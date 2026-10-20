@@ -3,8 +3,8 @@ import { an, constant, fin, ligne } from '../aides';
 
 /**
  * Écurie d'entraînement du Bois-Ricard (dossier standard).
- * Modèle : entraîneur public de trotteurs, pensions d'entraînement au jour, pourcentage
- * sur les allocations, frais refacturés (maréchalerie, transport).
+ * Modèle : entraîneur public de trotteurs, pensions d'entraînement au jour, 15 % des gains
+ * des chevaux entraînés (répartition à la source par LeTrot), frais refacturés (maréchalerie, transport).
  * Situation : rentabilité moyenne, risque client élevé (retards, créance douteuse, concentration).
  * Toutes les données sont fictives.
  */
@@ -25,7 +25,7 @@ const etab: Etablissement = {
   },
   formeJuridique: 'SARL au capital de 20 000 €',
   gouvernance:
-    'Le gérant, entraîneur public titulaire de la licence, détient 80 % des parts ; son épouse, associée non salariée, 20 %. Les terrains, les écuries et la piste sont la propriété d’une SCI familiale qui les loue à la SARL.',
+    'Le gérant, titulaire de la licence d’entraîneur public délivrée par LeTrot (Société d’encouragement à l’élevage du trotteur français), détient 80 % des parts ; son épouse, associée non salariée, 20 %. Les terrains, les écuries et la piste appartiennent à une SCI familiale qui les loue à la SARL.',
   creation: 2009,
   dirigeant: { nom: 'Gaëtan Morvilliers', fonction: 'Gérant, entraîneur public et driver' },
   theme: {
@@ -41,13 +41,13 @@ const etab: Etablissement = {
     graphique: ['#7a1c2c', '#262123', '#b98a93', '#c39a48', '#5c7482'],
   },
   accroche:
-    'Écurie d’entraînement de trotteurs de 42 boxes près de Laval, pour une quinzaine de propriétaires. Des résultats sportifs réguliers, des marges modestes et des factures de pension qui se paient de plus en plus tard.',
+    'Écurie d’entraînement de trotteurs de 42 boxes près de Laval, pour une quinzaine de propriétaires. Des résultats réguliers en province, une saison 2025 en retrait et des factures de pension qui se paient de plus en plus tard.',
   chiffresCles: [
     { libelle: 'Chevaux à l’entraînement', valeur: '36', detail: 'au 31 décembre 2025, plus 6 au repos' },
     { libelle: 'Propriétaires actifs', valeur: '15', detail: 'trois détiennent 17 chevaux' },
     { libelle: 'Partants', valeur: '312', detail: 'en 2025' },
-    { libelle: 'Allocations gagnées', valeur: '760 000 €', detail: 'par les chevaux de l’écurie en 2025' },
-    { libelle: 'Effectif', valeur: '13,1 ETP', detail: 'gérant compris' },
+    { libelle: 'Gains des chevaux entraînés', valeur: '560 000 €', detail: 'en 2025, dont 15 % reviennent à l’entraîneur' },
+    { libelle: 'Effectif', valeur: '8,5 ETP', detail: 'gérant et apprentis compris' },
     { libelle: 'Création', valeur: '2009', detail: 'licence d’entraîneur public' },
   ],
   enjeux: [
@@ -60,17 +60,17 @@ const etab: Etablissement = {
 
   presentation: {
     introduction:
-      'Le Bois-Ricard entraîne des trotteurs pour le compte de propriétaires : l’écurie les héberge, les nourrit, les prépare et les conduit en course. Gaëtan Morvilliers, ancien premier garçon d’une grande écurie normande, a obtenu sa licence d’entraîneur public en 2009 et s’est installé sur la ferme de ses beaux-parents.',
+      'Le Bois-Ricard entraîne des trotteurs pour le compte de propriétaires : l’écurie les héberge, les nourrit, les qualifie, les prépare et les conduit en course, au sulky ou au trot monté. Gaëtan Morvilliers, ancien premier garçon d’une grande écurie normande et driver, a obtenu sa licence d’entraîneur public en 2009 et s’est installé sur la ferme de ses beaux-parents.',
     histoire: [
       'L’écurie démarre en 2009 avec douze chevaux et une piste de 1 000 mètres en sable construite la même année par la SCI familiale et la SARL. Les premiers propriétaires sont des éleveurs mayennais qui confient leurs jeunes chevaux.',
       'En 2011, la SARL aménage deux bâtiments de boxes. L’effectif dépasse trente chevaux en 2016, avec l’arrivée de propriétaires extérieurs au département, attirés par les résultats en courses régionales puis à Vincennes.',
-      'Depuis 2022, les charges ont fortement augmenté (aliments, carburant, salaires) et le gérant a relevé le prix de la journée de pension chaque année. Trois propriétaires concentrent désormais près de la moitié de l’effectif.',
-      'En 2025, un propriétaire de quatre chevaux, en difficulté financière, a cessé de régler ses factures. Ses chevaux ont quitté l’écurie en septembre. La créance, dépréciée en grande partie, pèse sur la trésorerie et alimente un débat sur les conditions de paiement.',
+      'Depuis 2022, les charges ont fortement augmenté (aliments, carburant, salaires) et le gérant a relevé le prix de la journée de pension d’un euro chaque année. Depuis septembre 2021, sa part de 15 % sur les gains lui est versée directement par LeTrot (répartition à la source), ce qui a sécurisé cette recette. Trois propriétaires concentrent désormais près de la moitié de l’effectif.',
+      'À partir de l’automne 2024, un propriétaire de quatre chevaux, en difficulté financière, n’a plus réglé ses factures que partiellement, puis plus du tout à partir d’avril 2025. Ses chevaux ont quitté l’écurie en septembre 2025. La créance, dépréciée en grande partie, pèse sur la trésorerie et alimente un débat sur les conditions de paiement.',
     ],
     valeurs: [
       { titre: 'Le cheval d’abord', texte: 'Programme individualisé, récupération après chaque course, mises au pré régulières. L’écurie refuse d’engager un cheval qui n’est pas prêt, même à la demande du propriétaire.' },
       { titre: 'Transparence', texte: 'Compte rendu hebdomadaire aux propriétaires, accès au programme d’engagements, facture mensuelle détaillée.' },
-      { titre: 'Formation', texte: 'Deux apprentis lads accueillis chaque année, en lien avec un établissement de formation aux métiers des courses.' },
+      { titre: 'Formation', texte: 'Deux apprentis accueillis en permanence, en lien avec l’AFASEC, l’école des métiers des courses hippiques.' },
     ],
     chronologie: [
       { annee: 2009, titre: 'Licence et installation', texte: 'Création de la SARL, piste de 1 000 m en sable, douze chevaux.' },
@@ -78,12 +78,12 @@ const etab: Etablissement = {
       { annee: 2018, titre: 'Premier camion six places', texte: 'Déplacements vers Vincennes et les hippodromes de l’Ouest.' },
       { annee: 2019, titre: 'Marcheur automatique', texte: 'Six places, utilisé pour la récupération et les jours sans piste.' },
       { annee: 2023, titre: 'Second camion', texte: 'Camion quatre places financé sur sept ans.' },
-      { annee: 2025, titre: 'Défaillance d’un propriétaire', texte: 'Quatre chevaux retirés, créance de 31 500 € en cours de recouvrement.' },
+      { annee: 2025, titre: 'Défaillance d’un propriétaire', texte: 'Quatre chevaux retirés en septembre, créance de 31 500 € HT en cours de recouvrement.' },
     ],
     organisation:
-      'Le gérant entraîne, drive et gère la relation avec les propriétaires. Un premier garçon organise le travail quotidien de trois lads-drivers, de cinq à six lads et de deux apprentis. Une secrétaire à temps partiel assure la facturation et les relances, sous le contrôle de l’associée.',
+      'Le gérant entraîne, drive et gère la relation avec les propriétaires. Un premier garçon, lui-même lad-driver, organise le travail quotidien de deux lads-drivers, de deux lads et de deux apprentis. Une secrétaire à mi-temps assure la facturation et les relances, sous le contrôle de l’associée.',
     modeleEconomique:
-      'Le chiffre d’affaires repose sur la pension d’entraînement facturée au jour (journées-cheval), complétée par un pourcentage des allocations gagnées par les chevaux entraînés, fixé à 10 % par les contrats d’entraînement. La maréchalerie et le transport vers les hippodromes sont refacturés ; les frais vétérinaires sont facturés directement aux propriétaires par la clinique. Les factures sont émises au mois échu et payables à trente jours.',
+      'Le chiffre d’affaires repose sur la pension d’entraînement facturée au jour (journées-cheval), complétée par la part de 15 % des gains (allocations) des chevaux entraînés qui revient à l’entraîneur public. Cette part est prélevée à la source et versée par LeTrot, sans risque d’impayé ; les 5 % du driver sont versés à celui qui drive (le gérant ou un lad-driver, à titre personnel) et n’entrent pas dans les comptes de la SARL. La maréchalerie et le transport vers les hippodromes sont refacturés ; les frais vétérinaires sont facturés directement aux propriétaires par la clinique ; les engagements sont débités du compte du propriétaire chez LeTrot. Les factures de pension sont émises au mois échu et payables à trente jours.',
   },
 
   installations: {
@@ -94,7 +94,7 @@ const etab: Etablissement = {
       { nom: 'Écuries', type: 'hebergement-equin', capacite: '42 boxes de 3,5 × 3,5 m', annee: 2011, etat: 'correct', description: 'Deux bâtiments agricoles aménagés, douches, sellerie et local de harnachement.', photo: 'chevaux' },
       { nom: 'Marcheur automatique', type: 'materiel', capacite: '6 places', annee: 2019, etat: 'bon', description: 'Utilisé pour la récupération et lorsque la piste est impraticable.' },
       { nom: 'Prés et paddocks', type: 'exterieur', surface: '9 ha', etat: 'correct', description: 'Dix places de repos au pré, six paddocks individuels.', photo: 'lieu' },
-      { nom: 'Camions et sulkys', type: 'materiel', capacite: 'Camions de 6 et 4 places, 14 sulkys d’entraînement', etat: 'correct', description: 'Le camion de 2018 approche des 400 000 km. Harnachement et sulkys entretenus par l’équipe.', photo: 'detail' },
+      { nom: 'Camions et sulkys', type: 'materiel', capacite: 'Camions de 6 et 4 places, 14 sulkys d’entraînement, 5 sulkys de course', etat: 'correct', description: 'Le camion de 2018 approche des 400 000 km. Harnachement, selles de trot monté et sulkys entretenus par l’équipe ; les sulkys de course, renouvelés en 2022, sont la propriété de la SARL.', photo: 'detail' },
     ],
     maintenance: [
       { titre: 'Piste', texte: 'Hersage et nivelage quotidiens, arrosage en été. Les réparations du virage nord coûtent de plus en plus cher : 16 500 € d’entretien en 2025.' },
@@ -131,10 +131,10 @@ const etab: Etablissement = {
       { etat: 'Au repos au pré', nombre: 6, commentaire: 'Dont deux en convalescence (tendon, suites de chirurgie)' },
     ],
     fiches: [
-      { nom: 'Grain de Mayenne', race: 'Trotteur français', naissance: 2016, sexe: 'hongre', robe: 'Bai', role: 'Cheval de tête, courses à Vincennes', statut: 'Écurie des Trois Vallées', notes: 'Meilleur gagnant de l’écurie depuis 2022. Dernière saison en 2026, année de ses dix ans.' },
+      { nom: 'Grain de Mayenne', race: 'Trotteur français', naissance: 2016, sexe: 'hongre', robe: 'Bai', role: 'Cheval de tête, meeting d’hiver de Vincennes', statut: 'Écurie des Trois Vallées', notes: 'Meilleur gagnant de l’écurie depuis 2022. Dernière saison en 2026 : un trotteur ne peut plus courir au-delà de l’année de ses dix ans.' },
       { nom: 'Iroise du Bois', race: 'Trotteur français', naissance: 2018, sexe: 'jument', robe: 'Alezane', role: 'Courses régionales, attelé et monté', statut: 'SCEA Hamelin Élevage', notes: 'Arrêtée trois mois en 2025 pour une boiterie ; reprise en novembre.' },
       { nom: 'Kantik de l’Oudon', race: 'Trotteur français', naissance: 2020, sexe: 'hongre', robe: 'Bai brun', role: 'Courses de 5 ans en province', statut: 'Écurie du Vicoin', notes: 'Régulier, souvent placé. Ferré et déferré selon les terrains.' },
-      { nom: 'Mistral Ricard', race: 'Trotteur français', naissance: 2022, sexe: 'étalon', robe: 'Noir', role: 'Qualifié à 3 ans, débuts en 2026', statut: 'Propriété partagée entre deux associés', notes: 'Programme de débuts prudent ; castration envisagée par les propriétaires.' },
+      { nom: 'Mistral Ricard', race: 'Trotteur français', naissance: 2022, sexe: 'étalon', robe: 'Noir', role: 'Qualifié en octobre 2025, débuts prévus au printemps 2026', statut: 'Copropriété de deux éleveurs', notes: 'Qualifié à la deuxième tentative sur 2 000 m à Laval. Programme de débuts prudent en province ; castration envisagée par les propriétaires.' },
     ],
     reglesUtilisation: [
       'Six jours de travail sur sept, un jour de repos au paddock ; le travail rapide est limité à deux séances par semaine.',
@@ -146,25 +146,25 @@ const etab: Etablissement = {
 
   activites: {
     synthese:
-      'L’écurie vend une journée de pension d’entraînement tout compris (hébergement, alimentation, travail, soins courants), complétée par des prestations refacturées et par un pourcentage des allocations gagnées. Les engagements en course sont réglés par les propriétaires sur leur compte auprès de l’institution des courses et n’apparaissent pas dans les comptes de la SARL.',
+      'L’écurie vend une journée de pension d’entraînement (hébergement, alimentation, travail, soins courants), complétée par des prestations refacturées et par la part de 15 % des gains qui revient à l’entraîneur public. Les engagements et forfaits sont débités du compte que chaque propriétaire détient auprès de LeTrot et n’apparaissent pas dans les comptes de la SARL.',
     prestations: [
-      { id: 'pension-entrainement', nom: 'Pension d’entraînement', activite: 'entrainement', description: 'Box, alimentation, litière, travail quotidien, soins courants et vermifugation. Facturée au jour, au mois échu.', unite: 'journée-cheval', prix: an(39, 41, 42.5, 44), volume: an(13140, 14050, 13500, 14420), capaciteAnnuelle: constant(15330), compte: '706', clientele: 'Propriétaires de trotteurs' },
-      { id: 'pension-repos', nom: 'Pension de repos au pré', activite: 'repos', description: 'Pré collectif avec abri, foin en hiver, surveillance quotidienne.', unite: 'journée-cheval', prix: an(14, 14.5, 15, 15.5), volume: an(1900, 2300, 2200, 2300), capaciteAnnuelle: constant(3650), compte: '706', clientele: 'Propriétaires des chevaux en repos ou en convalescence' },
-      { id: 'pourcentage-gains', nom: 'Pourcentage sur les allocations', activite: 'courses', description: 'Part de 10 % des allocations gagnées par les chevaux entraînés, prévue par les contrats d’entraînement (hypothèse du cas). Le prix est le taux, le volume le montant des allocations.', unite: '€ d’allocations gagnées', prix: constant(0.1), volume: an(820000, 905000, 760000, 880000), compte: '706', clientele: 'Propriétaires' },
-      { id: 'transport', nom: 'Transport aux hippodromes', activite: 'courses', description: 'Forfait par partant selon la distance moyenne, déplacement du personnel compris.', unite: 'partant', prix: an(120, 128, 135, 140), volume: an(318, 336, 312, 340), compte: '706', clientele: 'Propriétaires' },
+      { id: 'pension-entrainement', nom: 'Pension d’entraînement', activite: 'entrainement', description: 'Box, alimentation, litière, travail quotidien, soins courants et vermifugation. Facturée au jour, au mois échu.', unite: 'journée-cheval', prix: an(31, 32, 33, 34), volume: an(13140, 14050, 13500, 14420), capaciteAnnuelle: constant(15330), compte: '706', clientele: 'Propriétaires de trotteurs' },
+      { id: 'pension-repos', nom: 'Pension de repos au pré', activite: 'repos', description: 'Pré collectif avec abri, foin en hiver, surveillance quotidienne.', unite: 'journée-cheval', prix: an(13, 13.5, 14, 14.5), volume: an(1900, 2300, 2200, 2300), capaciteAnnuelle: constant(3650), compte: '706', clientele: 'Propriétaires des chevaux en repos ou en convalescence' },
+      { id: 'pourcentage-gains', nom: 'Part de l’entraîneur sur les gains', activite: 'courses', description: 'Part de 15 % des gains (allocations) des chevaux entraînés, prélevée à la source et versée chaque mois par LeTrot à l’entraîneur public. Le prix est le taux, le volume le montant des gains.', unite: '€ de gains', prix: constant(0.15), volume: an(640000, 720000, 560000, 680000), compte: '706', clientele: 'Propriétaires (versement par LeTrot)' },
+      { id: 'transport', nom: 'Transport aux hippodromes', activite: 'courses', description: 'Forfait par partant selon la distance moyenne, déplacement du personnel compris.', unite: 'partant', prix: an(95, 100, 105, 110), volume: an(318, 336, 312, 340), compte: '706', clientele: 'Propriétaires' },
       { id: 'marechalerie', nom: 'Maréchalerie refacturée', activite: 'refacturations', description: 'Ferrures et déferrages réalisés par le maréchal de l’écurie, refacturés avec une marge de gestion.', unite: 'ferrure', prix: an(98, 101, 105, 108), volume: an(400, 425, 410, 432), compte: '706', clientele: 'Propriétaires' },
     ],
     calendrier: [
-      'Novembre à février : meeting d’hiver à Vincennes pour les meilleurs chevaux, travail décalé faute d’éclairage de la piste.',
-      'Mars à octobre : courses régionales (Laval, Craon, Le Mans, Nantes) le week-end et en semaine.',
-      'Juin à septembre : qualifications des jeunes chevaux.',
-      'Fin d’année : mises au pré, bilan avec chaque propriétaire, programme de la saison suivante.',
+      'Novembre à février : meeting d’hiver de Vincennes pour les deux ou trois meilleurs chevaux, travail décalé faute d’éclairage de la piste ; courses d’hiver à Caen et dans l’Ouest pour les autres.',
+      'Mars à octobre : courses de province (Laval, Craon et les autres hippodromes de la Mayenne, Le Mans, Angers, Nantes, Caen), en semaine et le week-end.',
+      'Toute l’année : qualifications des jeunes chevaux (épreuve chronométrée), les deux ans à partir du printemps, les trois ans et plus toute l’année.',
+      'Septembre : les journées de courses de Craon ; fin d’année : mises au pré, bilan avec chaque propriétaire, programme de la saison suivante.',
     ],
   },
 
   clients: {
     synthese:
-      'Quinze propriétaires actifs confient leurs chevaux à l’écurie : éleveurs, investisseurs particuliers et associations de copropriétaires. Trois d’entre eux détiennent 17 des 36 chevaux à l’entraînement. Les délais de paiement s’allongent et un propriétaire défaillant laisse une créance de 31 500 €.',
+      'Quinze propriétaires actifs confient leurs chevaux à l’écurie : éleveurs, investisseurs particuliers et associations de copropriétaires. Trois d’entre eux détiennent 17 des 36 chevaux à l’entraînement. Les délais de paiement des pensions s’allongent et un propriétaire défaillant laisse une créance de 31 500 € HT.',
     segments: [
       { nom: 'Trois propriétaires principaux', part: 0.47, effectif: '17 chevaux', description: 'Écurie des Trois Vallées (8 chevaux), SCEA Hamelin Élevage (5), Écurie du Vicoin (4). Exigeants sur les résultats et sur les prix.' },
       { nom: 'Éleveurs mayennais', part: 0.27, effectif: '7 propriétaires, 11 chevaux', description: 'Confient leurs jeunes chevaux pour les qualifier et les valoriser avant la vente.' },
@@ -174,17 +174,18 @@ const etab: Etablissement = {
       { libelle: 'Propriétaires actifs au 31 décembre', valeurs: { 2023: 14, 2024: 16, 2025: 15, 2026: 16 } },
       { libelle: 'Partants', valeurs: { 2023: 318, 2024: 336, 2025: 312, 2026: 340 } },
       { libelle: 'Victoires', valeurs: { 2023: 41, 2024: 47, 2025: 36 } },
-      { libelle: 'Créances clients de plus de 60 jours', unite: '€', valeurs: { 2023: 9800, 2024: 21400, 2025: 34000 }, commentaire: 'Balance âgée au 31 décembre, montants hors taxes.' },
+      { libelle: 'Gains des chevaux entraînés', unite: '€', valeurs: { 2023: 640000, 2024: 720000, 2025: 560000, 2026: 680000 }, commentaire: '2026 : budget. Moyenne 2025 : environ 1 800 € par partant.' },
+      { libelle: 'Créances clients de plus de 60 jours', unite: '€', valeurs: { 2023: 8200, 2024: 19800, 2025: 34400 }, commentaire: 'Balance âgée au 31 décembre, montants hors taxes.' },
     ],
     verbatims: [
-      { auteur: 'Gérant de l’Écurie des Trois Vallées', profil: '8 chevaux', texte: 'Les résultats sont là, mais à chaque hausse de pension je compare avec les écuries normandes. Je ne veux pas payer la piste neuve avant de l’avoir vue.' },
+      { auteur: 'Gérant de l’Écurie des Trois Vallées', profil: '8 chevaux', texte: 'Les résultats sont là, mais à chaque hausse de pension je compare avec les écuries de la Jouanne et de Normandie. Je ne veux pas payer la piste neuve avant de l’avoir vue.' },
       { auteur: 'Éleveuse', profil: '2 chevaux de 3 ans', texte: 'On sait ce que fait chaque cheval chaque semaine. Les factures arrivent tard dans le mois, ce qui n’aide pas à suivre.' },
-      { auteur: 'Copropriétaire', profil: 'Association de cinq amis, 1 cheval', texte: 'Quand le cheval ne gagne pas, il faut relancer chacun des associés pour payer la pension.' },
+      { auteur: 'Copropriétaire', profil: 'Association de cinq amis, 1 cheval', texte: 'Les gains arrivent sur notre compte chez LeTrot, mais la pension, c’est à nous de la payer chaque mois. Quand le cheval ne gagne pas, il faut relancer chacun des associés.' },
     ],
     communication: [
       { canal: 'Résultats en course', description: 'Premier vecteur de notoriété auprès des propriétaires et des éleveurs.' },
       { canal: 'Compte rendu hebdomadaire', description: 'Message aux propriétaires : travail, état de santé, engagements prévus.' },
-      { canal: 'Réseau des éleveurs', description: 'Ventes aux enchères, concours d’élevage, bouche-à-oreille dans le bassin mayennais.' },
+      { canal: 'Réseau des éleveurs', description: 'Ventes de yearlings, concours d’élevage, bouche-à-oreille dans le bassin mayennais.' },
     ],
     reclamations: [
       'Factures jugées trop tardives et peu lisibles par plusieurs propriétaires.',
@@ -194,7 +195,7 @@ const etab: Etablissement = {
 
   fournisseurs: {
     synthese:
-      'Les achats concernent surtout l’alimentation, la litière, la maréchalerie et le carburant. Le loyer versé à la SCI familiale est la première charge externe après la maréchalerie. Les fournisseurs sont payés à 30 ou 45 jours, alors que certains propriétaires paient à 90 jours.',
+      'Les achats concernent surtout l’alimentation, la litière, la maréchalerie et le carburant. Le loyer versé à la SCI familiale est la première charge externe. Les fournisseurs sont payés à 30 ou 45 jours, alors que certains propriétaires paient leurs pensions à 90 jours.',
     liste: [
       { nom: 'Coopérative des Coëvrons', categorie: 'Alimentation', prestation: 'Aliments floconnés et granulés pour chevaux de course', ligne: 'concentres', part: 0.9, evolutionTarifaire: '+3 % en 2026', delaiPaiement: '45 jours fin de mois', conditions: 'Remise de volume au-delà de 40 tonnes', dependance: 'moyenne', risques: 'Prix liés aux cours des céréales.' },
       { nom: 'Ludovic Perrouin, maréchal-ferrant', categorie: 'Soins', prestation: 'Ferrures et déferrages, présence deux matinées par semaine', ligne: 'marechalerie', part: 1, evolutionTarifaire: '+3 % par an', delaiPaiement: 'Mensuel', conditions: 'Tarif à la ferrure', dependance: 'forte', risques: 'Maréchal spécialisé trot difficile à remplacer.' },
@@ -204,36 +205,38 @@ const etab: Etablissement = {
     ],
     partenaires: [
       { nom: 'Clinique vétérinaire équine du bassin lavallois', type: 'Santé', description: 'Suivi des chevaux, facturation directe aux propriétaires.' },
-      { nom: 'Établissement de formation aux métiers des courses', type: 'Formation', description: 'Accueil de deux apprentis lads chaque année.' },
+      { nom: 'AFASEC, école des courses hippiques', type: 'Formation', description: 'Formation en alternance des deux apprentis (CAPa lad-cavalier d’entraînement, bac professionnel).' },
+      { nom: 'LeTrot (Société d’encouragement à l’élevage du trotteur français)', type: 'Institution', description: 'Délivre les licences et autorisations, organise les qualifications et les courses, gère les comptes des propriétaires et verse à l’entraîneur sa part des gains.' },
       { nom: 'Expert-comptable de l’écurie', type: 'Conseil', description: 'Tenue des comptes, conseil sur les conditions de paiement et le recouvrement.' },
     ],
   },
 
   rh: {
     synthese:
-      'L’équipe compte 13,1 équivalents temps plein pour 36 à 40 chevaux. Le travail commence à 6 h 30, les déplacements en course allongent les journées et les week-ends. La fidélisation des lads-drivers expérimentés est le principal souci du gérant.',
+      'L’équipe compte 8,5 équivalents temps plein, gérant, apprentis et secrétaire compris, pour 36 à 40 chevaux à l’entraînement, soit environ cinq chevaux par personne travaillant à l’écurie. Le travail commence à 6 h 30, les déplacements en course allongent les journées et les week-ends. La fidélisation des lads-drivers expérimentés est le principal souci du gérant.',
     organigramme: [
       { id: 'g', intitule: 'Gérant, entraîneur public et driver', personne: 'Gaëtan Morvilliers' },
       { id: 'a', intitule: 'Associée, suivi administratif', personne: 'Sandrine Morvilliers', parent: 'g' },
       { id: 'pg', intitule: 'Premier garçon, lad-driver', personne: 'Kévin Lebreton', parent: 'g' },
-      { id: 'ld', intitule: 'Lads-drivers (3)', personne: 'Équipe de piste', parent: 'pg' },
-      { id: 'l', intitule: 'Lads (5,5 ETP)', personne: 'Équipe d’écurie', parent: 'pg' },
-      { id: 'ap', intitule: 'Apprentis lads (2)', personne: 'Apprentis', parent: 'pg' },
-      { id: 's', intitule: 'Secrétaire de facturation (temps partiel)', personne: 'Anaïs Gohier', parent: 'a' },
+      { id: 'ld', intitule: 'Lads-drivers (2)', personne: 'Équipe de piste', parent: 'pg' },
+      { id: 'l', intitule: 'Lads (2 ETP)', personne: 'Équipe d’écurie', parent: 'pg' },
+      { id: 'ap', intitule: 'Apprentis (2), formés avec l’AFASEC', personne: 'Apprentis', parent: 'pg' },
+      { id: 's', intitule: 'Secrétaire de facturation (mi-temps)', personne: 'Anaïs Gohier', parent: 'a' },
     ],
     organisationTravail: [
-      'Soins et premier lot sur la piste dès 6 h 30 (8 h 30 en hiver faute d’éclairage), trois à quatre lots par matinée.',
-      'L’après-midi : marcheur, soins, préparation des déplacements.',
-      'Deux à quatre déplacements en course par semaine, avec un lad-driver ou le gérant au sulky.',
-      'Roulement d’un week-end sur deux pour l’équipe d’écurie.',
+      'Soins et premier lot sur la piste dès 6 h 30 (8 h 30 en hiver faute d’éclairage), quatre à cinq lots par matinée ; chaque lad-driver attelle six à huit chevaux par jour.',
+      'L’après-midi : marcheur, soins, douches, préparation des déplacements et du harnachement.',
+      'Trois à cinq déplacements en course par semaine ; le lad qui accompagne fait office de garçon de voyage, le gérant ou un lad-driver drive.',
+      'Roulement d’un week-end sur deux pour l’équipe d’écurie ; les apprentis mineurs ne travaillent ni de nuit ni lors des retours tardifs.',
     ],
     saisonnalite:
       'Activité continue toute l’année. Le meeting d’hiver de Vincennes mobilise le gérant et un lad-driver plusieurs jours par semaine ; l’été concentre les qualifications et les courses de province.',
     dirigeant:
-      'Gaëtan Morvilliers entraîne, drive en course, recrute et négocie avec les propriétaires. Il se verse 50 000 € brut par an en 2025. Il délègue la facturation et les relances, qu’il juge éloignées de son métier.',
-    conventionCollective: 'Convention collective applicable aux établissements d’entraînement de chevaux de course au trot',
+      'Gaëtan Morvilliers entraîne, drive en course, recrute et négocie avec les propriétaires. Gérant majoritaire, il se verse une rémunération de 44 000 € brut en 2025, soumise aux cotisations des non-salariés agricoles ; ses gains de driver (5 % des gains des chevaux qu’il drive) lui reviennent à titre personnel. Il délègue la facturation et les relances, qu’il juge éloignées de son métier.',
+    conventionCollective: 'Convention collective nationale des personnels des activités hippiques (IDCC 7026), qui a repris le champ de l’ancienne convention des établissements d’entraînement de chevaux de courses au trot',
     enjeux: [
-      'Départ d’un lad-driver expérimenté vers une écurie normande en 2025, remplacé par un profil plus jeune.',
+      'Départ d’un lad-driver expérimenté vers une écurie normande en 2025, remplacé par un profil plus jeune qui ne drive pas encore en course.',
+      'Ratio d’environ cinq chevaux par personne, inférieur aux repères des écuries de trot suivies par le Réseau Équin : le gérant l’explique par le nombre de déplacements.',
       'Pénibilité des horaires et des déplacements.',
       'Dépendance au gérant pour les décisions d’engagement et la relation avec les propriétaires.',
     ],
@@ -243,28 +246,29 @@ const etab: Etablissement = {
     synthese:
       'La Mayenne et l’Ouest de la France forment un bassin historique du trot, avec de nombreux éleveurs et entraîneurs et plusieurs hippodromes proches. La concurrence entre écuries porte sur les résultats, la réputation de l’entraîneur et le prix de la pension.',
     territoire:
-      'Entrammes est située à 10 km de Laval. Les hippodromes de Laval et de Craon sont à moins de 40 minutes, Le Mans et Nantes à moins d’une heure trente, Vincennes à trois heures de route. Le bassin compte de nombreux élevages de trotteurs.',
+      'Entrammes est située à 10 km de Laval. L’hippodrome de Laval (Bellevue-la-Forêt), réservé au trot, est à un quart d’heure ; Craon est à 40 minutes, Le Mans, Angers et Nantes à moins d’une heure trente, Caen à deux heures, Vincennes à trois heures de route. Le département compte de nombreux élevages et centres d’entraînement de trotteurs.',
     donneesTerritoire: [
+      { libelle: 'Filière hippique de la Mayenne', valeur: '89 entraîneurs, près de 2 500 chevaux à l’entraînement, 9 hippodromes', source: 'Préfecture de la Mayenne, citée par info.fr (juin 2026)' },
       { libelle: 'Entraîneurs de trot établis dans un rayon de 40 km', valeur: '≈ 30', source: 'Estimation du cas' },
-      { libelle: 'Hippodromes accueillant des courses de trot à moins d’1 h 30', valeur: '6', source: 'Relevé du cas' },
-      { libelle: 'Distance moyenne par déplacement en course', valeur: '≈ 180 km aller', source: 'Relevé du cas' },
-      { libelle: 'Prix moyen de la pension d’entraînement dans l’Ouest', valeur: '40 à 52 € HT par jour', source: 'Estimation du cas' },
+      { libelle: 'Distance moyenne par déplacement en course', valeur: '≈ 150 km aller', source: 'Relevé du cas' },
+      { libelle: 'Pension d’entraînement pratiquée dans le secteur', valeur: '28 à 40 € HT par jour', source: 'Estimation du cas' },
     ],
     concurrents: [
-      { nom: 'Écurie de la Jouanne', distance: '15 km', offre: '55 chevaux, piste éclairée, piscine de récupération', tarifs: '52 € HT par jour', positionnement: 'Haut de gamme régional, propriétaires extérieurs' },
-      { nom: 'Écurie familiale du Craonnais', distance: '30 km', offre: '20 chevaux, éleveurs locaux', tarifs: '40 € HT par jour', positionnement: 'Prix bas, peu de déplacements parisiens' },
-      { nom: 'Écuries normandes', distance: '150 à 200 km', offre: 'Grandes structures, pistes multiples', tarifs: '48 à 60 € HT par jour', positionnement: 'Proximité des grands haras, réputation nationale' },
+      { nom: 'Écurie de la Jouanne', distance: '15 km', offre: '55 chevaux, piste éclairée, ligne droite en montée, bassin de récupération', tarifs: '39 € HT par jour', positionnement: 'Haut de gamme régional, propriétaires extérieurs, présence régulière à Vincennes' },
+      { nom: 'Écurie familiale du Craonnais', distance: '30 km', offre: '20 chevaux, éleveurs locaux', tarifs: '28 € HT par jour', positionnement: 'Prix bas, peu de déplacements parisiens' },
+      { nom: 'Grandes écuries normandes', distance: '150 à 200 km', offre: 'Structures de 60 à 120 chevaux, pistes multiples', tarifs: '38 à 50 € HT par jour', positionnement: 'Proximité des grands haras, réputation nationale, entraîneurs de premier plan' },
     ],
     pestel: [
-      { dimension: 'Politique', faits: ['L’organisation des courses et le versement des allocations relèvent des sociétés de courses agréées par l’État.', 'Le produit des paris hippiques finance une large part des allocations.'] },
+      { dimension: 'Politique', faits: ['LeTrot, société mère des courses au trot agréée par l’État, organise les courses, délivre les licences et autorisations et répartit les allocations.', 'Le produit des paris hippiques, collectés par le PMU, finance l’essentiel des allocations.', 'Les allocations du trot ont atteint environ 258 millions d’euros en 2025 pour près de 143 000 partants, soit en moyenne 23 200 € par course (source : LeTrot).'] },
       { dimension: 'Économique', faits: ['Les prix des aliments, du carburant et de l’énergie ont fortement augmenté en 2022 et 2023.', 'Le SMIC a été revalorisé à plusieurs reprises depuis 2022.', 'Les taux des crédits professionnels sont supérieurs à 4 % depuis 2023.'] },
       { dimension: 'Socioculturel', faits: ['La propriété de chevaux de course se diffuse sous forme de copropriétés et d’associations.', 'Les métiers de lad et de lad-driver souffrent d’un déficit d’attractivité.'] },
       { dimension: 'Technologique', faits: ['Les pistes éclairées, les tapis roulants et les bassins de récupération se diffusent dans les grandes écuries.', 'Les logiciels de gestion d’écurie automatisent la facturation et les relances.'] },
       { dimension: 'Écologique', faits: ['Les épisodes de fortes pluies dégradent les pistes en sable mal drainées.', 'La gestion des fumiers et des eaux de lavage est encadrée.'] },
-      { dimension: 'Légal', faits: ['La préparation et l’entraînement des équidés domestiques en vue de leur exploitation sont des activités agricoles par nature (article L311-1 du code rural et de la pêche maritime).', 'L’activité d’entraîneur public suppose une licence délivrée par la société mère des courses au trot.', 'La loi n° 2021-1539 du 30 novembre 2021 visant à lutter contre la maltraitance animale a renforcé les obligations des détenteurs d’équidés.', 'Les délais de paiement entre professionnels sont encadrés par le code de commerce.'] },
+      { dimension: 'Légal', faits: ['La préparation et l’entraînement des équidés domestiques en vue de leur exploitation sont des activités agricoles par nature (article L311-1 du code rural et de la pêche maritime) ; exploitants et salariés relèvent de la MSA.', 'L’activité d’entraîneur public suppose une licence délivrée par LeTrot, après une expérience professionnelle et une formation sanctionnée par une certification.', 'Depuis le 1er septembre 2021, 15 % des gains sont répartis à la source au profit de l’entraîneur public, sans opposition possible du propriétaire ; la part du driver (5 %) peut être refusée par le propriétaire.', 'Le code des courses au trot permet à un entraîneur impayé de saisir une commission paritaire d’arbitrage et de conciliation ; l’opposition prononcée est publiée au bulletin officiel et interdit au débiteur de faire courir ses chevaux.', 'La loi n° 2021-1539 du 30 novembre 2021 visant à lutter contre la maltraitance animale a renforcé les obligations des détenteurs d’équidés.', 'Les délais de paiement entre professionnels sont encadrés par le code de commerce.'] },
     ],
     marche: [
-      'Les propriétaires comparent les écuries sur les résultats, puis sur le prix de la journée et les frais annexes.',
+      'Les propriétaires comparent les écuries sur les résultats, puis sur le prix de la journée et les frais annexes (transport, maréchalerie, part de l’entraîneur).',
+      'Un trotteur doit se qualifier (épreuve chronométrée) avant de courir ; une part minoritaire des chevaux y parvient dès deux ans.',
       'Les meilleurs chevaux tendent à rejoindre les grandes écuries normandes ou parisiennes.',
       'Les éleveurs locaux privilégient les écuries proches pour suivre leurs jeunes chevaux.',
     ],
