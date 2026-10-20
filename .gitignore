@@ -6,3 +6,4 @@ playwright-report
 enseignant-prive/
 public/photos/*.webp
 public/photos/*.jpg
+dossier-enseignant-*.zip

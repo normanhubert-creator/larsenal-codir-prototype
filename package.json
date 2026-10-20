@@ -10,7 +10,8 @@
     "test": "vitest run",
     "typecheck": "tsc -b --noEmit",
     "check:data": "vitest run tests/data.test.ts",
-    "photos": "node scripts/fetch-photos.mjs"
+    "photos": "node scripts/fetch-photos.mjs",
+    "publier": "npm test && npm run photos && vite build && node scripts/publier-racine.mjs"
   },
   "dependencies": {
     "@fontsource-variable/fraunces": "^5.3.0",

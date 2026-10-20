@@ -1,0 +1,40 @@
+name: Publication du site
+
+# À chaque mise à jour de main : contrôles, téléchargement des photographies,
+# construction, puis copie du site à la racine (servie par GitHub Pages en mode
+# « Deploy from a branch »). Le commit automatique ne relance pas ce workflow.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publication
+  cancel-in-progress: true
+
+jobs:
+  publier:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Contrôles de cohérence financière
+        run: npm test
+      - name: Photographies
+        run: npm run photos
+      - run: npx vite build
+      - run: node scripts/publier-racine.mjs
+      - name: Enregistrer le site construit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A index.html assets photos .nojekyll
+          git diff --cached --quiet || (git commit -m "Publication automatique du site" && git push)
