@@ -6,8 +6,35 @@ import { ETABLISSEMENTS, FAMILLES } from '../data/registry';
 import { etablissementsAvecTravaux } from '../storage/travaux';
 import { POLICES_TITRE, THEME_PLATEFORME, variablesTheme } from '../theme/theme';
 import type { CSSProperties } from 'react';
+import type { Etablissement } from '../types';
 
 const GROUPES = ['Tous', ...Array.from(new Set(FAMILLES.map((f) => f.groupe)))];
+
+/**
+ * Disposition de la galerie en rangées complètes de 12 colonnes : chaque dossier
+ * approfondi (8 colonnes) est associé à un dossier standard (4 colonnes) ; les dossiers
+ * standard restants se répartissent par rangées de 3 ou de 4.
+ */
+function disposer(liste: Etablissement[]): { e: Etablissement; span: number; grande: boolean }[] {
+  const grands = liste.filter((e) => e.profondeur === 'approfondi');
+  const petits = liste.filter((e) => e.profondeur !== 'approfondi');
+  const out: { e: Etablissement; span: number; grande: boolean }[] = [];
+  grands.forEach((g, i) => {
+    const p = petits.shift();
+    const rangee = p ? [{ e: g, span: 8, grande: true }, { e: p, span: 4, grande: false }] : [{ e: g, span: 12, grande: true }];
+    out.push(...(i % 2 === 1 ? rangee.reverse() : rangee));
+  });
+  const n = petits.length;
+  // rangées de 4 (3 colonnes) tant que le reste le permet, sinon rangées de 3 (4 colonnes)
+  let restants = n;
+  while (restants > 0) {
+    const taille = restants % 3 === 0 || restants < 4 ? Math.min(3, restants) : 4;
+    const span = 12 / taille;
+    for (let k = 0; k < taille; k++) out.push({ e: petits.shift()!, span, grande: false });
+    restants -= taille;
+  }
+  return out;
+}
 
 export function Accueil() {
   const [groupe, setGroupe] = useState('Tous');
@@ -85,7 +112,7 @@ export function Accueil() {
               </button>
             </div>
             <div className="galerie">
-              {liste.map((e) => {
+              {disposer(liste).map(({ e, span, grande }) => {
                 const style = {
                   '--carte-primaire': e.theme.primaire,
                   '--carte-accent': e.theme.accent,
@@ -96,8 +123,8 @@ export function Accueil() {
                   <Link
                     key={e.id}
                     to={`/e/${e.id}`}
-                    className={`carte-etab apparition ${e.profondeur === 'approfondi' ? 'carte-etab--grande' : ''}`}
-                    style={style}
+                    className={`carte-etab apparition ${grande ? 'carte-etab--grande' : ''}`}
+                    style={{ ...style, gridColumn: `span ${span}` }}
                   >
                     <Photo cle={`${e.id}-hero`} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" />
                     <div className="carte-etab__bandeau">
