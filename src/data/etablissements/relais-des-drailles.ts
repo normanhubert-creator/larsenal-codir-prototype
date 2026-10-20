@@ -135,10 +135,10 @@ const etab: Etablissement = {
       { etat: 'Ânes de bât', nombre: 4 },
     ],
     fiches: [
-      { nom: 'Bramabiau', race: 'Mérens', naissance: 2012, sexe: 'hongre', robe: 'Noir', role: 'Cheval de tête de Bastien', statut: 'Propriété', notes: 'Connaît tous les itinéraires ; ouvre les passages difficiles.' },
+      { nom: 'Causse du Bougès', race: 'Mérens', naissance: 2012, sexe: 'hongre', robe: 'Noir', role: 'Cheval de tête de Bastien', statut: 'Propriété', notes: 'Connaît tous les itinéraires ; ouvre les passages difficiles.' },
       { nom: 'Lozérine', race: 'Arabe-Barbe', naissance: 2015, sexe: 'jument', robe: 'Gris', role: 'Randonnée, cavaliers confirmés', statut: 'Propriété', notes: 'Très sûre en descente ; demandée par les cavaliers réguliers.' },
       { nom: 'Pastoral', race: 'Haflinger', naissance: 2010, sexe: 'hongre', robe: 'Alezan, crins lavés', role: 'Balades et stages enfants', statut: 'Propriété', notes: 'Ne fait plus de randonnée de plus de deux jours depuis 2024.' },
-      { nom: 'Tarn d’Aigoual', race: 'Mérens', naissance: 2020, sexe: 'hongre', robe: 'Noir', role: 'Randonnée', statut: 'Propriété (acheté en 2024)', notes: 'Acheté 3 500 € à quatre ans, débourré mais peu formé ; intégré aux randonnées de trois jours en 2025, puis à toutes les distances.' },
+      { nom: 'Kenzo de l’Aigoual', race: 'Mérens', naissance: 2020, sexe: 'hongre', robe: 'Noir', role: 'Randonnée', statut: 'Propriété (acheté en 2024)', notes: 'Acheté 3 500 € à quatre ans, débourré mais peu formé ; intégré aux randonnées de trois jours en 2025, puis à toutes les distances.' },
       { nom: 'Cadichon', race: 'Âne de Provence', naissance: 2013, sexe: 'hongre', robe: 'Gris', role: 'Âne de bât', statut: 'Propriété', notes: 'Âne le plus loué ; supporte mal les étapes de plus de 20 km.' },
     ],
     reglesUtilisation: [

@@ -133,7 +133,7 @@ const etab: Etablissement = {
       { categorie: 'Étalon Selle Français approuvé', statut: 'reproducteur', nombre: 1, usage: 'Saillies en insémination artificielle (semence fraîche réfrigérée)' },
       { categorie: 'Foals nés en 2025', statut: 'elevage', nombre: 10, usage: 'Sevrés en septembre et octobre, au pré' },
       { categorie: 'Jeunes de 1 et 2 ans', statut: 'elevage', nombre: 18, usage: 'Élevage au pré, présentation en concours de modèle et allures' },
-      { categorie: 'Jeunes chevaux de 3 à 6 ans', statut: 'elevage', nombre: 13, usage: 'Débourrage, travail monté, concours de jeunes chevaux, vente' },
+      { categorie: 'Jeunes chevaux de 3 à 6 ans', statut: 'elevage', nombre: 13, usage: 'Débourrage, travail monté, circuit SHF des jeunes chevaux, vente' },
       { categorie: 'Poulinières de tiers', statut: 'pension', nombre: 14, usage: 'Pension, suivi de reproduction et poulinage (moyenne annuelle)' },
       { categorie: 'Jeunes chevaux de tiers', statut: 'pension', nombre: 8, usage: "Pension d'élevage au pré (moyenne annuelle)" },
       { categorie: 'Chevaux de tiers au travail', statut: 'pension', nombre: 3, usage: 'Débourrage et valorisation pour le compte de propriétaires' },
@@ -284,7 +284,7 @@ const etab: Etablissement = {
       'Travail des jeunes chevaux de 8 h à 13 h : Antoine Lécuyer et le cavalier montent chacun six à huit chevaux par jour.',
       'Saison de monte : collectes de l’étalon le lundi, le mercredi et le vendredi ; expéditions avant 11 h.',
       'Poulinages : surveillance vidéo de 22 h à 6 h par le saisonnier, appel de l’associée de garde en cas d’alarme.',
-      'Week-ends : un associé de garde, en alternance ; concours de jeunes chevaux le samedi et le dimanche d’avril à septembre.',
+      'Week-ends : un associé de garde, en alternance ; épreuves SHF de jeunes chevaux le samedi et le dimanche de mars à août.',
     ],
     saisonnalite:
       "La charge de travail culmine de février à juin, lorsque poulinages, saison de monte, concours de jeunes chevaux et fenaison se superposent. L'hiver est consacré au débourrage des trois ans et aux soins aux jeunes en stabulation.",
@@ -763,10 +763,10 @@ const etab: Etablissement = {
     {
       id: 'resultats-concours',
       type: 'tableau',
-      titre: 'Résultats en concours de jeunes chevaux, saison 2025',
+      titre: 'Résultats sur le circuit SHF des jeunes chevaux, saison 2025',
       date: '2025-10-05',
       emetteur: 'Antoine Lécuyer, cogérant',
-      resume: 'Synthèse des participations et des résultats des chevaux de l’élevage en concours de jeunes chevaux en 2025.',
+      resume: 'Synthèse des participations et des résultats des chevaux de l’élevage sur le circuit SHF (cycle classique de CSO) en 2025.',
       rubriques: ['cavalerie', 'activites'],
       contenu: [
         {
@@ -1080,7 +1080,7 @@ const etab: Etablissement = {
       documentsUtiles: ['offre-marchand', 'inventaire-jeunes', 'couts-production', 'note-ventes', 'note-valorisation', 'proposition-centre', 'courrier-banque'],
       options: [
         { id: 'a', titre: 'Vendre vite', description: "Accepter l'offre du marchand pour les quatre chevaux de 3 ans et vendre les jeunes chevaux dès 3 ans à l'avenir." },
-        { id: 'b', titre: 'Valoriser jusqu’à 5 ou 6 ans', description: 'Conserver les meilleurs chevaux et les présenter en concours de jeunes chevaux jusqu’à 5 ou 6 ans.' },
+        { id: 'b', titre: 'Valoriser jusqu’à 5 ou 6 ans', description: 'Conserver les meilleurs chevaux et les présenter sur le circuit SHF jusqu’à 5 ou 6 ans.' },
         { id: 'c', titre: 'Réduire le cheptel', description: 'Ne mettre que douze poulinières à la reproduction et réformer les plus âgées.' },
         { id: 'd', titre: 'Confier la valorisation', description: 'Confier une partie des chevaux au centre de valorisation contre pension et commission.' },
       ],
@@ -1094,6 +1094,7 @@ const etab: Etablissement = {
   indicateursActivite: [
     { libelle: 'Naissances (poulains nés vivants)', unite: 'poulains', valeurs: { 2023: 13, 2024: 12, 2025: 12, 2026: 12 } },
     { libelle: 'Chevaux élevés vendus', unite: 'chevaux', valeurs: { 2023: 13, 2024: 10, 2025: 9, 2026: 12 } },
+    { libelle: 'Juments de tiers inséminées par Éclat de Varenne', unite: 'juments', valeurs: { 2023: 50, 2024: 44, 2025: 36, 2026: 36 }, aide: 'Contrats de saillie ; recette moyenne de 640 à 670 € par contrat.' },
     { libelle: 'Prix moyen des chevaux de 5 et 6 ans vendus', unite: '€', valeurs: { 2023: 29000, 2024: 26000, 2025: 24000, 2026: 30000 } },
     { libelle: 'Valeur du stock de jeunes chevaux au 31/12', unite: '€', valeurs: { 2023: 292800, 2024: 314200, 2025: 345000, 2026: 318400 }, aide: 'Valeur au coût de production (barème du centre de gestion).' },
   ],

@@ -130,7 +130,7 @@ const etab: Etablissement = {
     ],
     fiches: [
       { nom: 'Olivo', race: 'Lusitanien', naissance: 2014, sexe: 'hongre', robe: 'Gris', role: 'Cours privés, lever du soleil', statut: 'Propriété de la SAS', notes: 'Cheval emblématique des photographies du domaine.' },
-      { nom: 'Mistralou', race: 'Camargue', naissance: 2011, sexe: 'hongre', robe: 'Gris', role: 'Balades débutants', statut: 'Propriété de la SAS', notes: 'Très sûr, demandé pour les enfants des clients.' },
+      { nom: 'Baïle', race: 'Camargue', naissance: 2011, sexe: 'hongre', robe: 'Gris', role: 'Balades débutants', statut: 'Propriété de la SAS', notes: 'Très sûr, demandé pour les enfants des clients.' },
       { nom: 'Bergamote', race: 'Pure race espagnole', naissance: 2017, sexe: 'jument', robe: 'Baie', role: 'Balades confirmés, cours privés', statut: 'Propriété de la SAS', notes: 'Achetée en 2024.' },
       { nom: 'Rustique', race: 'Selle croisé', naissance: 2007, sexe: 'hongre', robe: 'Alezan', role: 'Balades au pas', statut: 'Propriété de la SAS', notes: 'Activité allégée ; retraite envisagée fin 2026.' },
     ],
