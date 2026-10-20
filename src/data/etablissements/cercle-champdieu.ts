@@ -181,6 +181,7 @@ const etab: Etablissement = {
       { libelle: 'Adhérents', valeurs: { 2023: 232, 2024: 236, 2025: 229, 2026: 232 } },
       { libelle: 'Familles au tarif réduit', unite: '%', valeurs: { 2023: 31, 2024: 33, 2025: 35 }, commentaire: 'Tranches A et B du quotient familial.' },
       { libelle: 'Taux de réinscription', unite: '%', valeurs: { 2023: 70, 2024: 72, 2025: 67 } },
+      { libelle: 'Codes Pass’Sport utilisés à l’inscription', unite: 'jeunes', valeurs: { 2023: 31, 2024: 34, 2025: 8 }, commentaire: 'Rentrée 2025 : aide de 70 € réservée, pour l’allocation de rentrée scolaire, aux 14-17 ans ; la plupart des enfants du club n’y ont plus eu droit.' },
       { libelle: 'Adultes au forfait', valeurs: { 2023: 34, 2024: 31, 2025: 28 } },
     ],
     satisfaction: {
@@ -221,7 +222,7 @@ const etab: Etablissement = {
     ],
     partenaires: [
       { nom: 'Commune de Champdieu', type: 'Collectivité', description: 'Propriétaire des installations, subvention de fonctionnement, cycles scolaires de l’école communale.' },
-      { nom: 'Institut médico-éducatif du secteur', type: 'Médico-social', description: 'Convention annuelle d’équitation adaptée.' },
+      { nom: 'Institut médico-éducatif du secteur', type: 'Médico-social', description: 'Convention annuelle d’équitation adaptée ; le bureau étudie la demande du label fédéral Equi Handi Club.' },
       { nom: 'Comité départemental d’équitation', type: 'Fédéral', description: 'Formation des enseignants, calendrier des concours club.' },
       { nom: 'Entreprises locales mécènes', type: 'Mécénat', description: 'Une dizaine de commerces et artisans de la plaine, dons de 100 à 800 €.' },
     ],
@@ -229,18 +230,18 @@ const etab: Etablissement = {
 
   rh: {
     synthese:
-      "L'équipe salariée est réduite et polyvalente ; le fonctionnement repose aussi sur le bénévolat (accueil du week-end, chantiers, soins, concours internes). Le contrat aidé de l'agente d'accueil et d'entretien arrive à son terme en juin 2026.",
+      "L'équipe salariée est réduite et polyvalente ; le fonctionnement repose aussi sur le bénévolat (accueil du week-end, chantiers, soins, concours internes). Le parcours emploi compétences de l'agente d'accueil et d'entretien, renouvelé à plusieurs reprises, arrive à son terme en juin 2026. Seuls les salariés diplômés et le moniteur vacataire encadrent les reprises ; les bénévoles n'enseignent pas.",
     organigramme: [
       { id: 'ca', intitule: "Conseil d'administration (bénévoles)", personne: 'Présidente : Odile Bérardier' },
-      { id: 'dir', intitule: 'Directeur-enseignant (DEJEPS)', personne: 'Julien Montagnon', parent: 'ca' },
-      { id: 'ens', intitule: 'Enseignante (BPJEPS)', personne: 'Camille Duverger', parent: 'dir' },
+      { id: 'dir', intitule: 'Directeur-enseignant (DEJEPS perfectionnement sportif, mention sports équestres)', personne: 'Julien Montagnon', parent: 'ca' },
+      { id: 'ens', intitule: 'Monitrice d’équitation (BPJEPS activités équestres)', personne: 'Camille Duverger', parent: 'dir' },
       { id: 'pal', intitule: 'Palefrenier-soigneur', personne: 'Rémi Faure', parent: 'dir' },
-      { id: 'pec', intitule: "Agente d'accueil et d'entretien (contrat aidé, 21 h par semaine)", personne: 'Sandrine Pupier', parent: 'dir' },
+      { id: 'pec', intitule: "Agente d'accueil et d'entretien (parcours emploi compétences, 21 h par semaine)", personne: 'Sandrine Pupier', parent: 'dir' },
       { id: 'ben', intitule: 'Bénévoles réguliers', personne: 'Une trentaine d’adhérents', parent: 'ca' },
     ],
     organisationTravail: [
       'Ouverture du mardi au dimanche ; soins du lundi assurés par le palefrenier et un bénévole.',
-      'Les deux enseignants assurent 22 reprises hebdomadaires et les stages en alternance.',
+      'Les deux enseignants assurent 22 reprises hebdomadaires (environ 11 heures chacun en face à face, complétées par le travail de la cavalerie, les cycles scolaires, l’équitation adaptée et les concours internes) et les stages en alternance.',
       'Un moniteur indépendant intervient à la vacation pendant les stages d’été.',
       'Accueil du samedi après-midi et du dimanche matin tenu par des bénévoles formés.',
     ],
@@ -248,9 +249,9 @@ const etab: Etablissement = {
       "Pic de travail en septembre (inscriptions), pendant les stages et au printemps (cycles scolaires). Fermeture des reprises en août, période de congés du personnel et de chantiers bénévoles.",
     dirigeant:
       "La présidente, bénévole, consacre environ dix heures par semaine à l'association (relations avec la commune, employeur, trésorerie avec le trésorier). Le directeur salarié cumule l'enseignement (vingt heures hebdomadaires), la gestion de la cavalerie et l'encadrement.",
-    conventionCollective: 'Convention collective nationale du personnel des centres équestres',
+    conventionCollective: 'Convention collective nationale des personnels des activités hippiques (IDCC 7026), qui a repris le champ de l’ancienne convention des centres équestres (IDCC 7012)',
     enjeux: [
-      'Fin du contrat aidé en juin 2026 et baisse de l’aide de l’État.',
+      'Fin du parcours emploi compétences en juin 2026, après une forte baisse du taux de prise en charge par l’État en 2025.',
       'Usure des bénévoles les plus engagés, difficile renouvellement du bureau.',
       'Rémunération du directeur inférieure à celle proposée par les structures privées.',
     ],
@@ -273,12 +274,12 @@ const etab: Etablissement = {
       { nom: 'Ferme équestre des Hautes Chaumes', distance: '18 km', offre: 'Randonnée et tourisme équestre dans les monts', tarifs: 'Journée de randonnée 85 €', positionnement: 'Tourisme et adultes' },
     ],
     pestel: [
-      { dimension: 'Politique', faits: ['Les communes réexaminent leurs subventions aux associations sous l’effet de la contrainte budgétaire.', "Le dispositif Pass'Sport peut être utilisé par les familles éligibles dans les clubs affiliés.", "Les aides de l'État aux parcours emploi compétences ont été réduites en 2025."] },
+      { dimension: 'Politique', faits: ['Les communes réexaminent leurs subventions aux associations sous l’effet de la contrainte budgétaire.', "Pour la saison 2025-2026, le Pass'Sport est une réduction de 70 € sur l'inscription, réservée aux 14-17 ans bénéficiaires de l'allocation de rentrée scolaire, aux 6-19 ans bénéficiaires de l'AEEH, aux 16-30 ans bénéficiaires de l'AAH et aux étudiants boursiers ; les 6-13 ans bénéficiaires de l'allocation de rentrée scolaire, éligibles les années précédentes (50 €), en sont exclus.", "L'enveloppe nationale 2025 des parcours emploi compétences correspond à environ 32 000 contrats, en forte baisse par rapport à 2024 ; le taux de prise en charge et la durée des contrats sont fixés par arrêté du préfet de région."] },
       { dimension: 'Économique', faits: ['Le prix du fourrage reste élevé et instable depuis la sécheresse de 2022.', 'Le coût des réparations de matériel agricole a nettement augmenté.', 'Les taux d’emprunt ont remonté depuis 2022.'] },
       { dimension: 'Socioculturel', faits: ['Les familles comparent les clubs sur le prix et les jours de reprise.', 'Le bénévolat associatif se raréfie chez les actifs de 30 à 50 ans.', 'La demande d’activités avec les chevaux pour des publics en situation de handicap progresse.'] },
       { dimension: 'Technologique', faits: ['Les logiciels de gestion d’adhérents permettent l’inscription et le paiement fractionné en ligne.', 'Les sols fibrés améliorent la tenue des manèges mais coûtent plus cher à l’installation.'] },
       { dimension: 'Écologique', faits: ['Les étés secs réduisent la pousse de l’herbe dans la plaine.', 'Les prés en bordure de rivière sont soumis aux règles de protection des berges.'] },
-      { dimension: 'Légal', faits: ["Le caractère non lucratif d'une association s'apprécie au regard de sa gestion désintéressée et des conditions d'exercice de ses activités ; il relève d'une analyse au cas par cas.", "L'encadrement contre rémunération exige un diplôme ou un titre inscrit au code du sport.", 'La loi du 30 novembre 2021 visant à lutter contre la maltraitance animale renforce les obligations des détenteurs d’équidés.'] },
+      { dimension: 'Légal', faits: ["Le caractère non lucratif d'une association s'apprécie au regard de sa gestion désintéressée et des conditions d'exercice de ses activités ; il relève d'une analyse au cas par cas.", "Toute occupation du domaine public donne lieu en principe au paiement d'une redevance tenant compte des avantages procurés à l'occupant ; la gratuité est possible pour les associations à but non lucratif concourant à un intérêt général, et les communes disposent d'une faculté propre au bénéfice des associations loi 1901 (code général de la propriété des personnes publiques).", "Selon les obligations de service imposées par la commune et le risque d'exploitation supporté par l'association, la gestion d'un équipement sportif municipal peut relever d'une convention d'occupation du domaine public ou d'une délégation de service public, avec des règles de publicité et de mise en concurrence différentes.", "L'encadrement contre rémunération exige un diplôme, un titre à finalité professionnelle ou un certificat de qualification inscrit au code du sport ; le BPJEPS mention « équitation », créé par arrêté du 18 novembre 2024, prend la suite du BPJEPS activités équestres.", 'La loi du 30 novembre 2021 visant à lutter contre la maltraitance animale renforce les obligations des détenteurs d’équidés.', 'Le personnel relève de la convention collective nationale des personnels des activités hippiques (IDCC 7026).'] },
     ],
     marche: [
       "La plaine du Forez compte plusieurs structures privées, dont les tarifs sont de 20 à 30 % supérieurs à ceux du Cercle.",
@@ -293,7 +294,7 @@ const etab: Etablissement = {
     formeComptable: "Association loi 1901, comptes établis selon le règlement ANC 2018-06, non soumise aux impôts commerciaux (gestion désintéressée)",
     subventionsExploitation: [
       ligne('subv-commune', 'Subvention de fonctionnement de la commune de Champdieu', '74', an(18000, 18000, 18000, 18000), 'Montant inchangé depuis 2019 ; la commune a annoncé un gel pour 2026.'),
-      ligne('aide-emploi', "Aide de l'État au parcours emploi compétences", '74', an(8400, 7600, 5900, 2700), 'Taux de prise en charge réduit en 2025 ; contrat terminé en juin 2026.'),
+      ligne('aide-emploi', "Aide de l'État au parcours emploi compétences", '74', an(8400, 7600, 5400, 2400), 'Aide calculée sur 21 heures hebdomadaires au SMIC : taux de prise en charge d’environ 65 % en 2023 et 60 % en 2024, ramené à 37 % au printemps 2025 ; contrat terminé en juin 2026.'),
     ],
     autresProduits: [
       ligne('cotisations', 'Cotisations statutaires des membres', '756', an(14384, 15340, 15572, 16704), 'Adhérents × cotisation (62 €, 65 €, 68 €, 72 €).'),
@@ -330,9 +331,9 @@ const etab: Etablissement = {
     chargesExceptionnelles: [],
     personnel: [
       { id: 'directeur', intitule: 'Directeur-enseignant (DEJEPS)', titulaire: 'Julien Montagnon', categorie: 'direction', etp: constant(1), brutAnnuelEtp: an(28400, 28900, 29500, 30100), tauxCharges: 0.3 },
-      { id: 'enseignante', intitule: 'Enseignante (BPJEPS)', titulaire: 'Camille Duverger', categorie: 'enseignement', etp: constant(1), brutAnnuelEtp: an(22800, 23300, 23900, 24500), tauxCharges: 0.22 },
+      { id: 'enseignante', intitule: 'Monitrice d’équitation (BPJEPS activités équestres)', titulaire: 'Camille Duverger', categorie: 'enseignement', etp: constant(1), brutAnnuelEtp: an(24300, 24800, 25200, 25700), tauxCharges: 0.22 },
       { id: 'palefrenier', intitule: 'Palefrenier-soigneur', titulaire: 'Rémi Faure', categorie: 'soins', etp: constant(1), brutAnnuelEtp: an(21400, 21900, 22300, 22800), tauxCharges: 0.16 },
-      { id: 'agente-pec', intitule: "Agente d'accueil et d'entretien (parcours emploi compétences)", titulaire: 'Sandrine Pupier', categorie: 'administratif', etp: an(0.6, 0.6, 0.6, 0.3), brutAnnuelEtp: an(20800, 21300, 21700, 22100), tauxCharges: 0.15 },
+      { id: 'agente-pec', intitule: "Agente d'accueil et d'entretien (parcours emploi compétences, 21 h par semaine)", titulaire: 'Sandrine Pupier', categorie: 'administratif', etp: an(0.6, 0.6, 0.6, 0.3), brutAnnuelEtp: an(20800, 21300, 21700, 22100), tauxCharges: 0.15 },
     ],
     immobilisations: [
       { id: 'logiciel', libelle: "Logiciel de gestion des adhérents", categorie: 'incorporel', valeurOrigine: 2400, miseEnService: '2024-01', duree: 3 },
@@ -382,7 +383,7 @@ const etab: Etablissement = {
         { id: 'groupes', nom: 'Groupes et équitation adaptée', uniteOeuvre: { libelle: 'séance', quantite: 178 } },
       ],
       cles: [
-        { id: 'heures-equide', nom: 'Heures de travail de la cavalerie', unite: 'heures-équidé', justification: 'Planning 2025 : heures de reprise, de stage et de séance de groupe par équidé du club (les chevaux en pension n’en consomment pas).', repartition: { enseignement: 5400, stages: 2600, pension: 0, groupes: 700 } },
+        { id: 'heures-equide', nom: 'Heures de travail de la cavalerie', unite: 'heures-équidé', justification: 'Planning 2025 : reprises au forfait et cartes (environ 7 000 h), stages à deux heures montées par journée (2 600 h), séances scolaires de dix enfants pendant une heure trente et équitation adaptée (1 900 h). Les chevaux en pension n’en consomment pas.', repartition: { enseignement: 7000, stages: 2600, pension: 0, groupes: 1900 } },
         { id: 'equides-presents', nom: 'Équidés présents', unite: 'équidés-année', justification: 'Les 26 équidés du club ventilés selon leur usage principal, plus les 6 chevaux en pension.', repartition: { enseignement: 16, stages: 7, pension: 6, groupes: 3 } },
         { id: 'temps-equipe', nom: 'Temps de l’équipe salariée', unite: 'heures', justification: 'Relevé des plannings du directeur, de l’enseignante et de l’agente sur quatre semaines types.', repartition: { enseignement: 3300, stages: 1150, pension: 450, groupes: 400 } },
         { id: 'installations', nom: 'Occupation des installations', unite: 'heures d’aires de travail', justification: 'Planning du manège et de la carrière (les propriétaires en pension utilisent les créneaux libres).', repartition: { enseignement: 1500, stages: 560, pension: 420, groupes: 220 } },
@@ -430,6 +431,15 @@ const etab: Etablissement = {
       "Les contributions volontaires en nature (bénévolat, environ 3 100 heures en 2025, et mise à disposition gratuite des prés par la commune) ne sont pas intégrées au compte de résultat du modèle ; elles sont décrites dans les documents du dossier.",
       'Les installations communales ne figurent pas au bilan de l’association ; seuls les aménagements qu’elle a financés sont immobilisés.',
       "Le cas suppose que la taxe sur les salaires éventuellement due est entièrement couverte par l'abattement propre aux associations.",
+      "Par simplification, le prix moyen retenu pour une année civile est celui de la saison qui commence en septembre de cette année ; les volumes de forfaits sont des moyennes sur l'année civile.",
+      'Repère réel : l’abattement de taxe sur les salaires des associations s’élève à 23 616 € pour les salaires versés en 2024 et à 24 041 € pour ceux versés en 2025 ; avec une masse salariale brute d’environ 92 000 € en 2025, la taxe théorique de l’association reste inférieure à cet abattement (source : https://www.impots.gouv.fr/professionnel/questions/mon-association-peut-elle-etre-redevable-de-la-taxe-sur-les-salaires).',
+      'Repère réel : le règlement ANC 2018-06 rend obligatoire l’information sur les contributions volontaires en nature (comptes 86 et 87 lorsqu’elles sont comptabilisées) ; si l’association choisit de ne pas les comptabiliser, elle doit en indiquer les motifs ainsi que leur nature et leur importance (source : https://iledefrance.famillesrurales.org/sites/multisite.famillesrurales.org._ile-de-france/files/ckeditor/contenus/fichiers/CONTRIBUTIONS%20VOLONTAIRES%20EN%20NATURE.pdf).',
+      'Repère réel : l’article L2125-1 du code général de la propriété des personnes publiques pose le principe d’une redevance pour toute occupation du domaine public, avec une faculté de gratuité pour les associations à but non lucratif concourant à un intérêt général ; une disposition propre aux communes (article L2125-1-2) leur permet d’accorder des titres d’occupation sans contrepartie financière aux associations loi 1901 (sources : https://www.banquedesterritoires.fr/dans-quelle-mesure-les-associations-peuvent-elles-beneficier-doccupations-du-domaine-public-titre et https://www.senat.fr/questions/base/2025/qSEQ250303803.html).',
+      'Repère réel : la circulaire relative aux parcours emploi compétences de 2025 fixe une enveloppe équivalente à 32 000 contrats, en forte baisse, avec des paramètres moyens en métropole de 37 % de prise en charge, six mois et 21 heures hebdomadaires, que les préfets peuvent adapter ; l’aide du cas est calée sur ces paramètres à partir du printemps 2025 (source : https://www.federationsolidarite.org/wp-content/uploads/2025/04/Annexes-Circulaire-FIE-2025-1.pdf).',
+      'Repère réel : en octobre 2023, les minima mensuels bruts de l’ancienne convention des centres équestres s’établissaient à 1 760,89 € (soigneur, coefficient 103) et 2 020,24 € (enseignant ou animateur, coefficient 130) ; la rémunération de la monitrice a été relevée dans le cas pour rester au-dessus des minima revalorisés (source : https://fgtafo.fr/wp-content/uploads/2023/09/AVENANT-SALAIRES-N°109-2023-Centres-equestres.pdf).',
+      'Repère réel : la synthèse nationale 2024 du Réseau Équin indique en moyenne 263 heures de travail par équidé de club et par an (médiane 199) et 7 clients réguliers par équidé ; le Cercle, avec environ 460 heures par équidé disponible et près de 9 adhérents par équidé, se situe très au-dessus de ces moyennes (source : https://chevaux-normandie.com/wp-content/uploads/2024/07/Reseau-Equin_Synthese-2024-1.pdf).',
+      'Repère réel : Pass’Sport 2025-2026, réduction de 70 € réservée aux 14-17 ans bénéficiaires de l’allocation de rentrée scolaire, aux bénéficiaires de l’AEEH (6-19 ans) et de l’AAH (16-30 ans) et aux étudiants boursiers (source : https://sports.gouv.fr/pratiques-sportives/sports-pour-tous/pass-sport/). Postérieurement au cas, le dispositif 2026-2027 a été ramené à 50 € et rouvert aux 6-17 ans sous condition de quotient familial (source : https://www.service-public.gouv.fr/particuliers/actualites/A15850?lang=fr).',
+      'Repère réel : le label École française d’équitation de la FFE peut être assorti des mentions Poney Club de France et Cheval Club de France ; la FFE délivre également un label Equi Handi Club (source : https://www.ffe.com/pratiquer/labels/ecole-francaise-d-equitation).',
     ],
   },
 
@@ -536,11 +546,11 @@ const etab: Etablissement = {
       contenu: [
         { type: 'p', texte: 'Présents : Odile Bérardier (présidente), Gérard Chazelle (trésorier), Agnès Rivollier (secrétaire), cinq administrateurs ; Julien Montagnon (directeur, voix consultative).' },
         { type: 'h', texte: '1. Comptes 2025' },
-        { type: 'p', texte: "Le trésorier présente un déficit de 2 446 €, après un déficit de 5 586 € en 2023 et un excédent de 745 € en 2024. La trésorerie au 31 décembre s'élève à 52 390 €, mais 40 600 € correspondent à des forfaits et cotisations encaissés pour la fin de la saison. Les capitaux propres s'établissent à 17 767 €." },
+        { type: 'p', texte: "Le trésorier présente un déficit de 4 449 €, après des déficits de 7 416 € en 2023 et de 1 085 € en 2024. La trésorerie au 31 décembre s'élève à 48 144 €, mais 40 600 € correspondent à des forfaits et cotisations encaissés pour la fin de la saison. Les fonds propres s'établissent à 12 105 €. Il rappelle que l'aide au parcours emploi compétences a perdu 2 200 € en 2025 et que la revalorisation de la rémunération de la monitrice, nécessaire au respect des minima conventionnels, a pesé sur les trois exercices." },
         { type: 'citation', texte: "Notre trésorerie appartient en grande partie aux familles : c'est de l'argent pour des séances que nous devons encore donner. Nous ne pouvons pas acheter un tracteur avec.", auteur: 'Gérard Chazelle, trésorier' },
         { type: 'citation', texte: "Nous avons toujours bouclé nos fins d'année. Si la commune prend sa part, le projet de renouvellement est à notre portée.", auteur: 'Odile Bérardier, présidente' },
         { type: 'h', texte: '2. Budget 2026' },
-        { type: 'p', texte: "Le budget prévoit un excédent de 7 816 €, fondé sur une hausse moyenne des tarifs d'environ 4 %, quelques forfaits supplémentaires, 4 000 € de mécénat et la fin du contrat aidé en juin. Deux administrateurs s'abstiennent en jugeant le mécénat incertain." },
+        { type: 'p', texte: "Le budget prévoit un excédent de 6 302 €, fondé sur une hausse moyenne des tarifs d'environ 4 %, quelques forfaits supplémentaires, 4 000 € de mécénat et la fin du parcours emploi compétences en juin. Deux administrateurs s'abstiennent en jugeant le mécénat incertain." },
         { type: 'h', texte: '3. Contributions volontaires en nature 2025' },
         { type: 'tableau', colonnes: ['Nature', 'Heures'], alignDroite: [1], lignes: [
           ['Accueil du week-end', 900],
@@ -549,7 +559,7 @@ const etab: Etablissement = {
           ['Concours internes et animations', 450],
           ['Administration (bureau, trésorerie)', 300],
           ['Total', 3100],
-        ], note: "Valorisation indicative proposée par le trésorier : 15 € de l'heure, soit 46 500 €, non intégrée aux comptes du dossier. La mise à disposition gratuite des prés est estimée par lui à 1 200 € par an." },
+        ], note: "Valorisation indicative proposée par le trésorier : 15 € de l'heure (environ le SMIC horaire chargé), soit 46 500 €, non intégrée aux comptes du dossier ; l'annexe des comptes annuels en décrit la nature et l'importance. La mise à disposition gratuite des prés est estimée par lui à 1 200 € par an." },
         { type: 'h', texte: 'Décisions' },
         { type: 'liste', items: ['Budget 2026 adopté (6 voix pour, 2 abstentions).', 'Mandat donné à la présidente pour ouvrir la renégociation de la convention.', 'Recours à un regard extérieur en gestion pour préparer cette négociation.'] },
       ],
@@ -655,7 +665,7 @@ const etab: Etablissement = {
         date: '2026-02-02',
         objet: 'Analyse de nos comptes 2023 à 2025 et du budget 2026',
         corps: [
-          "Notre trésorier et moi-même n'avons pas la même lecture de nos comptes : il s'inquiète de déficits répétés, je constate que la trésorerie n'a jamais été aussi élevée. Je souhaite une analyse qui nous mette d'accord sur les faits.",
+          "Notre trésorier et moi-même n'avons pas la même lecture de nos comptes : il s'inquiète de déficits répétés, je constate que la trésorerie reste élevée, autour de 48 000 € en fin d'année. Je souhaite une analyse qui nous mette d'accord sur les faits.",
           "Analysez l'évolution de nos ressources, de nos charges, de notre structure financière et de notre trésorerie, ainsi que le coût de chacune de nos activités.",
         ],
       },
@@ -756,6 +766,7 @@ const etab: Etablissement = {
     { libelle: 'Adhérents', unite: 'adhérents', valeurs: { 2023: 232, 2024: 236, 2025: 229, 2026: 232 } },
     { libelle: 'Heures-cavalier par équidé disponible et par semaine', unite: 'h', valeurs: { 2023: 8.6, 2024: 8.8, 2025: 8.5 }, aide: 'Forfaits et cartes, 36 semaines, 23 équidés disponibles en moyenne.' },
     { libelle: 'Part des forfaits au tarif réduit', unite: '%', valeurs: { 2023: 31, 2024: 33, 2025: 35 } },
+    { libelle: 'Heures de travail par équidé disponible et par an', unite: 'h', valeurs: { 2023: 440, 2024: 455, 2025: 460 }, aide: 'Toutes activités (reprises, cartes, stages, scolaires, équitation adaptée), 25 équidés disponibles en moyenne. Repère Réseau Équin 2024 : moyenne 263 h, médiane 199 h.' },
     { libelle: 'Heures de bénévolat déclarées', unite: 'h', valeurs: { 2023: 3400, 2024: 3250, 2025: 3100 } },
     { libelle: 'Âge moyen de la cavalerie', unite: 'ans', valeurs: { 2023: 13.1, 2024: 13.6, 2025: 13.4 } },
   ],

@@ -71,17 +71,17 @@ const etab: Etablissement = {
 
   presentation: {
     introduction:
-      "Le Haras du Mesnil-Sorel élève des chevaux de sport Selle Français destinés au saut d'obstacles. Il fait naître une douzaine de poulains par an, les élève au pré jusqu'à deux ans, les débourre à trois ans, puis les présente en concours de jeunes chevaux jusqu'à leur vente. L'étalon de la maison, Éclat de Varenne, sert une cinquantaine de juments extérieures chaque saison. Depuis 2014, l'exploitation est conduite par Hélène et Antoine Lécuyer, enfants des fondateurs.",
+      "Le Haras du Mesnil-Sorel élève des chevaux de sport Selle Français destinés au saut d'obstacles. Il fait naître une douzaine de poulains par an, les élève au pré jusqu'à deux ans, les débourre à trois ans, puis les présente sur le circuit SHF des jeunes chevaux jusqu'à leur vente. L'étalon de la maison, Éclat de Varenne, approuvé par le stud-book Selle Français, a inséminé 36 juments extérieures en 2025, contre 50 en 2023. Depuis 2014, l'exploitation est conduite par Hélène et Antoine Lécuyer, enfants des fondateurs.",
     histoire: [
       "Michel et Annick Lécuyer s'installent en 1987 sur la ferme familiale du Mesnil-Sorel, alors exploitation laitière. Passionnés de concours, ils remplacent progressivement les vaches par des poulinières et vendent leurs premiers chevaux de trois ans à des marchands du pays d'Auge. L'élevage atteint une quinzaine de juments à la fin des années 2000 et se fait un nom auprès des cavaliers amateurs de la région.",
       "En 2014, Hélène, ingénieure agronome revenue de dix ans de conseil en élevage, et son frère Antoine, cavalier professionnel formé chez plusieurs marchands normands, reprennent l'exploitation sous la forme d'une EARL. Les terres restent dans le groupement foncier familial. L'EARL rachète le cheptel et le matériel à l'aide d'un prêt de reprise sur douze ans.",
-      "De 2016 à 2019, les associés modernisent l'outil : écurie de seize boxes et stabulation pour les jeunes, hangar à fourrage et fumière couverte, puis bâtiment de poulinage avec vidéosurveillance, barre d'insémination et petit laboratoire de semence. L'achat d'Éclat de Varenne en 2019 ouvre une activité d'étalonnage et attire les pensions de poulinières de tiers.",
+      "De 2016 à 2019, les associés modernisent l'outil : écurie de seize boxes et stabulation pour les jeunes, hangar à fourrage et fumière couverte, puis bâtiment de poulinage avec vidéosurveillance, barre d'insémination et laboratoire de collecte, agréé par les services vétérinaires de l'État pour l'expédition de semence réfrigérée sur le territoire national. L'achat d'Éclat de Varenne en 2019 ouvre une activité d'étalonnage et attire les pensions de poulinières de tiers.",
       "Les années 2021 à 2023 sont favorables : les chevaux se vendent bien et à bon prix. Depuis 2024, les acheteurs se font plus sélectifs, les chevaux moyens trouvent difficilement preneur et les associés en gardent davantage, dans l'espoir de les vendre plus cher une fois expérimentés. L'écurie se remplit, le découvert bancaire devient fréquent et un prêt de consolidation a été souscrit fin 2024.",
     ],
     valeurs: [
       { titre: 'Des chevaux de sport nés et élevés dehors', texte: "Les poulains vivent en troupeau au pré jusqu'à deux ans et demi, avec abri et complément en hiver. Les associés considèrent que cette éducation conditionne la solidité des chevaux." },
       { titre: 'La transparence avec les acheteurs', texte: "Chaque cheval mis en vente dispose d'un dossier : origines, radiographies récentes, vidéos de travail et résultats en concours. Les associés acceptent les visites d'achat sans conditions." },
-      { titre: 'La continuité familiale', texte: "Le haras fait naître la sixième génération de certaines souches maternelles. Les associés tiennent à conserver les meilleures lignées, même lorsque la conjoncture invite à réduire l'effectif." },
+      { titre: 'La continuité familiale', texte: "Le haras fait naître la cinquième génération de certaines souches maternelles. Les associés tiennent à conserver les meilleures lignées, même lorsque la conjoncture invite à réduire l'effectif." },
     ],
     chronologie: [
       { annee: 1987, titre: 'Installation des fondateurs', texte: 'Michel et Annick Lécuyer reprennent la ferme familiale et achètent leurs trois premières poulinières.' },
@@ -91,7 +91,7 @@ const etab: Etablissement = {
       { annee: 2018, titre: 'Hangar et fumière', texte: 'Stockage du foin à l’abri et mise aux normes de la gestion des effluents.' },
       { annee: 2019, titre: 'Pôle reproduction et étalon', texte: "Bâtiment de poulinage et de reproduction ; achat de l'étalon Éclat de Varenne." },
       { annee: 2023, titre: 'Dernière bonne année de ventes', texte: 'Treize chevaux vendus, dont quatre de cinq et six ans.' },
-      { annee: 2024, titre: 'Prêt de consolidation', texte: "Un prêt de 35 000 € sur quatre ans est souscrit en novembre pour réduire le découvert." },
+      { annee: 2024, titre: 'Prêt de consolidation', texte: "Un prêt de 50 000 € sur cinq ans est souscrit en novembre pour réduire le découvert." },
     ],
     organisation:
       "Hélène Lécuyer conduit la reproduction (suivi des chaleurs, inséminations, poulinages), les ventes, la relation avec les éleveurs utilisateurs de l'étalon et la gestion administrative. Antoine Lécuyer débourre et travaille les jeunes chevaux, les présente en concours et gère les cultures d'herbe et le matériel. Ils sont épaulés par un cavalier-soigneur salarié, une apprentie et, de février à mai, par un salarié saisonnier chargé de la surveillance des poulinages.",
@@ -105,7 +105,7 @@ const etab: Etablissement = {
     elements: [
       { nom: 'Écurie principale', type: 'hebergement-equin', capacite: '16 boxes de 3,5 × 3,5 m', annee: 2016, etat: 'bon', description: 'Ossature bois, ventilation naturelle, sellerie et local de soins. Accueille les poulinières en fin de gestation, les chevaux au travail et les chevaux de tiers en valorisation.' },
       { nom: 'Stabulation des jeunes', type: 'hebergement-equin', capacite: '24 jeunes chevaux en lots de 6', annee: 2016, etat: 'bon', description: "Stabulation paillée ouverte sur les herbages, utilisée de novembre à mars pour les yearlings et les deux ans." },
-      { nom: 'Bâtiment de poulinage et de reproduction', type: 'batiment', capacite: '6 boxes de poulinage de 4 × 4 m, barre de soins, laboratoire', annee: 2019, etat: 'excellent', description: "Vidéosurveillance et alarme de poulinage, infirmerie, barre d'insémination, mannequin de collecte et petit laboratoire de préparation de la semence réfrigérée.", photo: 'detail' },
+      { nom: 'Bâtiment de poulinage et de reproduction', type: 'batiment', capacite: '6 boxes de poulinage de 4 × 4 m, barre de soins, laboratoire de collecte', annee: 2019, etat: 'excellent', description: "Vidéosurveillance et alarme de poulinage, infirmerie, barre d'insémination, mannequin de collecte et laboratoire de préparation de la semence réfrigérée. Le centre de collecte dispose d'un agrément sanitaire national ; la clinique vétérinaire en assure le suivi et les contrôles sanitaires annuels de l'étalon.", photo: 'detail' },
       { nom: "Écurie ancienne en colombage", type: 'hebergement-equin', capacite: '8 boxes de 3 × 3 m', annee: 1960, etat: 'vieillissant', description: "Ancienne étable reconvertie par les fondateurs. Utilisée pour les poulinières de tiers à leur arrivée et pour les quarantaines." },
       { nom: 'Hangar à fourrage et fumière couverte', type: 'batiment', capacite: '450 tonnes de foin en bottes', annee: 2018, etat: 'bon', description: 'Stockage de la récolte de foin et du matériel. Fumière couverte de 180 m².' },
       { nom: 'Paddock sablé de travail', type: 'aire-travail', capacite: '45 × 25 m, non drainé', annee: 2008, etat: 'a-renover', description: "Seule aire de travail de l'exploitation. Impraticable après de fortes pluies, environ 70 jours par an selon le relevé d'Antoine Lécuyer." },
@@ -152,10 +152,10 @@ const etab: Etablissement = {
       { etat: 'Convalescence', nombre: 1, commentaire: "Lilas du Mesnil, entorse du boulet en octobre 2025, reprise prévue en février" },
     ],
     fiches: [
-      { nom: 'Éclat de Varenne', race: 'Selle Français', naissance: 2014, sexe: 'étalon', robe: 'Bai brun', role: 'Étalon de la maison', statut: 'Propriété de l’EARL, acquis en 2019', notes: "Par Vigilant du Rouvre et une mère par Quadrille de Tessé. A tourné en épreuves amateur jusqu'en 2021. Ses premiers produits ont cinq ans en 2025 ; 50 juments de tiers inséminées en 2025 contre 58 en 2023." },
+      { nom: 'Éclat de Varenne', race: 'Selle Français', naissance: 2014, sexe: 'étalon', robe: 'Bai brun', role: 'Étalon de la maison', statut: 'Propriété de l’EARL, acquis en 2019', notes: "Par Saphir du Rouvre et une mère par Quadrille de Tessé. Approuvé par le stud-book Selle Français, il a couru jusqu'en 2021 en épreuves Pro 2 (1,35 m). Ses premiers produits ont cinq ans en 2025 ; 36 juments de tiers inséminées en 2025 contre 50 en 2023." },
       { nom: 'Tamaris du Mesnil', race: 'Selle Français', naissance: 2007, sexe: 'jument', robe: 'Alezane', role: 'Poulinière de tête', statut: 'Propriété de l’EARL (cheptel repris en 2014)', notes: 'Mère de Kalypso du Mesnil et de deux chevaux vendus à plus de 40 000 €. Vide en 2025 après trois inséminations ; le vétérinaire évoque un transfert d’embryon.' },
-      { nom: 'Héloïse de Montreuil', race: 'Selle Français', naissance: 2017, sexe: 'jument', robe: 'Baie', role: 'Jeune poulinière', statut: 'Propriété de l’EARL, achetée en 2023', notes: 'Ancienne jument de concours (épreuves amateur 1,15 m). Deuxième poulain attendu en 2026, par un étalon extérieur.' },
-      { nom: 'Kalypso du Mesnil', race: 'Selle Français', naissance: 2020, sexe: 'jument', robe: 'Baie', role: 'Jeune cheval de 5 ans', statut: 'Stock (élevage)', notes: "Par Éclat de Varenne et Tamaris du Mesnil. Qualifiée pour la finale des 5 ans en 2025 (6 sans-faute sur 8 parcours). Deux marques d'intérêt reçues, aucune offre ferme au-dessus de 35 000 €." },
+      { nom: 'Héloïse de Montreuil', race: 'Selle Français', naissance: 2017, sexe: 'jument', robe: 'Baie', role: 'Jeune poulinière', statut: 'Propriété de l’EARL, achetée en 2023', notes: 'Ancienne jument de concours (épreuves Amateur 2, 1,15 m). Deuxième poulain attendu en 2026, par un étalon extérieur en semence congelée.' },
+      { nom: 'Kalypso du Mesnil', race: 'Selle Français', naissance: 2020, sexe: 'jument', robe: 'Baie', role: 'Jeune cheval de 5 ans', statut: 'Stock (élevage)', notes: "Par Éclat de Varenne et Tamaris du Mesnil. Retenue au classement SHF pour la finale du cycle classique 5 ans à Fontainebleau en 2025 (6 sans-faute sur 8 parcours), deux sans-faute en finale. Deux marques d'intérêt reçues, aucune offre ferme au-dessus de 35 000 €." },
       { nom: 'Jazz du Mesnil', race: 'Selle Français', naissance: 2019, sexe: 'hongre', robe: 'Bai', role: 'Jeune cheval de 6 ans', statut: 'Stock (élevage)', notes: 'Tendinite en 2024, saison perdue. Reprise en 2025 avec des parcours réguliers mais sans qualification. Valeur au bilan supérieure à la fourchette basse du marché.' },
       { nom: 'Lord du Mesnil', race: 'Selle Français', naissance: 2021, sexe: 'hongre', robe: 'Gris', role: 'Jeune cheval de 4 ans', statut: 'Stock (élevage)', notes: 'Par Éclat de Varenne. Cheval respectueux, encore vert. Antoine Lécuyer souhaite le conserver jusqu’à 6 ans.' },
       { nom: 'Magnum du Mesnil', race: 'Selle Français', naissance: 2022, sexe: 'hongre', robe: 'Bai', role: 'Jeune cheval de 3 ans', statut: 'Stock (élevage)', notes: "Meilleur trois ans de la génération : 1er du concours de modèle et allures régional à deux ans. Débourré au printemps 2025. Exclu de l'offre du marchand." },
@@ -172,14 +172,14 @@ const etab: Etablissement = {
 
   activites: {
     synthese:
-      "L'activité suit le cycle biologique des chevaux : poulinages et saison de monte de février à juillet, sevrages à l'automne, concours de jeunes chevaux d'avril à septembre, ventes au printemps et après les finales de septembre. Les prix des saillies et des pensions sont fixés chaque année en décembre ; les chevaux sont vendus de gré à gré.",
+      "L'activité suit le cycle biologique des chevaux : poulinages et saison de monte de février à juillet, sevrages à l'automne, circuit SHF des jeunes chevaux de mars à août, finales nationales à la Grande Semaine de Fontainebleau (fin août, début septembre), ventes au printemps et à l'automne. Les conditions de monte et les prix des pensions sont fixés chaque année en décembre ; les chevaux sont vendus de gré à gré, parfois aux enchères en ligne.",
     prestations: [
       { id: 'ventes-foals', nom: 'Ventes de foals au sevrage', activite: 'naissage', description: "Foals vendus à six mois à des éleveurs ou des marchands, sur photos et vidéos, ou présentés en concours de foals.", unite: 'cheval vendu', prix: an(4000, 3800, 3500, 3800), volume: an(2, 2, 1, 1), compte: '701', periode: 'Septembre à novembre', clientele: 'Éleveurs, marchands' },
       { id: 'ventes-loisir', nom: 'Ventes de jeunes chevaux de loisir', activite: 'elevage', description: "Chevaux de deux ans jugés sans aptitude au sport (modèle, allures ou santé), vendus pour l'équitation de loisir.", unite: 'cheval vendu', prix: an(3500, 3200, 3000, 3200), volume: an(1, 1, 1, 1), compte: '701', clientele: 'Particuliers, centres équestres' },
       { id: 'ventes-3ans', nom: 'Ventes de chevaux de 3 ans', activite: 'valorisation', description: 'Chevaux débourrés, montés aux trois allures, vendus après les premiers concours de 3 ans ou à l’automne.', unite: 'cheval vendu', prix: an(8200, 7400, 6800, 7200), volume: an(3, 2, 2, 3), compte: '701', periode: 'Mai à novembre', clientele: 'Marchands, cavaliers professionnels' },
       { id: 'ventes-4ans', nom: 'Ventes de chevaux de 4 ans', activite: 'valorisation', description: 'Chevaux ayant couru le circuit des 4 ans, avec dossier radiographique.', unite: 'cheval vendu', prix: an(14500, 12500, 11800, 13000), volume: an(3, 2, 2, 2), compte: '701', periode: 'Avril à octobre', clientele: 'Cavaliers professionnels, amateurs confirmés' },
       { id: 'ventes-5-6ans', nom: 'Ventes de chevaux de 5 et 6 ans', activite: 'valorisation', description: "Chevaux expérimentés en concours de jeunes chevaux, vendus prêts pour les épreuves amateur ou professionnelles.", unite: 'cheval vendu', prix: an(29000, 26000, 24000, 30000), volume: an(4, 3, 3, 5), compte: '701', periode: 'Toute l’année, pic en septembre et octobre', clientele: 'Cavaliers amateurs, cavaliers professionnels, acheteurs étrangers' },
-      { id: 'saillies', nom: 'Contrats de saillie de l’étalon Éclat de Varenne', activite: 'etalonnage', description: "Insémination en semence fraîche réfrigérée (IAR) expédiée depuis le centre de collecte du haras. Frais techniques payés à la réservation (330 € HT en 2025), solde de 500 € HT dû seulement si la jument est pleine au 1er octobre. Le prix indiqué est la recette moyenne encaissée par contrat, compte tenu des juments restées vides.", unite: 'contrat de saillie', prix: an(640, 655, 660, 670), volume: an(44, 40, 34, 34), capaciteAnnuelle: constant(70), compte: '706', periode: 'Février à juillet (solde en octobre)', clientele: 'Éleveurs amateurs et professionnels du Grand Ouest' },
+      { id: 'saillies', nom: 'Contrats de saillie de l’étalon Éclat de Varenne', activite: 'etalonnage', description: "Insémination en semence fraîche réfrigérée (IAR) expédiée depuis le centre de collecte du haras. Frais techniques payés à la réservation (330 € HT en 2025), solde de 500 € HT dû seulement si la jument est pleine au 1er octobre. Le prix indiqué est la recette moyenne encaissée par contrat, compte tenu des juments restées vides.", unite: 'contrat de saillie', prix: an(640, 655, 660, 670), volume: an(50, 44, 36, 36), capaciteAnnuelle: constant(70), compte: '706', periode: 'Février à juillet (solde en octobre)', clientele: 'Éleveurs amateurs et professionnels du Grand Ouest' },
       { id: 'pension-poulinieres', nom: 'Pension de poulinières de tiers', activite: 'pensions-tiers', description: "Pension au pré avec abri, box en fin de gestation, foal sous la mère compris, suivi des chaleurs. Actes vétérinaires refacturés.", unite: 'mois de pension', prix: an(315, 325, 335, 350), volume: an(152, 160, 170, 174), capaciteAnnuelle: constant(192), compte: '706', periode: 'Pic de janvier à juillet', clientele: 'Éleveurs propriétaires de une à quatre juments' },
       { id: 'poulinage-tiers', nom: 'Poulinage pour compte de tiers', activite: 'pensions-tiers', description: 'Forfait comprenant le box de poulinage, la surveillance vidéo jour et nuit, la mise bas et les soins néonatals.', unite: 'poulinage', prix: an(520, 540, 560, 580), volume: an(14, 15, 16, 16), capaciteAnnuelle: an(23, 24, 24, 24), compte: '706', periode: 'Février à mai', clientele: 'Propriétaires de poulinières en pension' },
       { id: 'pension-jeunes-tiers', nom: "Pension d'élevage de jeunes chevaux de tiers", activite: 'pensions-tiers', description: 'Élevage au pré en troupeau, stabulation en hiver, parage et vermifugation compris.', unite: 'mois de pension', prix: an(185, 190, 195, 205), volume: an(84, 96, 100, 96), capaciteAnnuelle: constant(120), compte: '706', clientele: 'Petits éleveurs sans herbages adaptés' },
@@ -187,11 +187,11 @@ const etab: Etablissement = {
     ],
     calendrier: [
       'Janvier : bilan de la saison, fixation des tarifs de saillie, réservations des poulinières de tiers.',
-      'Février à mai : poulinages (élevage et tiers), surveillance de nuit par le salarié saisonnier.',
+      'Février à mai : poulinages (élevage et tiers), surveillance de nuit par le salarié saisonnier ; déclaration des naissances et identification des foals (transpondeur et signalement) pour leur enregistrement au SIRE avant le sevrage.',
       'Février à juillet : saison de monte, collectes de l’étalon et expéditions de semence trois fois par semaine.',
-      'Avril à septembre : concours de jeunes chevaux, finales nationales en septembre.',
+      'Mars à août : épreuves SHF du cycle classique (3 à 6 ans) ; sélection pour les finales sur le classement arrêté mi-août ; Grande Semaine de Fontainebleau fin août et début septembre.',
       'Juin : récolte du foin sur 25 ha.',
-      'Septembre à novembre : sevrages, ventes d’automne, rentrée des jeunes en stabulation.',
+      'Septembre à novembre : sevrages, ventes d’automne, rentrée des jeunes en stabulation ; 1er octobre : constat de gestation des juments de tiers et facturation du solde des saillies.',
     ],
   },
 
@@ -199,16 +199,17 @@ const etab: Etablissement = {
     synthese:
       "Les clients du haras relèvent de deux mondes : les acheteurs de chevaux, peu nombreux et exigeants, dont les achats font l'essentiel des variations du chiffre d'affaires, et les éleveurs qui utilisent l'étalon ou confient leurs juments et leurs jeunes chevaux, clientèle plus fidèle et plus régulière.",
     segments: [
-      { nom: 'Cavaliers amateurs acheteurs', part: 0.26, effectif: '4 à 6 achats par an', description: 'Achètent des chevaux de 5 et 6 ans prêts à concourir ; décident après essai et visite vétérinaire.' },
-      { nom: 'Marchands et cavaliers professionnels', part: 0.16, effectif: '5 à 8 acheteurs réguliers', description: 'Achètent des 3 et 4 ans pour les revendre ; négocient fortement, paient comptant.' },
-      { nom: 'Éleveurs utilisateurs de l’étalon', part: 0.16, effectif: '50 éleveurs en 2025', description: 'Petits éleveurs du Grand Ouest, souvent fidèles plusieurs saisons ; sensibles aux résultats des produits.' },
-      { nom: 'Propriétaires de poulinières et de jeunes en pension', part: 0.31, effectif: '22 propriétaires', description: 'Éleveurs sans structure adaptée ; recherchent proximité, sécurité du poulinage et suivi de reproduction.' },
+      { nom: 'Cavaliers amateurs acheteurs', part: 0.29, effectif: '4 à 6 achats par an', description: 'Achètent des chevaux de 5 et 6 ans prêts à concourir ; décident après essai et visite vétérinaire.' },
+      { nom: 'Marchands et cavaliers professionnels', part: 0.17, effectif: '5 à 8 acheteurs réguliers', description: 'Achètent des 3 et 4 ans pour les revendre ; négocient fortement, paient comptant.' },
+      { nom: 'Éleveurs utilisateurs de l’étalon', part: 0.09, effectif: '32 éleveurs en 2025', description: 'Petits éleveurs du Grand Ouest, souvent fidèles plusieurs saisons ; sensibles aux résultats des produits.' },
+      { nom: 'Propriétaires de poulinières et de jeunes en pension', part: 0.34, effectif: '22 propriétaires', description: 'Éleveurs sans structure adaptée ; recherchent proximité, sécurité du poulinage et suivi de reproduction.' },
       { nom: 'Propriétaires de chevaux en valorisation', part: 0.11, effectif: '7 propriétaires', description: 'Confient un jeune cheval quelques mois pour le débourrage ou une saison de concours.' },
     ],
     indicateurs: [
       { libelle: 'Chevaux élevés vendus', valeurs: { 2023: 13, 2024: 10, 2025: 9, 2026: 12 }, commentaire: '2026 : budget.' },
       { libelle: 'Prix moyen des chevaux de 5 et 6 ans vendus', unite: '€', valeurs: { 2023: 29000, 2024: 26000, 2025: 24000, 2026: 30000 } },
-      { libelle: 'Éleveurs utilisateurs de l’étalon', valeurs: { 2023: 55, 2024: 52, 2025: 47 }, commentaire: 'Certains éleveurs font inséminer plusieurs juments.' },
+      { libelle: 'Éleveurs utilisateurs de l’étalon', valeurs: { 2023: 45, 2024: 40, 2025: 32 }, commentaire: 'Certains éleveurs font inséminer plusieurs juments.' },
+      { libelle: 'Juments de tiers inséminées par l’étalon', valeurs: { 2023: 50, 2024: 44, 2025: 36, 2026: 36 }, commentaire: '2026 : budget.' },
       { libelle: 'Taux de réservation renouvelée (pensions de poulinières)', unite: '%', valeurs: { 2023: 78, 2024: 81, 2025: 83 } },
       { libelle: 'Délai moyen entre mise en vente et vente (chevaux de 4 ans et plus)', unite: 'mois', valeurs: { 2023: 3.5, 2024: 6, 2025: 8.5 } },
     ],
@@ -233,11 +234,13 @@ const etab: Etablissement = {
       { canal: 'Site internet du haras', description: 'Fiches des chevaux à vendre, catalogue de l’étalon. Mis à jour par Hélène Lécuyer, irrégulièrement en période de poulinage.' },
       { canal: 'Réseaux sociaux', description: '3 400 abonnés ; vidéos de travail et de concours publiées par Antoine Lécuyer.' },
       { canal: 'Plateformes d’annonces spécialisées', description: 'Annonces payantes pour les chevaux de 4 ans et plus ; frais inclus dans les charges de commercialisation.' },
-      { canal: 'Concours et finales', description: 'Premier lieu de contact avec les acheteurs de chevaux de 5 et 6 ans.' },
+      { canal: 'Circuit SHF et Grande Semaine de Fontainebleau', description: 'Premier lieu de contact avec les acheteurs de chevaux de 5 et 6 ans.' },
+      { canal: 'Ventes aux enchères en ligne', description: 'Deux chevaux présentés depuis 2024 sur une plateforme d’enchères, un seul adjugé ; frais d’inscription non remboursés en cas d’invendu.' },
       { canal: 'Journée de l’étalon', description: 'Présentation annuelle de l’étalon et de ses produits au haras, en janvier.' },
     ],
     reclamations: [
       'Retards ponctuels d’expédition de semence les week-ends de mai.',
+      'Contestation par deux éleveurs du solde de saillie facturé au 1er octobre, faute de certificat vétérinaire de jument vide reçu dans les délais.',
       'Un acheteur de 2024 a signalé une boiterie apparue trois semaines après la vente ; le litige s’est réglé à l’amiable.',
       'Demandes répétées des éleveurs pour un suivi publié des performances des produits de l’étalon.',
     ],
@@ -249,7 +252,7 @@ const etab: Etablissement = {
     liste: [
       { nom: 'Coopérative d’approvisionnement Auge-Bocage', categorie: 'Alimentation', prestation: 'Aliments concentrés pour poulinières, jeunes et chevaux au travail', ligne: 'concentres', part: 0.9, evolutionTarifaire: 'Baisse de 4 % en 2024 après le pic de 2023, stable depuis', delaiPaiement: '60 jours', conditions: 'Ristourne de fin d’année selon les volumes', dependance: 'moyenne', risques: 'Coopérative proche ; un concurrent livre le secteur à des prix voisins.' },
       { nom: 'Négoce Pellerin Fourrages', categorie: 'Fourrage', prestation: 'Foin de complément et paille en balles', ligne: 'foin', part: 0.8, evolutionTarifaire: 'Très variable selon les récoltes ; +35 % en 2023', delaiPaiement: '30 jours', conditions: 'Livraison par 20 tonnes', dependance: 'faible', risques: 'Qualité inégale du foin acheté.' },
-      { nom: 'Clinique vétérinaire équine du Haut-Auge', categorie: 'Soins et reproduction', prestation: 'Suivi gynécologique, échographies, inséminations, urgences, contrôle de la semence', ligne: 'veterinaire', part: 0.85, evolutionTarifaire: '+5 % en 2025', delaiPaiement: '30 jours fin de mois', conditions: 'Forfait de suivi de reproduction par jument', dependance: 'forte', risques: 'Seule clinique équine à moins de 40 km assurant les urgences de nuit.' },
+      { nom: 'Clinique vétérinaire équine du Haut-Auge', categorie: 'Soins et reproduction', prestation: 'Suivi gynécologique, échographies, inséminations, urgences, contrôles sanitaires de l’étalon et suivi du centre de collecte', ligne: 'veterinaire', part: 0.85, evolutionTarifaire: '+5 % en 2025', delaiPaiement: '30 jours fin de mois', conditions: 'Forfait de suivi de reproduction par jument', dependance: 'forte', risques: 'Seule clinique équine à moins de 40 km assurant les urgences de nuit.' },
       { nom: 'Mathieu Lebrun, maréchal-ferrant', categorie: 'Soins', prestation: 'Ferrure des chevaux au travail, parage des poulinières et des jeunes', ligne: 'marechalerie', part: 1, evolutionTarifaire: '+6 % en 2025', delaiPaiement: 'À réception', conditions: 'Passage toutes les cinq semaines', dependance: 'forte', risques: 'Agenda saturé ; délais de trois semaines pour les interventions imprévues.' },
       { nom: 'ETA Hamelin', categorie: 'Travaux agricoles', prestation: 'Fauche, pressage, épandage du fumier', ligne: 'travaux-tiers', part: 1, evolutionTarifaire: 'Indexée sur le prix du gazole', delaiPaiement: '45 jours', conditions: 'Chantier de fenaison planifié en mai', dependance: 'moyenne', risques: 'Priorité donnée aux grandes exploitations lors des fenêtres météo courtes.' },
       { nom: 'GFA du Mesnil-Sorel', categorie: 'Foncier', prestation: 'Bail rural sur 42 ha et bâtiments anciens', ligne: 'fermage', part: 0.52, evolutionTarifaire: 'Indice national des fermages', delaiPaiement: 'Annuel, à la Saint-Michel', conditions: 'Bail de neuf ans renouvelé en 2023', dependance: 'forte', risques: 'Groupement familial : les parents fondateurs et une sœur non exploitante en sont associés.' },
@@ -259,14 +262,16 @@ const etab: Etablissement = {
     partenaires: [
       { nom: 'Centre de gestion rurale Ouche et Auge', type: 'Comptabilité et conseil', description: 'Tient la comptabilité, établit le barème de coût de production des jeunes chevaux et accompagne les associés.' },
       { nom: 'Association régionale des éleveurs de chevaux de sport', type: 'Filière', description: 'Organise les concours de foals, de modèle et allures et les ventes groupées régionales.' },
+      { nom: 'SHF (Société hippique française)', type: 'Institution', description: 'Organise le circuit de valorisation des jeunes chevaux (cycles classique et libre) et les finales nationales de la Grande Semaine de Fontainebleau.' },
+      { nom: 'Stud-book Selle Français et IFCE (SIRE)', type: 'Institution', description: 'Approbation des étalons, inscription des produits au stud-book ; enregistrement des naissances, des saillies et des propriétaires au fichier central SIRE.' },
       { nom: 'Centre de valorisation de la Touques', type: 'Prestataire potentiel', description: 'Structure professionnelle de travail et de commercialisation de jeunes chevaux, à 35 km.' },
-      { nom: 'Lycée agricole du secteur', type: 'Formation', description: 'Accueil de l’apprentie en bac professionnel conduite et gestion de l’entreprise hippique.' },
+      { nom: 'Lycée agricole du secteur', type: 'Formation', description: 'Formation en alternance de l’apprentie (bac professionnel conduite et gestion de l’entreprise hippique, 2024-2027).' },
     ],
   },
 
   rh: {
     synthese:
-      "Le travail repose d'abord sur les deux associés, qui assurent ensemble environ 5 500 heures par an. Le haras emploie un cavalier-soigneur à temps plein, une apprentie depuis septembre 2024 et un saisonnier pour les poulinages. Une soigneuse salariée, partie en août 2024, n'a pas été remplacée.",
+      "Le travail repose d'abord sur les deux associés, qui assurent ensemble environ 5 500 heures par an. Le haras emploie un cavalier-soigneur à temps plein, une apprentie mineure depuis septembre 2024 et un saisonnier pour les poulinages. Une soigneuse salariée, partie en août 2024, n'a pas été remplacée.",
     organigramme: [
       { id: 'h', intitule: 'Cogérante : reproduction, ventes, gestion', personne: 'Hélène Lécuyer' },
       { id: 'a', intitule: 'Cogérant : travail des jeunes chevaux, cultures, matériel', personne: 'Antoine Lécuyer' },
@@ -284,11 +289,11 @@ const etab: Etablissement = {
     saisonnalite:
       "La charge de travail culmine de février à juin, lorsque poulinages, saison de monte, concours de jeunes chevaux et fenaison se superposent. L'hiver est consacré au débourrage des trois ans et aux soins aux jeunes en stabulation.",
     dirigeant:
-      "Hélène et Antoine Lécuyer travaillent chacun environ 2 700 heures par an. Ils ne perçoivent aucun salaire : ils vivent de leurs prélèvements sur le résultat de l'EARL (26 000 € à eux deux en 2025, contre 36 000 € en 2023) et acquittent leurs cotisations sociales à la MSA, comptabilisées en charges de l'EARL. Leurs points de vue divergent sur la politique de vente des jeunes chevaux.",
-    conventionCollective: 'Convention collective nationale de la production agricole et des CUMA',
+      "Hélène et Antoine Lécuyer travaillent chacun environ 2 700 heures par an. Ils ne perçoivent aucun salaire : ils vivent de leurs prélèvements sur l'EARL (20 000 € à eux deux en 2025, contre 32 000 € en 2023, soit environ 3,70 € par heure travaillée) et acquittent leurs cotisations sociales de non-salariés agricoles à la MSA, comptabilisées en charges de l'EARL. Leurs points de vue divergent sur la politique de vente des jeunes chevaux.",
+    conventionCollective: "Convention collective nationale de la production agricole et des CUMA, applicable aux salariés de l'élevage ; le rattachement du travail de chevaux de tiers à la convention des personnels des activités hippiques reste à vérifier avec le centre de gestion",
     enjeux: [
       'Charge physique et horaires des associés en période de poulinage et de concours.',
-      'Départ de la soigneuse non remplacé : l’apprentie n’est pas autorisée à rester seule la nuit ni à monter les chevaux non débourrés.',
+      'Départ de la soigneuse non remplacé : l’apprentie, mineure, ne peut pas travailler de nuit, et la règle interne lui interdit de monter les chevaux non débourrés.',
       'Fidélisation du cavalier salarié, sollicité par des écuries de commerce.',
     ],
   },
@@ -311,16 +316,19 @@ const etab: Etablissement = {
       { nom: 'Petits éleveurs amateurs du secteur', distance: 'Secteur', offre: '1 à 3 poulinières, vente de foals et de yearlings', tarifs: 'Foals 2 500 à 4 000 €', positionnement: 'Prix bas, peu de suivi' },
     ],
     pestel: [
-      { dimension: 'Politique', faits: ["Les surfaces en herbe exploitées par l'élevage ouvrent droit aux aides découplées de la politique agricole commune.", "Les associés d'EARL relèvent du régime social des non-salariés agricoles (MSA)."] },
+      { dimension: 'Politique', faits: ["Les surfaces en herbe exploitées par l'élevage ouvrent droit aux aides découplées de la politique agricole commune.", "Les associés d'EARL relèvent du régime social des non-salariés agricoles (MSA) ; le bénéfice de l'EARL à l'impôt sur le revenu est imposé au nom des associés dans la catégorie des bénéfices agricoles.", "La SHF, association soutenue par l'État et la filière, organise la valorisation des jeunes chevaux de sport et des primes récompensent les éleveurs des chevaux classés."] },
       { dimension: 'Économique', faits: ['Les prix des aliments, des engrais et du fourrage ont fortement augmenté en 2022 et 2023, puis se sont partiellement détendus.', 'Les taux des crédits professionnels ont nettement remonté depuis 2022.', 'Les professionnels du secteur rapportent une demande soutenue pour les chevaux confirmés et un ralentissement des ventes de jeunes chevaux moyens.', 'Les prix des jeunes chevaux de sport sont très dispersés selon le niveau, l’âge, les origines et les résultats.'] },
       { dimension: 'Socioculturel', faits: ['La pratique du saut d’obstacles en compétition est majoritairement amateur.', 'Les acheteurs amateurs consultent les vidéos et les résultats en ligne avant toute visite.', 'L’attention portée au bien-être des chevaux, y compris à leur fin de carrière, progresse dans l’opinion.'] },
-      { dimension: 'Technologique', faits: ['L’insémination en semence fraîche réfrigérée ou congelée permet de choisir des étalons éloignés.', 'Le transfert d’embryons permet à une jument âgée ou de sport de donner un poulain porté par une jument receveuse.', 'Les plateformes de vente aux enchères en ligne se sont développées pour les jeunes chevaux.'] },
+      { dimension: 'Technologique', faits: ['L’insémination en semence fraîche réfrigérée (IAR) ou congelée (IAC) permet de choisir des étalons éloignés ; les stud-books de chevaux de sport autorisent tous les modes de monte et le transfert d’embryon.', 'Le transfert d’embryons permet à une jument âgée ou de sport de donner un poulain porté par une jument receveuse.', 'Les plateformes de vente aux enchères en ligne se sont développées pour les jeunes chevaux.'] },
       { dimension: 'Écologique', faits: ['Les sécheresses estivales réduisent la pousse de l’herbe et la récolte de foin certaines années.', 'Le stockage et l’épandage du fumier sont encadrés par la réglementation environnementale.'] },
-      { dimension: 'Légal', faits: ['La loi n° 2021-1539 du 30 novembre 2021 a créé un certificat d’engagement et de connaissance pour les personnes acquérant un équidé pour la première fois.', 'L’identification des équidés et leur enregistrement auprès du fichier central sont obligatoires.', 'Les activités de préparation et d’entraînement des équidés sont agricoles par nature (article L311-1 du code rural).', 'La vente d’équidés relève du régime des vices rédhibitoires du code rural, que les parties peuvent aménager par convention.'] },
+      { dimension: 'Légal', faits: ['La loi n° 2021-1539 du 30 novembre 2021 a créé un certificat d’engagement et de connaissance pour les personnes acquérant un équidé pour la première fois.', 'L’identification des équidés (transpondeur et relevé de signalement par un identificateur habilité) et leur enregistrement au fichier central SIRE sont obligatoires ; le poulain doit être identifié avant son sevrage.', 'L’inscription d’un poulain au stud-book Selle Français suppose la déclaration de saillie par l’étalonnier et la déclaration de naissance par le naisseur.', 'Les centres de collecte de sperme d’équidés sont soumis à un agrément sanitaire, national ou communautaire selon la destination de la semence.', 'Les activités de préparation et d’entraînement des équidés sont agricoles par nature (article L311-1 du code rural).', 'La vente d’équidés relève du régime des vices rédhibitoires du code rural, que les parties peuvent aménager par convention.'] },
     ],
     marche: [
       'Le marché des jeunes chevaux de sport fonctionne de gré à gré, par réseaux de marchands, concours, annonces et ventes aux enchères.',
       'Le prix d’un cheval de 3 ans moyen se situe dans le secteur entre 5 000 et 9 000 € ; un très bon cheval de 5 ou 6 ans avec des résultats peut dépasser 40 000 €.',
+      'Les données de l’IFCE sur les achats de chevaux de CSO montrent des prix moyens bien plus bas que ceux des meilleurs chevaux : environ 4 500 € pour les 3 ans et moins, 7 600 € pour les 4 à 6 ans (moyennes 2011-2020).',
+      'Les ventes aux enchères d’élite atteignent des prix sans commune mesure : en 2025, le prix moyen des 3 ans d’une vente sélective de l’agence Fences a atteint 47 000 €.',
+      'Les finales nationales de la SHF ne retiennent que les chevaux les mieux classés de chaque génération ; y figurer est un argument de vente reconnu.',
       'La notoriété d’un étalon dépend en grande partie des résultats sportifs de ses produits à partir de 5 ans.',
       'Les pensions de poulinières sont recherchées par les petits éleveurs qui ne disposent pas d’installations de poulinage.',
     ],
@@ -380,8 +388,8 @@ const etab: Etablissement = {
     exploitant: {
       description:
         "Deux associés exploitants non salariés, Hélène et Antoine Lécuyer. Leurs cotisations sociales personnelles (MSA) sont des charges de l'EARL ; leurs prélèvements sont imputés sur le résultat et ne sont pas des charges. Le résultat de l'exercice rémunère donc leur travail (environ 5 500 heures par an à eux deux) et leurs capitaux.",
-      cotisations: an(13800, 12900, 12100, 12400),
-      prelevements: an(36000, 30000, 26000, 30000),
+      cotisations: an(12800, 11200, 9800, 9600),
+      prelevements: an(32000, 26000, 20000, 24000),
     },
     immobilisations: [
       { id: 'parts-coop', libelle: 'Parts sociales de la coopérative et de la CUMA', categorie: 'financier', valeurOrigine: 3000, miseEnService: '2014-10', duree: 0 },
@@ -418,7 +426,7 @@ const etab: Etablissement = {
       { id: 'pret-poulinage', libelle: 'Prêt bâtiment de poulinage', preteur: 'Banque rurale de l’Orne', capital: 120000, taux: 0.014, dureeMois: 180, debut: '2019-05', objet: 'Bâtiment de poulinage et de reproduction, vidéosurveillance' },
       { id: 'pret-etalon', libelle: 'Prêt étalon', preteur: 'Banque rurale de l’Orne', capital: 45000, taux: 0.015, dureeMois: 84, debut: '2019-02', objet: 'Achat de l’étalon Éclat de Varenne' },
       { id: 'pret-tracteur', libelle: 'Prêt tracteur', preteur: 'Banque rurale de l’Orne', capital: 52000, taux: 0.012, dureeMois: 84, debut: '2021-05', objet: 'Tracteur 95 ch' },
-      { id: 'pret-consolidation', libelle: 'Prêt de consolidation de trésorerie', preteur: 'Banque rurale de l’Orne', capital: 35000, taux: 0.047, dureeMois: 48, debut: '2024-11', objet: 'Réduction du découvert bancaire' },
+      { id: 'pret-consolidation', libelle: 'Prêt de consolidation de trésorerie', preteur: 'Banque rurale de l’Orne', capital: 50000, taux: 0.047, dureeMois: 60, debut: '2024-11', objet: 'Réduction du découvert bancaire' },
     ],
     subventionsInvestissement: [],
     stocks: [
@@ -434,7 +442,7 @@ const etab: Etablissement = {
       autresDettes: fin(2400, 2600, 3100, 6200, 3000),
       produitsConstatesAvance: fin(4800, 5200, 5400, 5900, 6000),
     },
-    ouverture: { capital: 60000, libelleCapital: 'Capital social', tresorerie: 14000 },
+    ouverture: { capital: 60000, libelleCapital: 'Capital social', tresorerie: 20000 },
     tresorerieMensuelle: {
       saisonnaliteEncaissements: [5, 7, 9, 11, 12, 10, 7, 5, 12, 11, 7, 4],
       saisonnaliteAchats: [8, 9, 10, 9, 8, 11, 10, 7, 7, 7, 7, 7],
@@ -449,7 +457,7 @@ const etab: Etablissement = {
         { id: 'naissage', nom: 'Naissage (poulinières et foals jusqu’au sevrage)', uniteOeuvre: { libelle: 'poulain sevré', quantite: 11 } },
         { id: 'elevage', nom: 'Élevage au pré des 1 et 2 ans', uniteOeuvre: { libelle: 'tête-année', quantite: 18.5 } },
         { id: 'valorisation', nom: 'Valorisation des jeunes chevaux (3 à 6 ans et chevaux de tiers)', uniteOeuvre: { libelle: 'mois de travail monté', quantite: 178 } },
-        { id: 'etalonnage', nom: 'Étalonnage', uniteOeuvre: { libelle: 'saillie réalisée', quantite: 57 } },
+        { id: 'etalonnage', nom: 'Étalonnage', uniteOeuvre: { libelle: 'jument inséminée (tiers et élevage)', quantite: 43 } },
         { id: 'pensions-tiers', nom: 'Pensions et poulinages pour tiers', uniteOeuvre: { libelle: 'mois de pension', quantite: 270 } },
       ],
       cles: [
@@ -457,12 +465,12 @@ const etab: Etablissement = {
         { id: 'temps', nom: 'Temps de travail de l’équipe', unite: 'heures', justification: 'Relevé de temps tenu par les associés et les salariés en 2025 (semaines types par saison).', repartition: { naissage: 2600, elevage: 900, valorisation: 3900, etalonnage: 450, 'pensions-tiers': 1500 } },
         { id: 'surfaces', nom: 'Surfaces pâturées et fauchées', unite: 'hectares', justification: 'Plan de pâturage 2025 ; les surfaces de fauche sont réparties selon la consommation de foin.', repartition: { naissage: 27, elevage: 24, valorisation: 8, etalonnage: 2, 'pensions-tiers': 19 } },
         { id: 'boxes', nom: 'Places en bâtiment', unite: 'places', justification: 'Boxes et places de stabulation utilisés en moyenne sur l’année par chaque activité.', repartition: { naissage: 10, elevage: 12, valorisation: 9, etalonnage: 2, 'pensions-tiers': 7 } },
-        { id: 'actes-repro', nom: 'Actes de reproduction', unite: 'actes', justification: 'Factures de la clinique 2025 : échographies, inséminations, collectes et contrôles de semence, poulinages assistés.', repartition: { naissage: 140, elevage: 30, valorisation: 35, etalonnage: 120, 'pensions-tiers': 95 } },
+        { id: 'actes-repro', nom: 'Actes de reproduction', unite: 'actes', justification: 'Factures de la clinique 2025 : échographies, inséminations, collectes et contrôles de semence, poulinages assistés.', repartition: { naissage: 140, elevage: 30, valorisation: 35, etalonnage: 95, 'pensions-tiers': 95 } },
         { id: 'marechal', nom: 'Interventions du maréchal', unite: '€ facturés', justification: 'Ventilation des factures 2025 par cheval.', repartition: { naissage: 2400, elevage: 2100, valorisation: 6600, etalonnage: 400, 'pensions-tiers': 500 } },
         { id: 'reproducteurs', nom: 'Amortissement des reproducteurs', unite: '€ de dotation', justification: 'Dotations 2025 du registre : poulinières d’un côté, étalon de l’autre.', repartition: { naissage: 15267, etalonnage: 6875 } },
         { id: 'poulinages', nom: 'Poulinages surveillés', unite: 'poulinages', justification: 'Poulinages de la saison 2025 : 12 juments de l’élevage, 16 juments de tiers.', repartition: { naissage: 12, 'pensions-tiers': 16 } },
         { id: 'production-stockee', nom: 'Variation du stock par classe d’âge', unite: '€', justification: "Variation 2025 de la valeur des foals (naissage), des 1 et 2 ans (élevage) et des 3 ans et plus (valorisation), sans cession interne entre sections.", repartition: { naissage: 4200, elevage: 1600, valorisation: 25000 } },
-        { id: 'ca', nom: "Chiffre d'affaires", unite: '€', justification: 'Clé conventionnelle pour les frais de structure sans lien mesurable avec une activité.', repartition: { naissage: 4000, elevage: 3000, valorisation: 138080, etalonnage: 43500, 'pensions-tiers': 85410 } },
+        { id: 'ca', nom: "Chiffre d'affaires", unite: '€', justification: 'Clé conventionnelle pour les frais de structure sans lien mesurable avec une activité.', repartition: { naissage: 3500, elevage: 3000, valorisation: 138080, etalonnage: 23760, 'pensions-tiers': 85410 } },
       ],
       affectations: {
         concentres: { cle: 'tetes' },

@@ -48,7 +48,7 @@ const etab: Etablissement = {
     { libelle: 'Prix moyen chambre', valeur: '445 €', detail: 'HT, petit-déjeuner inclus, 2025' },
     { libelle: 'Taux d’occupation', valeur: '70 %', detail: 'sur la période d’ouverture, 2025' },
     { libelle: 'Chevaux', valeur: '10', detail: 'balade, lever du soleil, cours privés' },
-    { libelle: 'Effectif', valeur: '44 ETP', detail: 'dont 9 ETP saisonniers hôteliers' },
+    { libelle: 'Effectif', valeur: '44,5 ETP', detail: 'dont 10 ETP saisonniers' },
   ],
   enjeux: [
     "Que rapporte réellement l'écurie au domaine, et comment le mesurer ?",
@@ -191,7 +191,7 @@ const etab: Etablissement = {
       ],
     },
     verbatims: [
-      { auteur: 'Cliente britannique', profil: 'Couple, 3 nuits en juin', texte: "The sunrise ride through the vineyards was the highlight of our trip. Nous reviendrons pour monter davantage." },
+      { auteur: 'Cliente britannique', profil: 'Couple, 3 nuits en juin', texte: "La sortie au lever du soleil dans les vignes a été le grand moment de notre voyage. Nous reviendrons pour monter davantage. (traduit de l'anglais)" },
       { auteur: 'Client parisien', profil: 'Séminaire de direction', texte: "Cadre exceptionnel ; l'activité équestre a été le moment fédérateur du séminaire." },
       { auteur: 'Cavalière confirmée', profil: 'Séjour de 5 nuits', texte: "Les chevaux sont superbes mais il manque un vrai terrain pour travailler entre deux balades." },
     ],
@@ -214,7 +214,7 @@ const etab: Etablissement = {
       { nom: 'Valcroze Participations', categorie: 'Groupe', prestation: 'Loyer des murs (bail commercial de neuf ans)', ligne: 'loyer', part: 1, evolutionTarifaire: 'Indexation annuelle sur un indice des loyers commerciaux', delaiPaiement: 'Trimestriel, d’avance', conditions: 'Bail renouvelé en 2023', dependance: 'forte', risques: 'Conditions fixées au sein du groupe.' },
       { nom: 'Valcroze Participations', categorie: 'Groupe', prestation: 'Redevance de marque (2 % du chiffre d’affaires)', ligne: 'redevance-marque', part: 1, evolutionTarifaire: 'Proportionnelle au chiffre d’affaires', delaiPaiement: 'Annuel', conditions: 'Contrat de licence de marque', dependance: 'forte', risques: 'Assiette incluant les activités équestres.' },
       { nom: 'Primeurs et Halles du Luberon', categorie: 'Alimentation', prestation: 'Fruits, légumes, produits frais', ligne: 'denrees', part: 0.35, evolutionTarifaire: '+4 % en 2025', delaiPaiement: '30 jours', conditions: 'Livraison quotidienne en saison', dependance: 'moyenne', risques: 'Disponibilité variable selon la météo.' },
-      { nom: 'Plateformes de réservation en ligne', categorie: 'Distribution', prestation: 'Commercialisation des chambres', ligne: 'commissions', part: 1, evolutionTarifaire: 'Taux de commission stable, programmes de visibilité payants', delaiPaiement: 'Prélèvement mensuel', conditions: 'Contrats standards', dependance: 'forte', risques: 'Poids dans la distribution, parité tarifaire.' },
+      { nom: 'Plateformes de réservation en ligne', categorie: 'Distribution', prestation: 'Commercialisation des chambres (30 % des nuitées)', ligne: 'commissions', part: 0.85, evolutionTarifaire: 'Taux de commission stable, programmes de visibilité payants', delaiPaiement: 'Prélèvement mensuel', conditions: 'Contrats standards', dependance: 'forte', risques: 'Poids dans la distribution, parité tarifaire.' },
       { nom: 'Élevage des Grandes Bories', categorie: 'Équestre', prestation: 'Foin de Crau, aliments, copeaux et hivernage des chevaux (environ 220 € par cheval et par mois de pré)', ligne: 'aliments-chevaux', part: 0.9, evolutionTarifaire: 'Foin de Crau en baisse depuis 2023, hivernage +3 % par an', delaiPaiement: '30 jours', conditions: 'Hivernage forfaitaire de mi-novembre à mi-mars', dependance: 'moyenne', risques: 'Seul partenaire d’hivernage identifié ; transport aller et retour à organiser.' },
     ],
     partenaires: [
@@ -226,7 +226,7 @@ const etab: Etablissement = {
 
   rh: {
     synthese:
-      "L'effectif compte 34 ETP permanents, complétés par 9 ETP de saisonniers hôteliers de mars à novembre, une praticienne et un palefrenier saisonniers, et par des extras pour les événements. L'écurie emploie deux permanents diplômés, une responsable équestre et un guide-soigneur, renforcés d'avril à octobre par un palefrenier-soigneur.",
+      "L'effectif compte 34,5 ETP permanents, complétés par 9 ETP de saisonniers hôteliers de mars à novembre, une praticienne et un palefrenier saisonniers, et par des extras pour les événements. L'écurie emploie deux permanents diplômés, une responsable équestre et un guide-soigneur, renforcés d'avril à octobre par un palefrenier-soigneur.",
     organigramme: [
       { id: 'dg', intitule: 'Directeur général', personne: 'Adrien Ferrandier' },
       { id: 'dc', intitule: 'Directeur commercial et marketing', personne: 'Olivier Dauphinet', parent: 'dg' },
@@ -630,7 +630,7 @@ const etab: Etablissement = {
       tauxImpot: 0.25,
       reperes: [
         'Les recettes des séjours équestres incluent les nuitées : seules les nuits qui n’auraient pas été vendues sans l’offre constituent une recette incrémentale.',
-        'Les charges variables (36 %) couvrent le coût des chambres (étages, petit-déjeuner, commissions) et les consommables équestres.',
+        'Les charges variables (40 %) couvrent le coût des chambres (étages, petit-déjeuner, linge, commissions), les dîners inclus dans certains séjours et les consommables équestres.',
         'Taux d’actualisation de 8 % retenu par le groupe pour ses projets hôteliers.',
         "Construction sur un terrain de la société mère : le bail devra être adapté et l'amortissement aligné sur sa durée.",
       ],
