@@ -45,7 +45,7 @@ const etab: Etablissement = {
     { libelle: 'Adhérents', valeur: '229', detail: 'année 2025' },
     { libelle: 'Équidés du club', valeur: '26', detail: '15 poneys, 11 chevaux' },
     { libelle: 'Pensions de membres', valeur: '6', detail: 'boxes réservés aux adhérents' },
-    { libelle: 'Salariés', valeur: '3,6 ETP', detail: 'dont un contrat aidé' },
+    { libelle: 'Salariés', valeur: '3,6 ETP', detail: 'dont un parcours emploi compétences' },
     { libelle: 'Bénévolat', valeur: '≈ 3 100 h', detail: 'heures déclarées en 2025' },
     { libelle: 'Création', valeur: '1984', detail: 'convention municipale depuis 2004' },
   ],
@@ -67,13 +67,14 @@ const etab: Etablissement = {
       "Depuis 2022, la hausse du fourrage, de l'énergie et des soins pèse sur un budget que l'association équilibre difficilement. Le tracteur de 2011, le van et une partie de la cavalerie arrivent en fin de vie, alors que les fonds associatifs restent faibles.",
     ],
     valeurs: [
-      { titre: 'Accessibilité', texte: "Tarifs modulés selon le quotient familial, paiement en trois fois, prêt de bombes et de bottes pour les débutants." },
+      { titre: 'Accessibilité', texte: "Tarifs modulés selon le quotient familial, paiement en trois fois, acceptation du Pass'Sport pour les jeunes éligibles, prêt de casques et de bottes pour les débutants." },
       { titre: 'Vie associative', texte: "Les adhérents participent aux soins, aux chantiers et à l'organisation des concours internes ; l'assemblée générale fixe les orientations." },
       { titre: 'Respect des équidés', texte: 'Vie au pré dès que le terrain le permet, plafond de reprises par équidé, retraite organisée pour les chevaux réformés.' },
     ],
     chronologie: [
       { annee: 1984, titre: "Création de l'association", texte: 'Une vingtaine de membres, une carrière louée, un moniteur vacataire.' },
       { annee: 2004, titre: 'Centre équestre municipal', texte: "La commune construit l'écurie, le manège et la carrière ; première convention d'occupation." },
+      { annee: 2008, titre: 'Labels fédéraux', texte: "Obtention du label École française d'équitation de la FFE, avec la mention Poney Club de France." },
       { annee: 2011, titre: 'Achat du tracteur', texte: "Tracteur d'occasion de 60 ch, toujours en service." },
       { annee: 2019, titre: 'Renouvellement de la convention', texte: "Convention de huit ans, redevance de 4 800 € par an, échéance au 31 décembre 2026." },
       { annee: 2021, titre: 'Obstacles et sellerie', texte: 'Renouvellement du matériel pédagogique avec une aide du département.' },
@@ -81,7 +82,7 @@ const etab: Etablissement = {
       { annee: 2025, titre: 'Alerte sur le sol du manège', texte: "Le sol se compacte et se creuse ; un devis de réfection est demandé." },
     ],
     organisation:
-      "Le conseil d'administration fixe les tarifs, vote le budget et recrute ; le bureau se réunit chaque mois avec le directeur. Le directeur organise l'enseignement, la cavalerie et l'équipe salariée (une enseignante, un palefrenier, une agente d'accueil et d'entretien en contrat aidé). Une trentaine de bénévoles réguliers assurent l'accueil du week-end, les chantiers et une partie des soins.",
+      "Le conseil d'administration fixe les tarifs, vote le budget et recrute ; le bureau se réunit chaque mois avec le directeur. Le directeur organise l'enseignement, la cavalerie et l'équipe salariée (une monitrice, un palefrenier-soigneur, une agente d'accueil et d'entretien en parcours emploi compétences). Une trentaine de bénévoles réguliers assurent l'accueil du week-end, les chantiers et une partie des soins.",
     modeleEconomique:
       "Les ressources proviennent des cotisations statutaires, des forfaits d'activité (enseignement à l'année, cartes, stages), des pensions réservées aux membres, des séances facturées aux écoles et à un institut médico-éducatif, d'une subvention municipale de fonctionnement, d'aides à l'emploi et de dons d'entreprises locales. Les forfaits et cotisations, réglés pour l'essentiel à la rentrée, constituent une avance de trésorerie.",
   },
@@ -111,7 +112,7 @@ const etab: Etablissement = {
 
   cavalerie: {
     synthese:
-      "La cavalerie appartient à l'association : 15 poneys et 11 chevaux, auxquels s'ajoutent six chevaux de membres en pension. Neuf équidés ont seize ans ou plus. Les réformés sont placés chez des adhérents ou cédés pour un euro symbolique à des particuliers sélectionnés.",
+      "La cavalerie appartient à l'association : 15 poneys et 11 chevaux, auxquels s'ajoutent six chevaux de membres en pension. Neuf équidés ont seize ans ou plus. Rapportée aux heures de reprise, de stage et de séances de groupe, chaque équidé disponible a travaillé environ 460 heures en 2025. Les réformés sont placés chez des adhérents ou cédés pour un euro symbolique à des particuliers sélectionnés, avec un contrat interdisant la revente.",
     effectifs: [
       { categorie: 'Shetlands et poneys A', statut: 'propriete', nombre: 5, usage: 'Baby-poney, premières reprises' },
       { categorie: 'Poneys B et C', statut: 'propriete', nombre: 7, usage: 'Reprises enfants, stages, séances scolaires' },
@@ -129,19 +130,19 @@ const etab: Etablissement = {
     disponibilite: [
       { etat: 'En activité normale', nombre: 21 },
       { etat: 'Activité allégée', nombre: 3, commentaire: 'Plus de vingt ans, une reprise par jour' },
-      { etat: 'Convalescence', nombre: 1, commentaire: 'Fourbure de printemps (Rocaille)' },
-      { etat: 'En débourrage et mise au travail', nombre: 1, commentaire: 'Kalin de Chalain, acheté en septembre 2025' },
+      { etat: 'Convalescence', nombre: 1, commentaire: 'Fourbure de printemps (Cannelle), reprise progressive' },
+      { etat: 'En reconversion (travail monté)', nombre: 1, commentaire: 'Iago de Chalain, trotteur acheté en septembre 2025' },
     ],
     fiches: [
       { nom: 'Java du Forez', race: 'Origine non constatée', naissance: 2004, sexe: 'hongre', robe: 'Bai', role: 'Reprises adultes débutants', statut: "Propriété de l'association", notes: "Activité allégée depuis 2024. Une adhérente s'est proposée pour sa retraite." },
-      { nom: 'Rocaille', race: 'Haflinger', naissance: 2012, sexe: 'jument', robe: 'Alezan crins lavés', role: 'Équitation adaptée, reprises enfants', statut: "Propriété de l'association", notes: "Fourbure en avril 2025 ; ferrure orthopédique, accès au pré limité." },
-      { nom: 'Bibop', race: 'Shetland', naissance: 2016, sexe: 'hongre', robe: 'Pie noir', role: 'Baby-poney', statut: "Propriété de l'association", notes: 'Acheté en 2023 avec Praline grâce au prêt de cavalerie.' },
-      { nom: 'Kalin de Chalain', race: 'Trotteur Français reconverti', naissance: 2018, sexe: 'hongre', robe: 'Bai brun', role: 'En formation pour les reprises adultes', statut: "Propriété de l'association", notes: "Acheté 4 500 € en septembre 2025 ; travaillé par le directeur, intégration prévue au printemps." },
+      { nom: 'Cannelle', race: 'Haflinger', naissance: 2012, sexe: 'jument', robe: 'Alezan crins lavés', role: 'Équitation adaptée, reprises enfants', statut: "Propriété de l'association", notes: "Fourbure en avril 2025 ; ferrure orthopédique, accès à l'herbe limité au printemps (paddock sec et panier de pâturage)." },
+      { nom: 'Gribouille', race: 'Shetland', naissance: 2016, sexe: 'hongre', robe: 'Pie noir', role: 'Baby-poney', statut: "Propriété de l'association", notes: 'Acheté en 2023 avec Praline, poney B, grâce au prêt d’équipement.' },
+      { nom: 'Iago de Chalain', race: 'Trotteur Français reconverti', naissance: 2018, sexe: 'hongre', robe: 'Bai brun', role: 'En formation pour les reprises adultes', statut: "Propriété de l'association", notes: "Retiré des courses en 2024, acheté 3 000 € en septembre 2025 après une remise au travail monté chez un particulier ; travaillé par le directeur (galop, équilibre), intégration aux reprises prévue au printemps." },
     ],
     reglesUtilisation: [
       'Trois reprises par jour au maximum, deux pour les équidés de plus de vingt ans.',
       'Une journée complète de repos au pré par semaine.',
-      'Pas plus de cinq journées de stage par semaine pour un même poney.',
+      'Pas plus de quatre journées de stage par semaine pour un même poney.',
       'Visite annuelle du dentiste et vermifugation raisonnée par coproscopie.',
     ],
   },
@@ -310,7 +311,7 @@ const etab: Etablissement = {
     chargesExternes: [
       ligne('redevance', "Redevance d'occupation versée à la commune", '613', an(4800, 4800, 4800, 4800), 'Fixée par la convention de 2019.'),
       ligne('marechalerie', 'Maréchalerie', '6228', an(8600, 9000, 9500, 9900)),
-      ligne('veterinaire', 'Vétérinaire et dentiste', '6226', an(5600, 6300, 7400, 7600), '2025 : fourbure de Rocaille.'),
+      ligne('veterinaire', 'Vétérinaire et dentiste', '6226', an(5600, 6300, 7400, 7600), '2025 : fourbure de Cannelle.'),
       ligne('energie', 'Électricité, eau et carburant', '6061', an(9800, 9100, 8900, 9200)),
       ligne('entretien', 'Entretien et réparations (matériel, sols, sellerie)', '615', an(6400, 7300, 8900, 10500), 'Réparations du tracteur : 2 100 € en 2023, 4 300 € en 2025.'),
       ligne('assurances', 'Assurances (responsabilité civile, mortalité des équidés, matériel)', '616', an(5900, 6200, 6500, 6800)),
@@ -343,8 +344,8 @@ const etab: Etablissement = {
       { id: 'van', libelle: "Van 2 places d'occasion", categorie: 'vehicules', valeurOrigine: 9000, miseEnService: '2018-04', duree: 7 },
       { id: 'cav-2017', libelle: 'Cavalerie, achats 2015 à 2018', categorie: 'cavalerie', valeurOrigine: 30000, miseEnService: '2017-01', duree: 8 },
       { id: 'cav-2020', libelle: 'Cavalerie, achats 2019 à 2021', categorie: 'cavalerie', valeurOrigine: 18000, miseEnService: '2020-03', duree: 7 },
-      { id: 'cav-2023', libelle: 'Cavalerie, achats 2023 (Bibop et Praline)', categorie: 'cavalerie', valeurOrigine: 6000, miseEnService: '2023-04', duree: 6 },
-      { id: 'cav-2025', libelle: 'Cavalerie, achat 2025 (Kalin de Chalain)', categorie: 'cavalerie', valeurOrigine: 4500, miseEnService: '2025-09', duree: 6 },
+      { id: 'cav-2023', libelle: 'Cavalerie, achats 2023 (Gribouille et Praline)', categorie: 'cavalerie', valeurOrigine: 6000, miseEnService: '2023-04', duree: 6 },
+      { id: 'cav-2025', libelle: 'Cavalerie, achat 2025 (Iago de Chalain)', categorie: 'cavalerie', valeurOrigine: 3000, miseEnService: '2025-09', duree: 6 },
       { id: 'cav-2026', libelle: 'Cavalerie, achat budgété 2026 (un poney)', categorie: 'cavalerie', valeurOrigine: 5000, miseEnService: '2026-03', duree: 6, prevue: true },
     ],
     emprunts: [

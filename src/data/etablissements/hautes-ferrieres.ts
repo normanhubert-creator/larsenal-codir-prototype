@@ -3,7 +3,7 @@ import { an, constant, fin, ligne } from '../aides';
 
 /**
  * Domaine des Hautes Ferrières (dossier standard).
- * Modèle : hôtel de charme haut de gamme (chambres, restaurant, spa, événements) avec une écurie
+ * Modèle : hôtel de charme classé cinq étoiles (chambres, restaurant, spa, événements) avec une écurie
  * de dix chevaux dont il faut mesurer la contribution économique.
  * Toutes les données sont fictives ; voir docs/METHODOLOGIE.md pour les hypothèses.
  */
@@ -41,14 +41,14 @@ const etab: Etablissement = {
     titresMajuscules: true,
   },
   accroche:
-    "Hôtel de charme de 24 chambres et suites au cœur du Luberon, avec restaurant, spa et réceptions. Son écurie de dix chevaux séduit les clients ; reste à savoir ce qu'elle rapporte vraiment.",
+    "Hôtel de charme classé cinq étoiles, 24 chambres et suites au cœur du Luberon, avec restaurant, spa et réceptions. Son écurie de dix chevaux séduit les clients ; reste à savoir ce qu'elle rapporte vraiment.",
   chiffresCles: [
-    { libelle: 'Chambres et suites', valeur: '24', detail: 'ouverture de mi-mars à fin décembre' },
-    { libelle: "Chiffre d'affaires 2025", valeur: '4,75 M€', detail: 'dont 4 % d’activités équestres' },
-    { libelle: 'Prix moyen chambre', valeur: '415 €', detail: 'HT, petit-déjeuner inclus, 2025' },
+    { libelle: 'Chambres et suites', valeur: '24', detail: 'ouverture de mi-mars à mi-novembre (245 jours)' },
+    { libelle: "Chiffre d'affaires 2025", valeur: '4,63 M€', detail: 'dont 4 % d’activités équestres' },
+    { libelle: 'Prix moyen chambre', valeur: '445 €', detail: 'HT, petit-déjeuner inclus, 2025' },
+    { libelle: 'Taux d’occupation', valeur: '70 %', detail: 'sur la période d’ouverture, 2025' },
     { libelle: 'Chevaux', valeur: '10', detail: 'balade, lever du soleil, cours privés' },
-    { libelle: 'Effectif', valeur: '42,5 ETP', detail: 'dont 9 ETP saisonniers' },
-    { libelle: 'Ouverture', valeur: '2014', detail: 'rénovation complète en 2021' },
+    { libelle: 'Effectif', valeur: '44 ETP', detail: 'dont 9 ETP saisonniers hôteliers' },
   ],
   enjeux: [
     "Que rapporte réellement l'écurie au domaine, et comment le mesurer ?",
@@ -64,26 +64,27 @@ const etab: Etablissement = {
     histoire: [
       "Valcroze Participations achète la propriété en 2014 et l'exploite d'abord comme maison d'hôtes de luxe de douze chambres. Les murs sont logés dans la société mère ; la SAS d'exploitation lui verse un loyer.",
       "En 2018, la création du spa et de la piscine chauffée permet d'allonger la saison. En 2019, la bergerie est aménagée en écurie de dix boxes : l'idée, portée par le directeur commercial, est de proposer une expérience que les hôtels concurrents n'offrent pas.",
-      "En 2021, une rénovation complète porte la capacité à 24 chambres et suites, financée par un emprunt de 1,3 M€ conclu à taux bas. La cuisine professionnelle est refaite en 2024.",
-      "Depuis 2023, le prix moyen progresse nettement et le domaine affiche une rentabilité solide. Le groupe s'interroge désormais sur la place à donner aux chevaux : simple agrément ou véritable activité à développer.",
+      "En 2021, une rénovation complète porte la capacité à 24 chambres et suites, financée par un emprunt de 1,3 M€ conclu à taux bas. L'hôtel obtient en 2022 le classement cinq étoiles d'Atout France, à renouveler en 2027. La cuisine professionnelle est refaite en 2024.",
+      "L'exercice 2023, pénalisé par le prix de l'énergie et l'inflation alimentaire, se clôt à l'équilibre sans dividende. Depuis, le prix moyen progresse nettement et le domaine affiche une rentabilité solide. Le groupe s'interroge désormais sur la place à donner aux chevaux : simple agrément ou véritable activité à développer.",
     ],
     valeurs: [
       { titre: 'Art de recevoir', texte: 'Service personnalisé, conciergerie, attention portée aux détails et aux produits du terroir.' },
       { titre: 'Ancrage provençal', texte: 'Cuisine de saison, vins du Luberon, artisans et producteurs locaux.' },
-      { titre: 'Respect du cheval', texte: 'Chevaux au pré la nuit en été, sorties limitées en période de chaleur, encadrement diplômé.' },
+      { titre: 'Respect du cheval', texte: 'Chevaux au paddock la nuit en été, sorties limitées en période de chaleur, encadrement diplômé, hivernage au pré pendant la fermeture.' },
     ],
     chronologie: [
       { annee: 2014, titre: 'Acquisition et ouverture', texte: "Maison d'hôtes de douze chambres." },
       { annee: 2018, titre: 'Spa et piscine chauffée', texte: 'Allongement de la saison de six semaines.' },
       { annee: 2019, titre: 'Écurie de la bergerie', texte: 'Dix boxes, sellerie et paddocks ; premières balades dans les vignes.' },
       { annee: 2021, titre: 'Rénovation complète', texte: 'Passage à 24 chambres et suites, restaurant ouvert à la clientèle extérieure.' },
+      { annee: 2022, titre: 'Cinq étoiles', texte: 'Classement cinq étoiles d’Atout France, valable cinq ans.' },
       { annee: 2024, titre: 'Nouvelle cuisine', texte: 'Cuisine professionnelle refaite, financée par emprunt sur sept ans.' },
       { annee: 2025, titre: 'Expériences au lever du soleil', texte: 'Sorties de deux heures avec petit-déjeuner servi dans les vignes, vendues 170 € HT.' },
     ],
     organisation:
       "Le directeur général encadre six services : hébergement (réception et étages), restauration, spa, événements, maintenance et écurie. Le directeur commercial pilote la distribution, le prix et la communication. La comptabilité, le contrôle de gestion et l'informatique sont assurés par le groupe contre une facturation d'assistance.",
     modeleEconomique:
-      "Le chiffre d'affaires provient des nuitées (44 %), de la restauration (24 %), des mariages et séminaires (19 %), du spa (9 %) et des activités équestres (4 %). L'hôtel ferme de janvier à mi-mars. Le domaine verse au groupe un loyer pour les murs, une redevance de marque de 2 % du chiffre d'affaires et des frais d'assistance.",
+      "Le chiffre d'affaires provient des nuitées (40 %), de la restauration (27 %), des mariages et séminaires (20 %), du spa (9 %) et des activités équestres (4 %). L'hôtel ferme de mi-novembre à mi-mars. Le domaine verse au groupe un loyer pour les murs, une redevance de marque de 2 % du chiffre d'affaires et des frais d'assistance.",
   },
 
   installations: {
@@ -92,9 +93,9 @@ const etab: Etablissement = {
     elements: [
       { nom: 'Mas principal', type: 'batiment', capacite: '16 chambres, salons, bar', annee: 2021, etat: 'excellent', description: 'Bâtiment du XVIIIe siècle rénové, chambres de 28 à 45 m².', photo: 'lieu' },
       { nom: 'Bastides des suites', type: 'batiment', capacite: '8 suites avec terrasse', annee: 2021, etat: 'excellent', description: 'Anciennes dépendances agricoles, vue sur les vignes.', photo: 'hero' },
-      { nom: 'Restaurant et cuisine', type: 'batiment', capacite: '60 couverts en salle, 80 en terrasse', annee: 2024, etat: 'excellent', description: 'Cuisine refaite en 2024 ; la terrasse doit être réaménagée en 2026.' },
+      { nom: 'Restaurant et cuisine', type: 'batiment', capacite: '60 couverts en salle, 80 en terrasse', annee: 2024, etat: 'excellent', description: 'Cuisine refaite en 2024 ; la terrasse doit être réaménagée en 2026. Deux salons de 40 et 60 m² accueillent les séminaires.' },
       { nom: 'Spa et piscine', type: 'batiment', capacite: '3 cabines, piscine chauffée de 18 m', annee: 2018, etat: 'bon', description: 'Accessible aux résidents et, sur réservation, à une clientèle extérieure.', photo: 'detail' },
-      { nom: 'Écurie de la bergerie', type: 'hebergement-equin', capacite: '10 boxes de 3,5 × 3,5 m, sellerie', annee: 2019, etat: 'bon', description: 'Bergerie en pierre aménagée, fraîche en été. Pas de box disponible pour accueillir des chevaux de clients.', photo: 'chevaux' },
+      { nom: 'Écurie de la bergerie', type: 'hebergement-equin', capacite: '10 boxes de 3,5 × 3,5 m, sellerie, aire de douche', annee: 2019, etat: 'bon', description: 'Bergerie en pierre aménagée, fraîche en été ; deux paddocks d’herbe sèche attenants pour la nuit. Pas de box disponible pour accueillir des chevaux de clients.', photo: 'chevaux' },
       { nom: 'Paddock de travail', type: 'aire-travail', capacite: '20 × 30 m', annee: 2019, etat: 'correct', description: 'Sable sur terre, ni drainage ni arrosage : poussiéreux en été, glissant après l’orage.' },
       { nom: 'Domaine extérieur', type: 'exterieur', surface: '18 ha de vignes d’agrément, oliveraie et garrigue', etat: 'bon', description: 'Itinéraires de balade balisés sur le domaine et sur les chemins communaux voisins.', photo: 'activite' },
     ],
@@ -111,7 +112,7 @@ const etab: Etablissement = {
 
   cavalerie: {
     synthese:
-      "Dix chevaux appartenant à la SAS, choisis pour leur calme et leur aptitude à la promenade : chevaux ibériques, croisés et deux chevaux de Camargue. Huit sont disponibles en moyenne pendant la saison ; ils passent l'hiver au pré chez un éleveur partenaire pendant la fermeture.",
+      "Dix chevaux appartenant à la SAS, choisis pour leur calme et leur aptitude à la promenade : chevaux ibériques, croisés et deux chevaux de Camargue. Huit sont disponibles en moyenne pendant la saison, dont un monté par le guide ; ils passent les quatre mois de fermeture au pré chez un éleveur partenaire.",
     effectifs: [
       { categorie: 'Chevaux ibériques (Lusitanien, Pure race espagnole)', statut: 'propriete', nombre: 4, usage: 'Balades, cours privés, lever du soleil' },
       { categorie: 'Chevaux de Camargue', statut: 'propriete', nombre: 2, usage: 'Balades pour cavaliers débutants' },
@@ -134,31 +135,32 @@ const etab: Etablissement = {
       { nom: 'Rustique', race: 'Selle croisé', naissance: 2007, sexe: 'hongre', robe: 'Alezan', role: 'Balades au pas', statut: 'Propriété de la SAS', notes: 'Activité allégée ; retraite envisagée fin 2026.' },
     ],
     reglesUtilisation: [
-      'Deux sorties par jour au maximum par cheval, une seule en juillet et août.',
+      'Deux sorties par jour au maximum par cheval, une seule en juillet et août ; un jour de repos par semaine au paddock.',
       'Aucune sortie entre 12 h et 17 h lorsque la température dépasse 30 °C.',
       'Groupes de six cavaliers au plus, encadrés par un professionnel diplômé.',
-      'Hivernage au pré de janvier à mars chez un éleveur partenaire.',
+      'Hivernage au pré de mi-novembre à mi-mars chez un éleveur partenaire, chevaux déferrés ; reprise progressive deux semaines avant l’ouverture.',
+      'Poids du cavalier limité à 95 kg ; cavaliers évalués lors d’un premier tour au paddock avant toute sortie dans les vignes.',
     ],
   },
 
   activites: {
     synthese:
-      "L'offre hôtelière est ouverte de mi-mars à fin décembre. Les activités équestres sont proposées aux résidents et, selon les disponibilités, à une clientèle extérieure. Les prix sont hors taxes ; le prix des chambres inclut le petit-déjeuner.",
+      "L'offre hôtelière est ouverte de mi-mars à mi-novembre (245 jours). Les activités équestres sont proposées aux résidents et, selon les disponibilités, à une clientèle extérieure. Les prix sont hors taxes ; le prix des chambres inclut le petit-déjeuner.",
     prestations: [
-      { id: 'nuitees', nom: 'Chambres et suites', activite: 'hebergement', description: 'Nuitée petit-déjeuner inclus ; prix moyen toutes catégories et canaux confondus.', unite: 'nuitée vendue', prix: an(380, 392, 415, 436), volume: an(4880, 4960, 5010, 5150), capaciteAnnuelle: constant(8760), compte: '706', periode: 'Mi-mars à fin décembre', clientele: 'Couples, familles, clientèle internationale' },
-      { id: 'restaurant', nom: 'Restaurant', activite: 'restauration', description: 'Déjeuners et dîners, résidents et clientèle extérieure ; ticket moyen boissons comprises.', unite: 'couvert', prix: an(66, 70, 74, 77), volume: an(15200, 15600, 15400, 15800), compte: '706', clientele: 'Résidents et clientèle de la région' },
-      { id: 'spa', nom: 'Soins et accès au spa', activite: 'spa', description: 'Soins de 50 à 80 minutes, accès privatif à la piscine pour la clientèle extérieure.', unite: 'soin', prix: an(105, 110, 115, 120), volume: an(3600, 3750, 3900, 4050), compte: '706', clientele: 'Résidents et clientèle extérieure' },
-      { id: 'mariages', nom: 'Mariages et réceptions privatisées', activite: 'evenements', description: 'Privatisation du domaine le week-end, hébergement des invités facturé séparément.', unite: 'événement', prix: an(28000, 29500, 31000, 32500), volume: an(16, 17, 18, 19), capaciteAnnuelle: constant(22), compte: '706', periode: 'Mai à septembre', clientele: 'Particuliers, souvent étrangers' },
+      { id: 'nuitees', nom: 'Chambres et suites', activite: 'hebergement', description: 'Nuitée petit-déjeuner inclus ; prix moyen toutes catégories et canaux confondus.', unite: 'nuitée vendue', prix: an(405, 425, 445, 465), volume: an(4000, 4060, 4120, 4230), capaciteAnnuelle: constant(5880), compte: '706', periode: 'Mi-mars à mi-novembre (24 chambres × 245 jours)', clientele: 'Couples, familles, clientèle internationale' },
+      { id: 'restaurant', nom: 'Restaurant', activite: 'restauration', description: 'Déjeuners et dîners, résidents et clientèle extérieure ; ticket moyen boissons comprises.', unite: 'couvert', prix: an(74, 78, 82, 85), volume: an(15000, 15300, 15400, 15700), compte: '706', clientele: 'Résidents et clientèle de la région' },
+      { id: 'spa', nom: 'Soins et accès au spa', activite: 'spa', description: 'Soins de 50 à 80 minutes, accès privatif à la piscine pour la clientèle extérieure.', unite: 'soin', prix: an(115, 120, 125, 130), volume: an(3000, 3100, 3200, 3300), compte: '706', clientele: 'Résidents et clientèle extérieure' },
+      { id: 'mariages', nom: 'Mariages et réceptions privatisées', activite: 'evenements', description: 'Privatisation des jardins et du restaurant le samedi, dîner et boissons pour 100 à 120 invités ; hébergement des invités facturé séparément.', unite: 'événement', prix: an(31000, 32500, 34000, 35500), volume: an(16, 17, 18, 19), capaciteAnnuelle: constant(22), compte: '706', periode: 'Mai à septembre', clientele: 'Particuliers, souvent étrangers' },
       { id: 'seminaires', nom: 'Séminaires', activite: 'evenements', description: 'Journée d’étude (salle, pauses, déjeuner) ; hébergement facturé en nuitées.', unite: 'journée participant', prix: an(165, 172, 180, 188), volume: an(1750, 1900, 1850, 2000), compte: '706', periode: 'Printemps et automne', clientele: 'Entreprises' },
-      { id: 'balades', nom: 'Balades dans les vignes et oliveraies', activite: 'equestre', description: 'Promenade guidée d’une heure trente, groupes de six cavaliers au plus.', unite: 'cavalier-balade', prix: an(85, 90, 95, 100), volume: an(1020, 1090, 1150, 1220), capaciteAnnuelle: constant(2760), compte: '706', periode: 'Mi-mars à mi-novembre', clientele: 'Résidents (80 %), clientèle extérieure' },
+      { id: 'balades', nom: 'Balades dans les vignes et oliveraies', activite: 'equestre', description: 'Promenade guidée d’une heure trente, groupes de six cavaliers au plus.', unite: 'cavalier-balade', prix: an(85, 90, 95, 100), volume: an(1020, 1090, 1150, 1220), capaciteAnnuelle: constant(2450), compte: '706', periode: 'Mi-mars à mi-novembre', clientele: 'Résidents (80 %), clientèle extérieure' },
       { id: 'lever-soleil', nom: 'À cheval au lever du soleil', activite: 'equestre', description: 'Sortie de deux heures à l’aube, petit-déjeuner servi dans les vignes.', unite: 'participant', prix: an(150, 160, 170, 180), volume: an(220, 260, 300, 330), capaciteAnnuelle: constant(600), compte: '706', periode: 'Mai à septembre', clientele: 'Résidents' },
       { id: 'cours-prives', nom: 'Cours privés', activite: 'equestre', description: 'Leçon individuelle de 45 minutes avec la responsable équestre.', unite: 'leçon', prix: an(90, 95, 105, 110), volume: an(230, 250, 270, 290), compte: '706', clientele: 'Résidents cavaliers' },
     ],
     calendrier: [
-      'Janvier à mi-mars : fermeture, travaux, chevaux en hivernage.',
+      'Mi-novembre à mi-mars : fermeture, travaux, congés des permanents, chevaux en hivernage.',
       'Mi-mars à juin : séminaires, courts séjours, balades.',
       'Juillet et août : pleine saison, mariages le samedi, sorties équestres à l’aube et en soirée.',
-      'Septembre à décembre : vendanges, séminaires, fêtes de fin d’année.',
+      'Septembre à mi-novembre : vendanges, séminaires, courts séjours d’automne.',
     ],
   },
 
@@ -173,9 +175,9 @@ const etab: Etablissement = {
       { nom: 'Clientèle locale', part: 0.06, description: 'Restaurant, spa, quelques balades à cheval.' },
     ],
     indicateurs: [
-      { libelle: "Taux d'occupation sur la période d'ouverture", unite: '%', valeurs: { 2023: 70, 2024: 71, 2025: 72, 2026: 74 }, commentaire: '24 chambres sur 290 jours d’ouverture.' },
+      { libelle: "Taux d'occupation sur la période d'ouverture", unite: '%', valeurs: { 2023: 68, 2024: 69, 2025: 70, 2026: 72 }, commentaire: '24 chambres sur 245 jours d’ouverture.' },
       { libelle: 'Durée moyenne de séjour', unite: 'nuits', valeurs: { 2023: 2.5, 2024: 2.5, 2025: 2.6 } },
-      { libelle: 'Part des nuitées vendues par les agences en ligne', unite: '%', valeurs: { 2023: 38, 2024: 38, 2025: 37 } },
+      { libelle: 'Part des nuitées vendues par les agences en ligne', unite: '%', valeurs: { 2023: 33, 2024: 31, 2025: 30 } },
       { libelle: 'Note moyenne sur les plateformes d’avis', unite: '/10', valeurs: { 2023: 9.1, 2024: 9.2, 2025: 9.3 } },
     ],
     satisfaction: {
@@ -194,8 +196,9 @@ const etab: Etablissement = {
       { auteur: 'Cavalière confirmée', profil: 'Séjour de 5 nuits', texte: "Les chevaux sont superbes mais il manque un vrai terrain pour travailler entre deux balades." },
     ],
     communication: [
-      { canal: 'Site du domaine et moteur de réservation', description: '55 % des nuitées, sans commission mais avec frais de référencement.' },
-      { canal: 'Agences de réservation en ligne', description: '37 % des nuitées, commission moyenne d’environ 17 % du prix de la chambre.' },
+      { canal: 'Site du domaine, téléphone et moteur de réservation', description: '62 % des nuitées, sans commission mais avec frais de référencement et de métamoteurs.' },
+      { canal: 'Agences de réservation en ligne', description: '30 % des nuitées, commission moyenne d’environ 17 % du prix de la chambre.' },
+      { canal: 'Agences de voyages haut de gamme et réseaux de conseillers', description: '8 % des nuitées, commission de 10 %, avantages offerts aux clients (surclassement, crédit au spa).' },
       { canal: 'Réseaux sociaux et presse', description: 'Les photographies de chevaux dans les vignes génèrent les publications les plus partagées.' },
     ],
     reclamations: [
@@ -212,7 +215,7 @@ const etab: Etablissement = {
       { nom: 'Valcroze Participations', categorie: 'Groupe', prestation: 'Redevance de marque (2 % du chiffre d’affaires)', ligne: 'redevance-marque', part: 1, evolutionTarifaire: 'Proportionnelle au chiffre d’affaires', delaiPaiement: 'Annuel', conditions: 'Contrat de licence de marque', dependance: 'forte', risques: 'Assiette incluant les activités équestres.' },
       { nom: 'Primeurs et Halles du Luberon', categorie: 'Alimentation', prestation: 'Fruits, légumes, produits frais', ligne: 'denrees', part: 0.35, evolutionTarifaire: '+4 % en 2025', delaiPaiement: '30 jours', conditions: 'Livraison quotidienne en saison', dependance: 'moyenne', risques: 'Disponibilité variable selon la météo.' },
       { nom: 'Plateformes de réservation en ligne', categorie: 'Distribution', prestation: 'Commercialisation des chambres', ligne: 'commissions', part: 1, evolutionTarifaire: 'Taux de commission stable, programmes de visibilité payants', delaiPaiement: 'Prélèvement mensuel', conditions: 'Contrats standards', dependance: 'forte', risques: 'Poids dans la distribution, parité tarifaire.' },
-      { nom: 'Élevage des Grandes Bories', categorie: 'Équestre', prestation: 'Foin de Crau, aliments, hivernage des chevaux', ligne: 'aliments-chevaux', part: 0.9, evolutionTarifaire: '+3 % par an', delaiPaiement: '30 jours', conditions: 'Hivernage forfaitaire de janvier à mars', dependance: 'moyenne', risques: 'Seul partenaire d’hivernage identifié.' },
+      { nom: 'Élevage des Grandes Bories', categorie: 'Équestre', prestation: 'Foin de Crau, aliments, copeaux et hivernage des chevaux (environ 220 € par cheval et par mois de pré)', ligne: 'aliments-chevaux', part: 0.9, evolutionTarifaire: 'Foin de Crau en baisse depuis 2023, hivernage +3 % par an', delaiPaiement: '30 jours', conditions: 'Hivernage forfaitaire de mi-novembre à mi-mars', dependance: 'moyenne', risques: 'Seul partenaire d’hivernage identifié ; transport aller et retour à organiser.' },
     ],
     partenaires: [
       { nom: 'Domaines viticoles voisins', type: 'Partenariat', description: 'Itinéraires de balade sur leurs chemins, dégustations en fin de promenade.' },
@@ -223,13 +226,13 @@ const etab: Etablissement = {
 
   rh: {
     synthese:
-      "L'effectif permanent compte 33,5 ETP, complétés par 9 ETP de saisonniers de mars à novembre et par des extras pour les événements. L'écurie emploie deux personnes : une responsable équestre diplômée et un guide-soigneur.",
+      "L'effectif compte 34 ETP permanents, complétés par 9 ETP de saisonniers hôteliers de mars à novembre, une praticienne et un palefrenier saisonniers, et par des extras pour les événements. L'écurie emploie deux permanents diplômés, une responsable équestre et un guide-soigneur, renforcés d'avril à octobre par un palefrenier-soigneur.",
     organigramme: [
       { id: 'dg', intitule: 'Directeur général', personne: 'Adrien Ferrandier' },
       { id: 'dc', intitule: 'Directeur commercial et marketing', personne: 'Olivier Dauphinet', parent: 'dg' },
       { id: 'heb', intitule: 'Hébergement (réception, étages)', personne: 'Isabelle Chauvet, gouvernante générale', parent: 'dg' },
       { id: 'res', intitule: 'Restauration', personne: 'Sébastien Garcin, chef de cuisine', parent: 'dg' },
-      { id: 'spa', intitule: 'Spa', personne: 'Trois praticiennes', parent: 'dg' },
+      { id: 'spa', intitule: 'Spa', personne: 'Trois praticiennes et une saisonnière', parent: 'dg' },
       { id: 'eq', intitule: 'Responsable équestre', personne: 'Clémence Arnaudet', parent: 'dg' },
       { id: 'guide', intitule: 'Guide équestre et soigneur', personne: 'Yanis Peyrolle', parent: 'eq' },
       { id: 'cg', intitule: 'Contrôleuse de gestion du groupe (rattachement fonctionnel)', personne: 'Nadia Roustan', parent: 'dg' },
@@ -238,14 +241,16 @@ const etab: Etablissement = {
       'Hôtel ouvert 7 jours sur 7 pendant la saison, réception 24 h sur 24.',
       'Écurie : soins à 7 h, balades à 8 h 30 et 17 h 30 en été, à 10 h et 15 h en intersaison.',
       'Extras recrutés pour chaque mariage (service, cuisine, plonge).',
+      'Temps de travail des permanents annualisé : congés et repos sont soldés pendant les quatre mois de fermeture.',
+      'Soins aux chevaux sept jours sur sept ; le palefrenier saisonnier assure les jours de repos des deux permanents, mais ne peut pas encadrer de sortie.',
     ],
     saisonnalite:
       "Recrutement des saisonniers de février à avril, fin des contrats en novembre. Pendant la fermeture, l'équipe permanente prend ses congés et la maintenance réalise les travaux.",
     dirigeant:
       "Le directeur général est salarié de la SAS ; il dispose d'une délégation étendue pour l'exploitation mais les investissements supérieurs à 50 000 € sont soumis au conseil des associés.",
-    conventionCollective: 'Convention collective nationale des hôtels, cafés, restaurants',
+    conventionCollective: "Convention collective nationale des hôtels, cafés, restaurants (IDCC 1979), appliquée à l'ensemble du personnel, écurie comprise, l'activité principale de l'entreprise étant hôtelière",
     enjeux: [
-      'Difficulté à recruter et loger les saisonniers dans le Luberon.',
+      'Difficulté à recruter et loger les saisonniers dans le Luberon : le domaine loue six logements pour son personnel.',
       'Dépendance de l’écurie à deux personnes, sans remplaçant diplômé.',
     ],
   },
@@ -257,21 +262,22 @@ const etab: Etablissement = {
       "Lourmarin, village classé parmi les plus visités du Luberon, se situe entre Aix-en-Provence (35 minutes) et Avignon (1 heure). La clientèle internationale arrive par les aéroports de Marseille et de Nice ou par le TGV. La saison touristique s'étend d'avril à octobre.",
     donneesTerritoire: [
       { libelle: 'Établissements hôteliers haut de gamme dans un rayon de 20 km', valeur: '≈ 15', source: 'Estimation du cas' },
+      { libelle: 'Taux d’occupation annuel des hôtels (bilans de l’observatoire départemental, territoire Vaison-Ventoux)', valeur: '59 % en 2024, 61 % en 2025', source: 'Vaucluse Provence Attractivité, bilans 2024 et 2025' },
       { libelle: "Part de la clientèle étrangère du domaine", valeur: '60 %', source: 'Fichier clients 2025' },
       { libelle: 'Distance de l’aéroport de Marseille', valeur: '≈ 1 heure', source: 'Relevé du cas' },
     ],
     concurrents: [
-      { nom: 'Bastide des Cigalons', distance: '6 km', offre: 'Hôtel de 30 chambres, spa, restaurant étoilé', tarifs: 'Prix moyen estimé 480 €', positionnement: 'Gastronomie, pas d’activité équestre' },
-      { nom: 'Mas de la Peyrière', distance: '12 km', offre: 'Hôtel de 18 chambres, vignoble', tarifs: 'Prix moyen estimé 350 €', positionnement: 'Œnotourisme' },
+      { nom: 'Bastide des Cigalons', distance: '6 km', offre: 'Hôtel de 30 chambres, spa, restaurant étoilé', tarifs: 'Prix moyen estimé 520 €', positionnement: 'Cinq étoiles, gastronomie, pas d’activité équestre' },
+      { nom: 'Mas de la Peyrière', distance: '12 km', offre: 'Hôtel quatre étoiles de 18 chambres, vignoble', tarifs: 'Prix moyen estimé 320 €', positionnement: 'Œnotourisme' },
       { nom: 'Ranch du Grand Luberon', distance: '15 km', offre: 'Randonnées équestres, stages', tarifs: 'Balade de 1 h 30 : 45 €', positionnement: 'Tourisme équestre grand public' },
     ],
     pestel: [
       { dimension: 'Politique', faits: ['Le parc naturel régional encadre les constructions et la fréquentation des espaces naturels.', 'La taxe de séjour est collectée pour le compte des collectivités.'] },
-      { dimension: 'Économique', faits: ['Le prix moyen des hôtels haut de gamme de la région a fortement progressé depuis 2022.', "Les coûts de l'énergie ont culminé en 2023.", 'Les taux d’emprunt ont nettement remonté depuis 2022.'] },
+      { dimension: 'Économique', faits: ['Le prix moyen des hôtels haut de gamme de la région a fortement progressé depuis 2022 ; dans le Vaucluse, le RevPAR progresse en janvier 2026 malgré un prix moyen en retrait.', 'Les commissions des agences de réservation en ligne, de l’ordre de 15 à 17 % selon l’UMIH, font l’objet d’actions collectives d’hôteliers européens contre une plateforme depuis 2024.', "Les coûts de l'énergie ont culminé en 2023.", 'Les taux d’emprunt ont nettement remonté depuis 2022.'] },
       { dimension: 'Socioculturel', faits: ['La clientèle haut de gamme recherche des expériences authentiques et photographiables.', 'La demande de séjours actifs et de pleine nature progresse.'] },
       { dimension: 'Technologique', faits: ['Les outils de gestion des revenus ajustent les prix quotidiennement selon la demande.', 'Les plateformes de réservation captent une part importante de la distribution.'] },
       { dimension: 'Écologique', faits: ['Les étés sont plus chauds et le risque d’incendie entraîne des fermetures temporaires de massifs.', 'La ressource en eau est sous tension en été.'] },
-      { dimension: 'Légal', faits: ["L'encadrement contre rémunération des activités équestres exige un diplôme ou un titre inscrit au code du sport.", 'La loi du 30 novembre 2021 visant à lutter contre la maltraitance animale renforce les obligations des détenteurs d’équidés.', 'Le personnel relève de la convention collective des hôtels, cafés, restaurants.'] },
+      { dimension: 'Légal', faits: ["L'encadrement contre rémunération des activités équestres exige un diplôme ou un titre inscrit au code du sport.", 'La loi du 30 novembre 2021 visant à lutter contre la maltraitance animale renforce les obligations des détenteurs d’équidés.', 'Le personnel relève de la convention collective des hôtels, cafés, restaurants, dont la grille issue de l’avenant n° 33 s’applique depuis décembre 2024.', 'Le classement hôtelier d’Atout France est volontaire et doit être renouvelé tous les cinq ans ; les catégories quatre et cinq étoiles font l’objet d’une visite mystère.'] },
     ],
     marche: [
       'Peu d’hôtels haut de gamme du Luberon proposent une activité équestre intégrée.',
@@ -290,16 +296,17 @@ const etab: Etablissement = {
     produitsExceptionnels: [],
     achatsMarchandises: [],
     achatsApprovisionnements: [
-      ligne('denrees', 'Denrées alimentaires et boissons', '6011', an(452000, 468000, 476000, 495000)),
+      ligne('denrees', 'Denrées alimentaires et boissons', '6011', an(478000, 495000, 512000, 530000), 'Environ 26 % du chiffre d’affaires de restauration, petits-déjeuners, mariages et séminaires compris.'),
       ligne('produits-accueil', "Produits d'accueil, linge de chambre et produits du spa", '6022', an(88000, 91000, 95000, 99000)),
-      ligne('aliments-chevaux', 'Fourrage, aliments, litière et hivernage des chevaux', '6012', an(17500, 16200, 16800, 17400)),
+      ligne('aliments-chevaux', 'Fourrage, aliments, litière et hivernage des chevaux', '6012', an(21500, 21000, 22400, 23200), '2025 : environ 13 600 € de foin, concentrés et copeaux pendant la saison et 8 800 € d’hivernage (dix chevaux, quatre mois).'),
     ],
     chargesExternes: [
       ligne('loyer', 'Loyer des murs versé à la société mère', '6132', an(480000, 492000, 505000, 518000)),
+      ligne('logements', 'Location de logements pour le personnel saisonnier', '6132', an(28000, 32000, 36000, 38000), 'Six logements loués à l’année dans les villages voisins.'),
       ligne('assistance', "Assistance du groupe (comptabilité, contrôle de gestion, informatique)", '6226', an(78000, 81000, 85000, 88000)),
-      ligne('commissions', 'Commissions des agences de réservation en ligne', '6222', an(122000, 131000, 134000, 139000)),
-      ligne('energie', 'Électricité, gaz et eau', '6061', an(196000, 176000, 168000, 172000), 'Pic de 2023 lié aux prix de l’énergie.'),
-      ligne('blanchisserie', 'Blanchisserie externalisée', '611', an(88000, 92000, 95000, 99000)),
+      ligne('commissions', 'Commissions des agences de réservation en ligne et des agences de voyages', '6222', an(100000, 104000, 108000, 114000), 'Agences en ligne : 30 % des nuitées à 17 % ; agences haut de gamme : 8 % des nuitées à 10 % (2025).'),
+      ligne('energie', 'Électricité, gaz et eau', '6061', an(184000, 165000, 158000, 162000), 'Pic de 2023 lié aux prix de l’énergie ; piscine chauffée et climatisation en été.'),
+      ligne('blanchisserie', 'Blanchisserie externalisée', '611', an(84000, 87000, 90000, 94000)),
       ligne('entretien', 'Entretien et réparations', '615', an(108000, 114000, 121000, 126000)),
       ligne('jardins', "Entretien des jardins, des vignes d'agrément et de l'oliveraie", '611', an(52000, 54000, 55000, 57000)),
       ligne('assurances', 'Assurances', '616', an(43000, 45000, 48000, 50000)),
@@ -307,7 +314,7 @@ const etab: Etablissement = {
       ligne('marketing', 'Publicité, relations presse, salons', '623', an(82000, 86000, 90000, 98000)),
       ligne('logiciels', 'Logiciels hôteliers et télécommunications', '626', an(38000, 40000, 42000, 44000)),
       ligne('interim', "Personnel extérieur (extras d'événements)", '621', an(78000, 84000, 85000, 90000)),
-      ligne('marechalerie', 'Maréchalerie', '6228', an(8200, 8600, 9000, 9400)),
+      ligne('marechalerie', 'Maréchalerie', '6228', an(7800, 8100, 8400, 8800), 'Ferrure toutes les six à sept semaines pendant la saison, parage pendant l’hivernage.'),
       ligne('veterinaire', 'Vétérinaire et soins des chevaux', '6226', an(5400, 6100, 5800, 6200)),
       ligne('banque', 'Commissions bancaires et frais d’encaissement par carte', '627', an(47000, 50000, 52000, 54000)),
       ligne('deplacements', 'Déplacements et réceptions', '625', an(16000, 17000, 18000, 19000)),
@@ -324,16 +331,17 @@ const etab: Etablissement = {
       { id: 'dg', intitule: 'Directeur général', titulaire: 'Adrien Ferrandier', categorie: 'direction', etp: constant(1), brutAnnuelEtp: an(92000, 94000, 96000, 98000), tauxCharges: 0.42 },
       { id: 'dir-commercial', intitule: 'Directeur commercial et marketing', titulaire: 'Olivier Dauphinet', categorie: 'commercial', etp: constant(1), brutAnnuelEtp: an(60000, 61500, 63000, 64500), tauxCharges: 0.42 },
       { id: 'chef', intitule: 'Chef de cuisine', titulaire: 'Sébastien Garcin', categorie: 'hotellerie', etp: constant(1), brutAnnuelEtp: an(50000, 51500, 53000, 54500), tauxCharges: 0.4 },
-      { id: 'cuisine', intitule: 'Équipe de cuisine permanente', titulaire: 'Cinq cuisiniers et commis', categorie: 'hotellerie', etp: constant(5), brutAnnuelEtp: an(25500, 26200, 26800, 27500), tauxCharges: 0.3 },
-      { id: 'salle', intitule: 'Salle, bar et sommellerie', titulaire: 'Six permanents', categorie: 'hotellerie', etp: constant(6), brutAnnuelEtp: an(24800, 25500, 26100, 26800), tauxCharges: 0.3 },
-      { id: 'reception', intitule: 'Réception, conciergerie et réservations', titulaire: 'Quatre permanents', categorie: 'hotellerie', etp: constant(4), brutAnnuelEtp: an(25000, 25700, 26300, 27000), tauxCharges: 0.3 },
-      { id: 'etages', intitule: 'Gouvernante et équipe des étages', titulaire: 'Isabelle Chauvet et six équipiers', categorie: 'hotellerie', etp: constant(7), brutAnnuelEtp: an(22600, 23200, 23700, 24300), tauxCharges: 0.25 },
-      { id: 'praticiennes', intitule: 'Praticiennes du spa', titulaire: 'Trois praticiennes', categorie: 'hotellerie', etp: constant(3), brutAnnuelEtp: an(24500, 25200, 25800, 26500), tauxCharges: 0.3 },
-      { id: 'maintenance', intitule: 'Maintenance technique et jardins', titulaire: 'Deux techniciens', categorie: 'technique', etp: constant(2), brutAnnuelEtp: an(24800, 25400, 26000, 26700), tauxCharges: 0.3 },
-      { id: 'administration', intitule: 'Administration et ressources humaines', titulaire: 'Une assistante de direction et une gestionnaire à mi-temps', categorie: 'administratif', etp: constant(1.5), brutAnnuelEtp: an(31000, 31800, 32500, 33300), tauxCharges: 0.35 },
-      { id: 'resp-equestre', intitule: 'Responsable équestre (DEJEPS)', titulaire: 'Clémence Arnaudet', categorie: 'encadrement', etp: constant(1), brutAnnuelEtp: an(30000, 30800, 31600, 32400), tauxCharges: 0.33 },
-      { id: 'guide', intitule: 'Guide équestre et soigneur', titulaire: 'Yanis Peyrolle', categorie: 'soins', etp: constant(1), brutAnnuelEtp: an(23500, 24000, 24600, 25200), tauxCharges: 0.28 },
-      { id: 'saisonniers', intitule: 'Saisonniers (cuisine, salle, étages), mars à novembre', titulaire: 'CDD saisonniers', categorie: 'saisonnier', etp: an(8.5, 9, 9, 9.5), brutAnnuelEtp: an(22800, 23400, 23900, 24500), tauxCharges: 0.25 },
+      { id: 'cuisine', intitule: 'Équipe de cuisine permanente', titulaire: 'Six cuisiniers, pâtissier et commis', categorie: 'hotellerie', etp: constant(6), brutAnnuelEtp: an(25500, 26200, 26800, 27500), tauxCharges: 0.2 },
+      { id: 'salle', intitule: 'Salle, bar et sommellerie', titulaire: 'Sept permanents', categorie: 'hotellerie', etp: constant(7), brutAnnuelEtp: an(24800, 25500, 26100, 26800), tauxCharges: 0.2 },
+      { id: 'reception', intitule: 'Réception, conciergerie et réservations', titulaire: 'Quatre permanents', categorie: 'hotellerie', etp: constant(4), brutAnnuelEtp: an(25000, 25700, 26300, 27000), tauxCharges: 0.2 },
+      { id: 'etages', intitule: 'Gouvernante et équipe des étages', titulaire: 'Isabelle Chauvet et six équipiers', categorie: 'hotellerie', etp: constant(7), brutAnnuelEtp: an(22600, 23200, 23700, 24300), tauxCharges: 0.15 },
+      { id: 'praticiennes', intitule: 'Praticiennes du spa', titulaire: 'Trois praticiennes permanentes et une saisonnière d’avril à octobre', categorie: 'hotellerie', etp: constant(3.5), brutAnnuelEtp: an(24500, 25200, 25800, 26500), tauxCharges: 0.2 },
+      { id: 'maintenance', intitule: 'Maintenance technique et jardins', titulaire: 'Deux techniciens', categorie: 'technique', etp: constant(2), brutAnnuelEtp: an(24800, 25400, 26000, 26700), tauxCharges: 0.2 },
+      { id: 'administration', intitule: 'Administration et ressources humaines', titulaire: 'Une assistante de direction et une gestionnaire à mi-temps', categorie: 'administratif', etp: constant(1.5), brutAnnuelEtp: an(31000, 31800, 32500, 33300), tauxCharges: 0.28 },
+      { id: 'resp-equestre', intitule: 'Responsable équestre (BPJEPS activités équestres)', titulaire: 'Clémence Arnaudet', categorie: 'encadrement', etp: constant(1), brutAnnuelEtp: an(30000, 30800, 31600, 32400), tauxCharges: 0.27 },
+      { id: 'guide', intitule: 'Guide équestre et soigneur (accompagnateur de tourisme équestre)', titulaire: 'Yanis Peyrolle', categorie: 'soins', etp: constant(1), brutAnnuelEtp: an(23500, 24000, 24600, 25200), tauxCharges: 0.15 },
+      { id: 'palefrenier', intitule: 'Palefrenier-soigneur saisonnier, avril à octobre', titulaire: 'CDD saisonnier', categorie: 'soins', etp: constant(0.5), brutAnnuelEtp: an(21000, 21400, 21800, 22100), tauxCharges: 0.1 },
+      { id: 'saisonniers', intitule: 'Saisonniers (cuisine, salle, étages), mars à novembre', titulaire: 'CDD saisonniers', categorie: 'saisonnier', etp: an(8.5, 9, 9, 9.5), brutAnnuelEtp: an(22800, 23400, 23900, 24500), tauxCharges: 0.15 },
     ],
     immobilisations: [
       { id: 'droit-bail', libelle: 'Droit au bail et fonds commercial', categorie: 'incorporel', valeurOrigine: 350000, miseEnService: '2014-06', duree: 0 },
@@ -367,30 +375,30 @@ const etab: Etablissement = {
       produitsConstatesAvance: fin(38000, 42000, 47000, 52000, 55000),
     },
     ouverture: { capital: 800000, libelleCapital: 'Capital social', tresorerie: 520000 },
-    dividendes: an(150000, 300000, 400000, 450000),
+    dividendes: an(0, 200000, 300000, 450000),
     tresorerieMensuelle: {
-      saisonnaliteEncaissements: [1, 1, 4, 8, 11, 13, 15, 15, 13, 10, 5, 4],
-      saisonnaliteAchats: [3, 3, 7, 9, 10, 11, 12, 12, 11, 9, 7, 6],
-      saisonnalitePersonnel: [5, 5, 8, 9, 9, 10, 10, 10, 10, 9, 8, 7],
+      saisonnaliteEncaissements: [1, 2, 5, 9, 11, 13, 15, 15, 13, 11, 4, 1],
+      saisonnaliteAchats: [3, 4, 8, 9, 10, 11, 12, 12, 11, 10, 6, 4],
+      saisonnalitePersonnel: [6, 6, 8, 9, 9, 10, 10, 10, 10, 9, 7, 6],
       moisDistributions: [6],
       commentaire:
-        "Encaissements concentrés de mai à septembre ; la fermeture de janvier à mi-mars consomme de la trésorerie (salaires des permanents, loyer, travaux). Les acomptes de mariages sont encaissés plusieurs mois à l'avance.",
+        "Encaissements concentrés de mai à octobre ; la fermeture de mi-novembre à mi-mars consomme de la trésorerie (salaires des permanents annualisés, loyer, travaux, hivernage des chevaux). Les acomptes de mariages et de séminaires sont encaissés plusieurs mois à l'avance.",
     },
     analytique: {
       exercice: 2025,
       sections: [
-        { id: 'hebergement', nom: 'Hébergement', uniteOeuvre: { libelle: 'nuitée vendue', quantite: 5010 } },
+        { id: 'hebergement', nom: 'Hébergement', uniteOeuvre: { libelle: 'nuitée vendue', quantite: 4120 } },
         { id: 'restauration', nom: 'Restaurant', uniteOeuvre: { libelle: 'couvert', quantite: 15400 } },
-        { id: 'spa', nom: 'Spa', uniteOeuvre: { libelle: 'soin', quantite: 3900 } },
+        { id: 'spa', nom: 'Spa', uniteOeuvre: { libelle: 'soin', quantite: 3200 } },
         { id: 'evenements', nom: 'Mariages et séminaires' },
         { id: 'equestre', nom: 'Activités équestres', uniteOeuvre: { libelle: 'prestation équestre', quantite: 1720 } },
       ],
       cles: [
-        { id: 'surfaces', nom: 'Surfaces utilisées', unite: 'm²', justification: "Plan du bail : surfaces bâties et aménagées utilisées par chaque activité. L'écurie, la sellerie et le paddock de travail comptent pour 520 m² (contrôle de gestion du groupe).", repartition: { hebergement: 2700, restauration: 680, spa: 450, evenements: 560, equestre: 520 } },
+        { id: 'surfaces', nom: 'Surfaces utilisées', unite: 'm²', justification: "Plan du bail : surfaces bâties et aménagées utilisées par chaque activité. L'écurie et la sellerie (260 m² bâtis) et le paddock de travail (600 m² retenus pour moitié comme surface extérieure aménagée) comptent pour 560 m² selon le contrôle de gestion du groupe ; jardins, vignes et chemins de balade ne sont pas comptés.", repartition: { hebergement: 2200, restauration: 1000, spa: 450, evenements: 700, equestre: 560 } },
         { id: 'couverts', nom: 'Couverts équivalents servis', unite: 'couverts', justification: 'Petits-déjeuners des résidents (pondérés), couverts du restaurant, repas des événements et petits-déjeuners servis lors des sorties au lever du soleil.', repartition: { hebergement: 4200, restauration: 15400, spa: 0, evenements: 7600, equestre: 300 } },
         { id: 'consommables', nom: 'Consommation de produits d’accueil et de linge', unite: 'points', justification: 'Relevé des sorties de stock 2025.', repartition: { hebergement: 70, restauration: 0, spa: 25, evenements: 5, equestre: 0 } },
         { id: 'effectif-saison', nom: 'Saisonniers affectés', unite: 'ETP', justification: 'Plannings des saisonniers 2025.', repartition: { hebergement: 3.5, restauration: 3.5, spa: 0, evenements: 2, equestre: 0 } },
-        { id: 'ca', nom: "Chiffre d'affaires", unite: '€', justification: 'Clé conventionnelle du groupe pour les frais de structure.', repartition: { hebergement: 2079150, restauration: 1139600, spa: 448500, evenements: 891000, equestre: 188600 } },
+        { id: 'ca', nom: "Chiffre d'affaires", unite: '€', justification: 'Clé conventionnelle du groupe pour les frais de structure.', repartition: { hebergement: 1833400, restauration: 1262800, spa: 400000, evenements: 945000, equestre: 188600 } },
       ],
       affectations: {
         denrees: { cle: 'couverts' },
@@ -415,6 +423,8 @@ const etab: Etablissement = {
         maintenance: { cle: 'surfaces' },
         'resp-equestre': { section: 'equestre' },
         guide: { section: 'equestre' },
+        palefrenier: { section: 'equestre' },
+        logements: { cle: 'effectif-saison' },
         saisonniers: { cle: 'effectif-saison' },
         'amortissements:cavalerie': { section: 'equestre' },
         'amortissements:installations': { cle: 'surfaces' },
@@ -431,7 +441,21 @@ const etab: Etablissement = {
       'Les murs appartiennent à la société mère : la SAS comptabilise un loyer et amortit les agencements qu’elle a financés sur leur durée d’utilité, dans la limite de la durée prévisible du bail.',
       'Le prix des chambres inclut le petit-déjeuner ; il n’est pas isolé dans une prestation distincte.',
       'Les acomptes reçus sur mariages et séminaires figurent en autres dettes ; les bons cadeaux non consommés en produits constatés d’avance.',
-      'Impôt sur les sociétés au taux réduit de 15 % jusqu’à 42 500 € de bénéfice, 25 % au-delà, sans retraitement fiscal ; l’intégration fiscale éventuelle avec la société mère n’est pas modélisée.',
+      'Impôt sur les sociétés au taux réduit de 15 % jusqu’à 42 500 € de bénéfice, 25 % au-delà, sans retraitement fiscal. Le taux réduit suppose des conditions de détention du capital qu’une filiale ne remplit pas toujours : il est appliqué par simplification ; l’intégration fiscale éventuelle avec la société mère n’est pas modélisée.',
+      'Taux de charges patronales après allègements généraux : 0,15 au voisinage du SMIC, 0,20 à 0,28 entre 1,1 et 1,5 SMIC, 0,40 à 0,42 pour les cadres ; les avantages en nature (repas) ne sont pas isolés.',
+      'Les pourboires et le service ne sont pas modélisés.',
+      'Repère réel : taux d’occupation annuel des hôtels de 59 % en 2024 et 61 % en 2025 selon les bilans de l’observatoire Vaucluse Provence publiés pour le territoire Vaison-Ventoux (sources : https://www.vaison-ventoux-provence.com/app/uploads/vaison-ventoux/2025/03/VPA_OBS_VAISONVENTOUX_Bilan_2024.pdf et https://www.vaison-ventoux-provence.com/app/uploads/vaison-ventoux/2026/03/VPA_OBS_VAISON_VENTOUX_Bilan_2025.pdf). Le taux du cas (70 % sur 245 jours d’ouverture, soit 47 % sur l’année) est cohérent avec un hôtel saisonnier haut de gamme qui ne vend pas l’hiver.',
+      'Repère réel : en octobre 2023, le segment haut de gamme de la Région Sud affichait 71,0 % d’occupation et un prix moyen de 210,3 €, toutes villes confondues (source : https://provence-alpes-cotedazur.com/app/uploads/crt-paca/2024/01/2310-MKG_Barometre_RegionSud.pdf).',
+      'Repère réel : un article professionnel citant MKG donne pour 2025, segment haut de gamme et luxe, 67 % d’occupation, 369 € de prix moyen et 247 € de RevPAR, sans préciser le périmètre géographique (source : https://www.lejournalduchr.fr/hotellerie/revpar-taux-occupation). Le prix moyen du cas (445 € HT) est supérieur, ce qui correspond à un petit cinq étoiles de campagne vendu surtout en haute saison.',
+      'Repère réel : relevés de prix à Lourmarin, mois le plus cher en octobre (environ 429 € la nuit en moyenne) et le moins cher en février (environ 113 €) (source : https://www.kayak.fr/Lourmarin-Hotels.45520.hotel.ksp).',
+      'Repère réel : selon une étude KPMG de 2024 citée par la presse hôtelière, la restauration représentait en moyenne 24,8 % des recettes d’un hôtel quatre étoiles avec restaurant, et le résultat brut d’exploitation 31,3 % des recettes contre 45,7 % sans restaurant (source : https://www.tendancehotellerie.fr/articles-breves/publireportages/23154-article/hebergement-restauration-hoteliere-comment-reconcilier-rentabilite-experience-parcours-client-et-collaborateur-sur-ces-2-centres-de-profits). Dans le cas, la restauration pèse 27 % et l’EBE avant loyer environ 30 % du chiffre d’affaires.',
+      'Repère réel : masse salariale chargée d’un établissement de cafés, hôtels, restaurants jugée saine entre 35 et 45 % du chiffre d’affaires hors taxes (source : https://www.keobiz.fr/fiches-pratiques/ouvrir-restaurant-hotel/tronc-commun-quel-est-le-ratio-ideal-de-la-masse-salariale/).',
+      'Repère réel : grille de la convention des hôtels, cafés, restaurants issue de l’avenant n° 33, applicable depuis le 1er décembre 2024 : 12,00 € de l’heure au premier échelon du niveau I, 18,43 € pour un cadre au premier échelon (source : https://www.juritravail.com/Actualite/grille-de-salaires-2025-dans-la-branche-hotels-cafes-restaurants/Id/378039).',
+      'Repère réel : commissions des plateformes de réservation de 15 à 17 % selon l’UMIH, jusqu’à 25 % pour certains hôtels (source : https://www.connexionfrance.com/news/france-to-sue-hotel-sites/620748). Commission moyenne du cas : 17 %.',
+      'Repère réel : balade à cheval près de Cavaillon à partir de 40 € l’heure (source : https://provence-alpes-cotedazur.com/que-faire/activites/balade-a-cheval-entre-les-monts-du-vaucluse-et-le-plateau-du-luberon-lagnes-fr-2856641/) ; 45 € la balade de 1 h 30 dans un centre des Alpes-de-Haute-Provence (source : https://provence-alpes-cotedazur.com/que-faire/activites/sorties-et-promenades-a-cheval-avec-lecrin-du-lac-les-salles-sur-verdon-fr-5759311/). Le prix du domaine (95 € HT la balade de 1 h 30) est environ le double, ce qui correspond à une prestation privative intégrée à un séjour cinq étoiles.',
+      'Repère réel : séjour « Découverte du Luberon à cheval version luxe » de 7 jours et 6 nuits, hébergement en hôtel quatre étoiles, à partir de 2 500 € par adulte (source : https://provence-alpes-cotedazur.com/que-faire/artisanat-et-shopping/toutes-les-activites-artisanat-et-shopping/cheval-nature-decouverte-du-luberon-a-cheval-version-luxe-lauris-fr-4393541/).',
+      'Repère réel : foin de Crau AOP vendu environ 200 € la tonne en 2025 contre environ 300 € quatre ans plus tôt, selon un producteur (source : https://www.reussir.fr/des-prairies-irriguees-au-pas-des-merinos).',
+      'Repère réel : le BPJEPS éducateur sportif mention activités équestres, qui a remplacé l’ancienne spécialité activités équestres, comporte une option d’équitation d’extérieur (source : https://www.intercariforef.org/formations/certification-93223.html).',
       "La contribution des chevaux au prix moyen et à la durée de séjour n'est pas mesurée dans les comptes : elle fait l'objet d'estimations divergentes dans les documents.",
     ],
   },
@@ -450,12 +474,12 @@ const etab: Etablissement = {
       contenu: [
         { type: 'p', texte: "Les comptes analytiques du groupe présentent l'écurie comme un centre de coûts. C'est ignorer ce qu'elle apporte à l'hôtel. J'ai rapproché, pour la saison 2025, les séjours des clients ayant pratiqué au moins une activité équestre de ceux des autres clients." },
         { type: 'tableau', colonnes: ['Indicateur 2025', 'Séjours avec activité équestre', 'Autres séjours', 'Ensemble'], alignDroite: [1, 2, 3], lignes: [
-          ['Nombre de séjours', 385, 1542, 1927],
+          ['Nombre de séjours', 317, 1268, 1585],
           ['Durée moyenne (nuits)', '3,4', '2,4', '2,6'],
-          ['Nuitées', 1310, 3700, 5010],
-          ['Prix moyen de la chambre', '452 €', '402 €', '415 €'],
+          ['Nuitées', 1078, 3042, 4120],
+          ['Prix moyen de la chambre', '482 €', '432 €', '445 €'],
         ], note: 'Extraction du logiciel de réservation ; séjours de la clientèle individuelle et des séminaires.' },
-        { type: 'p', texte: "L'écart de prix de 50 € sur 1 310 nuitées représente 65 500 € ; la nuit supplémentaire de 385 séjours représente près de 160 000 €. La contribution indirecte des chevaux approche donc 225 000 € par an, sans compter leur place dans notre image : les photographies de balades dans les vignes sont nos publications les plus partagées." },
+        { type: 'p', texte: "L'écart de prix de 50 € sur 1 078 nuitées représente 53 900 € ; la nuit supplémentaire de 317 séjours, valorisée au prix moyen de 445 €, représente environ 141 000 €. La contribution indirecte des chevaux approche donc 195 000 € par an, sans compter leur place dans notre image : les photographies de balades dans les vignes sont nos publications les plus partagées." },
         { type: 'p', texte: "Je propose de faire de l'équitation un axe de marque, avec une écurie de seize boxes, une vraie carrière et une offre de séjours équestres de trois nuits." },
         { type: 'signature', nom: 'Olivier Dauphinet', fonction: 'Directeur commercial et marketing' },
       ],
@@ -471,7 +495,7 @@ const etab: Etablissement = {
       rubriques: ['finances', 'activites'],
       contenu: [
         { type: 'p', texte: "Les résultats analytiques 2025 du domaine sont établis selon la méthode commune aux filiales : imputation directe des charges propres à chaque activité, répartition du loyer, de l'énergie, de l'entretien et des amortissements au mètre carré, et des frais de structure au chiffre d'affaires." },
-        { type: 'p', texte: "Pour les activités équestres, les produits s'élèvent à 189 101 € (y compris une quote-part de produits financiers), les charges directes à 113 449 € et les charges réparties à 173 038 €, soit un résultat de −97 386 €. La marge sur coûts directs est positive (75 652 €), mais elle ne couvre pas la quote-part de loyer et de structure liée aux 520 m² de l'écurie et du paddock." },
+        { type: 'p', texte: "Pour les activités équestres, les produits s'élèvent à 189 113 € (y compris une quote-part de produits financiers), les charges directes à 125 345 € et les charges réparties à 182 645 €, soit un résultat de −118 877 €. La marge sur coûts directs est positive (63 768 €), mais elle ne couvre pas la quote-part de loyer, d'énergie et de structure liée aux 560 m² retenus pour l'écurie et le paddock." },
         { type: 'citation', texte: "La corrélation entre pratique équestre et prix moyen ne démontre pas un lien de cause à effet : les clients qui montent à cheval réservent plus souvent des suites et des séjours longs, avec ou sans chevaux.", auteur: 'Nadia Roustan' },
         { type: 'p', texte: "Je recommande, avant tout investissement, de tester l'effet de l'offre équestre sur une période et un échantillon comparables, et de discuter les clés de répartition retenues pour l'écurie." },
         { type: 'signature', nom: 'Nadia Roustan', fonction: 'Contrôleuse de gestion du groupe' },
@@ -487,18 +511,17 @@ const etab: Etablissement = {
       rubriques: ['activites', 'cavalerie'],
       contenu: [
         { type: 'tableau', colonnes: ['Mois', 'Balades', 'Lever du soleil', 'Cours privés', 'Demandes refusées'], alignDroite: [1, 2, 3, 4], lignes: [
-          ['Mars', 40, 0, 10, 0],
+          ['Mars (à partir du 14)', 30, 0, 10, 0],
           ['Avril', 120, 0, 30, 5],
-          ['Mai', 160, 50, 35, 20],
-          ['Juin', 170, 70, 35, 45],
+          ['Mai', 165, 50, 35, 20],
+          ['Juin', 175, 70, 35, 45],
           ['Juillet', 150, 75, 30, 140],
           ['Août', 140, 70, 25, 120],
-          ['Septembre', 160, 35, 40, 30],
-          ['Octobre', 140, 0, 40, 0],
-          ['Novembre', 70, 0, 20, 0],
-          ['Décembre', 0, 0, 5, 0],
+          ['Septembre', 170, 35, 45, 30],
+          ['Octobre', 150, 0, 45, 0],
+          ['Novembre (jusqu’au 15)', 50, 0, 15, 0],
           ['Total', 1150, 300, 270, 360],
-        ], note: 'Balades suspendues aux heures chaudes en juillet et août ; une seule sortie par cheval et par jour.' },
+        ], note: 'Balades : cavaliers-balades ; lever du soleil : participants ; cours : leçons. Balades suspendues aux heures chaudes en juillet et août ; une seule sortie par cheval et par jour. Capacité théorique : environ 2 450 cavaliers-balades et 600 places au lever du soleil par saison.' },
         { type: 'p', texte: "Les refus de juillet et d'août tiennent au nombre de chevaux et aux règles de chaleur, pas au personnel. Au printemps et à l'automne, la demande est satisfaite sans difficulté." },
         { type: 'signature', nom: 'Clémence Arnaudet', fonction: 'Responsable équestre' },
       ],
@@ -514,12 +537,12 @@ const etab: Etablissement = {
       rubriques: ['installations', 'finances', 'environnement'],
       contenu: [
         { type: 'tableau', colonnes: ['Poste', 'Montant HT'], alignDroite: [1], lignes: [
-          ['Écurie de seize boxes en ossature bois, sellerie', '380 000 €'],
-          ['Carrière paysagère 40 × 60 m', '145 000 €'],
+          ['Écurie de seize boxes en ossature bois, sellerie', '360 000 €'],
+          ['Carrière paysagère 40 × 60 m (drainage, sol, arrosage, lices)', '110 000 €'],
           ['Six chevaux (11 000 € en moyenne)', '66 000 €'],
           ['Van, tracteur compact, herse', '52 000 €'],
           ['Lancement (photographies, agences, formation)', '22 000 €'],
-          ['Total', '665 000 €'],
+          ['Total', '610 000 €'],
         ] },
         { type: 'h', texte: 'Hypothèses de marché' },
         { type: 'liste', items: [
@@ -542,7 +565,7 @@ const etab: Etablissement = {
       rubriques: ['finances', 'etablissement'],
       contenu: [
         { type: 'p', texte: 'Adrien,' },
-        { type: 'p', texte: "Le conseil examinera le projet d'écurie en avril. Nos critères restent ceux du groupe : taux de rentabilité interne d'au moins 8 %, pas d'augmentation de capital, apport de la filiale limité à 165 000 €. La banque nous propose 500 000 € sur douze ans à 4,1 %." },
+        { type: 'p', texte: "Le conseil examinera le projet d'écurie en avril. Nos critères restent ceux du groupe : taux de rentabilité interne d'au moins 8 %, pas d'augmentation de capital, apport de la filiale limité à 110 000 €. La banque nous propose 500 000 € sur douze ans à 4,1 %." },
         { type: 'p', texte: "Le budget 2026 prévoit 450 000 € de dividendes : ce montant finance les projets des deux autres maisons du groupe et ne doit pas être remis en cause." },
         { type: 'p', texte: "Je souhaite enfin une position claire sur l'écurie actuelle, quelle que soit la décision sur le projet : nous ne pouvons pas continuer à débattre chaque année de ce qu'elle coûte." },
         { type: 'signature', nom: 'Hubert Valcroze', fonction: 'Président de Valcroze Participations' },
@@ -580,23 +603,23 @@ const etab: Etablissement = {
       description:
         "Construction d'une écurie de seize boxes en ossature bois et d'une carrière de 40 × 60 m intégrée au paysage, achat de six chevaux et lancement d'une offre « séjour équestre » (trois nuits pour deux personnes avec quatre activités). L'actuelle bergerie serait rendue à l'hôtel (salle de séminaire).",
       composantes: [
-        { libelle: 'Écurie de seize boxes en ossature bois avec sellerie', montant: 380000, duree: 20 },
-        { libelle: 'Carrière paysagère 40 × 60 m (drainage, sol, lices, plantations)', montant: 145000, duree: 12 },
+        { libelle: 'Écurie de seize boxes en ossature bois avec sellerie', montant: 360000, duree: 20 },
+        { libelle: 'Carrière paysagère 40 × 60 m (drainage, sol, arrosage, lices, plantations)', montant: 110000, duree: 12 },
         { libelle: 'Six chevaux supplémentaires', montant: 66000, duree: 8 },
         { libelle: 'Matériel (van, tracteur compact, herse)', montant: 52000, duree: 8 },
       ],
       chargesLancement: 22000,
-      financement: { apport: 165000, emprunt: 500000, taux: 0.041, dureeAnnees: 12, subvention: 0 },
+      financement: { apport: 110000, emprunt: 500000, taux: 0.041, dureeAnnees: 12, subvention: 0 },
       recettes: [
-        { libelle: 'Séjours équestres (3 nuits, 2 personnes, 4 activités)', unite: 'séjour', prix: 2650, volumes: { prudent: 50, central: 85, favorable: 130 }, capaciteMax: 200 },
+        { libelle: 'Séjours équestres (3 nuits, 2 personnes, 4 activités)', unite: 'séjour', prix: 2650, volumes: { prudent: 50, central: 80, favorable: 130 }, capaciteMax: 200 },
         { libelle: 'Balades et leçons supplémentaires', unite: 'prestation', prix: 105, volumes: { prudent: 600, central: 1000, favorable: 1500 }, capaciteMax: 2500 },
         { libelle: 'Pension et hivernage de chevaux de clients', unite: 'mois', prix: 620, volumes: { prudent: 12, central: 24, favorable: 40 }, capaciteMax: 72 },
       ],
-      tauxChargesVariables: 0.36,
+      tauxChargesVariables: 0.4,
       chargesFixes: [
-        { libelle: 'Moniteur diplômé supplémentaire (1 ETP chargé)', montant: 44000 },
-        { libelle: 'Soigneur saisonnier (0,6 ETP)', montant: 19000 },
-        { libelle: 'Entretien de six chevaux supplémentaires', montant: 21000 },
+        { libelle: 'Enseignant diplômé supplémentaire, BPJEPS (1 ETP chargé)', montant: 36000 },
+        { libelle: 'Second palefrenier-soigneur saisonnier (0,6 ETP chargé)', montant: 14500 },
+        { libelle: 'Entretien de six chevaux supplémentaires (environ 3 600 € par cheval et par an, hivernage compris)', montant: 21600 },
         { libelle: 'Entretien de la carrière et des bâtiments, assurances', montant: 14000 },
         { libelle: "Commercialisation de l'offre séjour équestre", montant: 12000 },
       ],
@@ -667,7 +690,7 @@ const etab: Etablissement = {
       ],
       controles: [
         { id: 'c-ebe', question: "Recalculez le taux d'EBE 2025 (EBE / chiffre d'affaires).", indicateur: 'tauxEBE', exercice: 2025, unite: '%', tolerance: 0.005, aide: 'Attention : la redevance de marque (compte 651) est enregistrée sous l’EBE.' },
-        { id: 'c-occ', question: "Quel est le taux d'occupation 2025 des chambres rapporté à la capacité annuelle (24 chambres × 365 jours) ?", indicateur: 'occupation:nuitees', exercice: 2025, unite: '%', tolerance: 0.005, aide: 'Nuitées vendues / nuitées disponibles sur l’année entière, fermeture comprise.' },
+        { id: 'c-occ', question: "Quel est le taux d'occupation 2025 des chambres sur la période d'ouverture (24 chambres × 245 jours) ?", indicateur: 'occupation:nuitees', exercice: 2025, unite: '%', tolerance: 0.005, aide: 'Nuitées vendues (chambres louées) / chambres disponibles pendant la période d’ouverture.' },
         { id: 'c-equestre', question: 'Quel est le résultat analytique 2025 des activités équestres selon la méthode du groupe ?', indicateur: 'resultatSection:equestre', exercice: 2025, unite: '€', tolerance: 50, aide: 'Produits de la section moins charges directes et charges réparties.' },
         { id: 'c-nuitee', question: "Quel est le coût complet 2025 d'une nuitée vendue ?", indicateur: 'coutUnitaire:hebergement', exercice: 2025, unite: '€/unité', tolerance: 3, aide: 'Coût complet de la section hébergement divisé par les nuitées vendues.' },
       ],
@@ -681,7 +704,7 @@ const etab: Etablissement = {
         date: '2026-02-23',
         objet: 'Évaluation du projet avant le conseil des associés',
         corps: [
-          "Le directeur commercial propose une écurie de seize boxes, une carrière et une offre de séjours équestres pour 665 000 €. Le conseil des associés l'examinera en avril selon les critères du groupe.",
+          "Le directeur commercial propose une écurie de seize boxes, une carrière et une offre de séjours équestres pour 610 000 €. Le conseil des associés l'examinera en avril selon les critères du groupe.",
           "Je vous demande une évaluation selon plusieurs scénarios et une recommandation argumentée, y compris sur les conditions à réunir avant de lancer les travaux.",
         ],
       },
@@ -750,9 +773,10 @@ const etab: Etablissement = {
     },
   ],
   indicateursActivite: [
-    { libelle: "Taux d'occupation sur la période d'ouverture", unite: '%', valeurs: { 2023: 70, 2024: 71, 2025: 72, 2026: 74 } },
-    { libelle: 'Prix moyen par chambre vendue', unite: '€', valeurs: { 2023: 380, 2024: 392, 2025: 415, 2026: 436 } },
-    { libelle: 'Revenu par chambre disponible (période d’ouverture)', unite: '€', valeurs: { 2023: 266, 2024: 279, 2025: 299, 2026: 323 }, aide: 'Prix moyen × taux d’occupation sur 290 jours.' },
+    { libelle: "Taux d'occupation sur la période d'ouverture", unite: '%', valeurs: { 2023: 68, 2024: 69, 2025: 70, 2026: 72 } },
+    { libelle: 'Prix moyen par chambre vendue (ADR)', unite: '€', valeurs: { 2023: 405, 2024: 425, 2025: 445, 2026: 465 } },
+    { libelle: 'Revenu par chambre disponible (RevPAR, période d’ouverture)', unite: '€', valeurs: { 2023: 276, 2024: 293, 2025: 312, 2026: 335 }, aide: 'Chiffre d’affaires hébergement / (24 chambres × 245 jours), soit prix moyen × taux d’occupation.' },
+    { libelle: 'RevPAR sur l’année civile', unite: '€', valeurs: { 2023: 185, 2024: 197, 2025: 209, 2026: 225 }, aide: 'Chiffre d’affaires hébergement / (24 chambres × 365 jours) : mesure le coût de la fermeture hivernale.' },
     { libelle: 'Prestations équestres vendues', unite: 'prestations', valeurs: { 2023: 1470, 2024: 1600, 2025: 1720, 2026: 1840 } },
     { libelle: 'Part des séjours avec activité équestre', unite: '%', valeurs: { 2023: 17, 2024: 18, 2025: 20 } },
   ],
