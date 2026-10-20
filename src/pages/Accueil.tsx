@@ -36,7 +36,7 @@ export function Accueil() {
             <p className="hero__signature">Laboratoire immersif de management et de finance des établissements équestres.</p>
             <div className="hero__bas">
               <p style={{ maxWidth: 560, margin: 0, opacity: 0.9 }}>
-                Quatorze entreprises de la filière équine vous ouvrent leurs écuries, leurs comptes et leurs dossiers de direction. Choisissez-en
+                Dix entreprises de la filière équine vous ouvrent leurs écuries, leurs comptes et leurs dossiers de direction. Choisissez-en
                 une, analysez-la, puis conseillez sa direction.
               </p>
               <button className="btn btn--clair" onClick={() => document.getElementById('etablissements')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -73,7 +73,7 @@ export function Accueil() {
         <section className="section section--alt" id="etablissements" aria-labelledby="titre-galerie">
           <div className="conteneur">
             <span className="surtitre">Les établissements</span>
-            <h2 id="titre-galerie">Quatorze modèles économiques de la filière équine</h2>
+            <h2 id="titre-galerie">Dix modèles économiques de la filière équine</h2>
             <div className="filtres" role="group" aria-label="Filtrer les établissements">
               {GROUPES.map((g) => (
                 <button key={g} className="puce-filtre" aria-pressed={groupe === g} onClick={() => setGroupe(g)}>

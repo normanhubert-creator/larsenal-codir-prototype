@@ -216,6 +216,10 @@ for (const etab of ETABLISSEMENTS) {
           expect(Math.abs(derniere.recettes - attendu)).toBeLessThan(EPS);
         // Nombre total de mois d'activité = horizon − délai de mise en service
         expect(ce.annees.every((a) => a.recettes >= 0)).toBe(true);
+        // Plan de financement initial équilibré : apport + emprunt + subvention = investissement + charges de lancement
+        const besoin = somme(projet.composantes.map((c) => c.montant)) + projet.chargesLancement;
+        const ressources = projet.financement.apport + projet.financement.emprunt + projet.financement.subvention;
+        expect(Math.abs(besoin - ressources), `plan de financement ${projet.id} : besoin ${besoin}, ressources ${ressources}`).toBeLessThan(1);
         // La somme des composantes égale le montant d'investissement
         expect(Math.abs(ce.montantInvestissement - somme(projet.composantes.map((c) => c.montant)))).toBeLessThan(EPS);
         for (const r of projet.recettes) {

@@ -218,7 +218,7 @@ export function Simulateur() {
               </div>
             )}
 
-            <div className="grille-2">
+            <div className="grille-souple">
               <div>
                 <h3>Plan de financement initial</h3>
                 <div className="table-defilante">
@@ -316,7 +316,7 @@ export function Simulateur() {
               </div>
             </div>
 
-            <div className="grille-2" style={{ marginTop: 28 }}>
+            <div className="grille-souple" style={{ marginTop: 28 }}>
               <GraphiqueScenarios
                 titre="Trésorerie cumulée du projet par scénario"
                 note="Après financement et remboursement des emprunts. Les autres hypothèses sont celles que vous avez réglées ; trait plein : vos réglages actuels."
@@ -420,7 +420,7 @@ export function Simulateur() {
               </caption>
             </div>
 
-            <div className="grille-2" style={{ marginTop: 28 }}>
+            <div className="grille-souple" style={{ marginTop: 28 }}>
               <div className="carte">
                 <h3>Repères pour discuter vos hypothèses</h3>
                 <ul className="liste-propre petit">

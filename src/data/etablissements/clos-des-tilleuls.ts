@@ -684,7 +684,7 @@ const etab: Etablissement = {
         { libelle: 'Paddocks attenants et clôtures', montant: 12000, duree: 10 },
       ],
       chargesLancement: 1500,
-      financement: { apport: 11000, emprunt: 55000, taux: 0.039, dureeAnnees: 12, subvention: 0 },
+      financement: { apport: 12500, emprunt: 55000, taux: 0.039, dureeAnnees: 12, subvention: 0 },
       recettes: [{ libelle: 'Pension complète en box neuf', unite: 'mois de pension', prix: 450, volumes: { prudent: 48, central: 60, favorable: 66 }, capaciteMax: 72 }],
       tauxChargesVariables: 0.36,
       chargesFixes: [

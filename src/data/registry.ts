@@ -10,19 +10,15 @@ const modules = import.meta.glob<{ default: Etablissement }>('./etablissements/*
 /** Ordre d'affichage dans la galerie (les identifiants absents sont ajoutés à la fin). */
 const ORDRE = [
   'clos-des-tilleuls',
-  'bellegrange',
-  'mesnil-sorel',
-  'trois-bornes',
-  'relais-des-drailles',
-  'selune',
-  'kervallon',
-  'crins-de-traverse',
-  'bois-ricard',
-  'orbe-evenements',
-  'campus-broceliande',
   'cercle-champdieu',
+  'bellegrange',
+  'trois-bornes',
+  'bois-ricard',
+  'mesnil-sorel',
+  'relais-des-drailles',
   'hautes-ferrieres',
-  'hersia',
+  'crins-de-traverse',
+  'orbe-evenements',
 ];
 
 export const ETABLISSEMENTS: Etablissement[] = Object.values(modules)
@@ -39,16 +35,12 @@ export const parId = (id: string) => ETABLISSEMENTS.find((e) => e.id === id);
 export const FAMILLES: { id: Famille; libelle: string; groupe: string }[] = [
   { id: 'enseignement', libelle: 'Centre équestre', groupe: 'Enseignement et loisirs' },
   { id: 'associatif', libelle: 'Centre associatif', groupe: 'Enseignement et loisirs' },
-  { id: 'polyvalent', libelle: 'Complexe polyvalent', groupe: 'Enseignement et loisirs' },
-  { id: 'pension', libelle: 'Écurie de propriétaires', groupe: 'Pensions et sport' },
-  { id: 'sport', libelle: 'Écurie de compétition', groupe: 'Pensions et sport' },
-  { id: 'courses', libelle: 'Courses hippiques', groupe: 'Pensions et sport' },
-  { id: 'elevage', libelle: 'Haras et élevage', groupe: 'Élevage et commerce' },
-  { id: 'valorisation', libelle: 'Valorisation', groupe: 'Élevage et commerce' },
+  { id: 'pension', libelle: 'Écurie de propriétaires', groupe: 'Sport et pensions' },
+  { id: 'sport', libelle: 'Écurie de compétition', groupe: 'Sport et pensions' },
+  { id: 'courses', libelle: 'Courses hippiques', groupe: 'Sport et pensions' },
+  { id: 'elevage', libelle: 'Haras et élevage', groupe: 'Élevage' },
   { id: 'tourisme', libelle: 'Tourisme équestre', groupe: 'Tourisme et événements' },
   { id: 'hotellerie', libelle: 'Domaine hôtelier', groupe: 'Tourisme et événements' },
   { id: 'evenementiel', libelle: 'Événementiel', groupe: 'Tourisme et événements' },
-  { id: 'mediation', libelle: 'Médiation équine', groupe: 'Accompagnement et formation' },
-  { id: 'formation', libelle: 'Formation professionnelle', groupe: 'Accompagnement et formation' },
-  { id: 'services', libelle: 'Services aux établissements', groupe: 'Accompagnement et formation' },
+  { id: 'mediation', libelle: 'Médiation équine', groupe: 'Accompagnement' },
 ];

@@ -50,7 +50,7 @@ function Methodologie() {
           <span className="surtitre">Méthodologie</span>
           <h1>Comment les dossiers sont construits</h1>
           <p className="chapeau">
-            Les quatorze établissements sont fictifs mais construits pour être économiquement plausibles. Leurs comptes ne sont pas saisis : ils sont
+            Les dix établissements sont fictifs mais construits pour être économiquement plausibles. Leurs comptes ne sont pas saisis : ils sont
             calculés à partir de leur activité.
           </p>
           <h2>Du modèle économique aux états financiers</h2>
