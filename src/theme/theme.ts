@@ -38,6 +38,14 @@ export const THEME_PLATEFORME: Theme = {
   graphique: ['#2f5d4a', '#b08a4a', '#7d9c8c', '#5b4636', '#c9b48a'],
 };
 
+/**
+ * Palette des séries de données, commune à tous les établissements.
+ * Validée (bande de luminosité, saturation minimale, séparation pour les daltonismes protan/deutan,
+ * écart en vision normale) sur les fonds clairs des thèmes. L'identité de chaque établissement
+ * passe par ses couleurs d'interface et sa typographie, pas par les couleurs des données.
+ */
+export const PALETTE_DONNEES = ['#2f6db5', '#d0662f', '#1f9d73', '#c98f00', '#b5578a'] as const;
+
 export function variablesTheme(t: Theme): CSSProperties {
   return {
     '--c-primaire': t.primaire,
@@ -51,10 +59,10 @@ export function variablesTheme(t: Theme): CSSProperties {
     '--f-texte': POLICES_TEXTE[t.policeTexte],
     '--titre-echelle': String(ECHELLE_TITRE[t.policeTitre] ?? 1),
     '--titre-casse': t.titresMajuscules ? 'uppercase' : 'none',
-    '--g1': t.graphique[0],
-    '--g2': t.graphique[1],
-    '--g3': t.graphique[2],
-    '--g4': t.graphique[3],
-    '--g5': t.graphique[4],
+    '--g1': PALETTE_DONNEES[0],
+    '--g2': PALETTE_DONNEES[1],
+    '--g3': PALETTE_DONNEES[2],
+    '--g4': PALETTE_DONNEES[3],
+    '--g5': PALETTE_DONNEES[4],
   } as CSSProperties;
 }

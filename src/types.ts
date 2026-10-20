@@ -80,7 +80,7 @@ export interface Theme {
   surPrimaire: string;
   policeTitre: PoliceTitre;
   policeTexte: PoliceTexte;
-  /** 5 couleurs de séries pour les graphiques, distinctes et lisibles sur `fond`. */
+  /** 5 couleurs d'identité (documentation du thème). Les graphiques utilisent la palette commune validée PALETTE_DONNEES (src/theme/theme.ts). */
   graphique: [string, string, string, string, string];
   /** Casse des grands titres. */
   titresMajuscules?: boolean;

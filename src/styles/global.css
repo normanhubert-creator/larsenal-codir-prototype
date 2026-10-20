@@ -2004,6 +2004,14 @@ input[type='radio'] {
   color: var(--c-accent);
 }
 
+.parcours a[aria-current='page'] .parcours__num {
+  color: color-mix(in srgb, var(--c-sur-primaire) 80%, var(--c-accent));
+}
+
+.parcours a[aria-current='page'] .jauge {
+  background: rgb(255 255 255 / 0.2);
+}
+
 .parcours__titre {
   display: block;
   font-weight: 600;
