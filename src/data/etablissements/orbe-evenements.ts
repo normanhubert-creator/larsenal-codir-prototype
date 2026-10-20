@@ -174,7 +174,7 @@ const etab: Etablissement = {
       "Orbe a quatre clientèles aux attentes différentes : les cavaliers (qualité des pistes, horaires, boxes), les entreprises (visibilité et relations publiques), le public (spectacle et ambiance familiale) et les collectivités (rayonnement du territoire). Les cavaliers apportent près de la moitié du chiffre d'affaires, les entreprises un tiers.",
     segments: [
       { nom: 'Cavaliers et propriétaires', part: 0.46, effectif: '≈ 1 900 cavaliers différents', description: 'Engagements nationaux et internationaux, boxes. 60 % viennent de la région Centre-Val de Loire et des départements limitrophes.' },
-      { nom: 'Entreprises partenaires', part: 0.14, effectif: '47 contrats en 2025', description: 'Un partenaire titre, trois partenaires officiels, 40 partenaires d’épreuve ou d’obstacle.' },
+      { nom: 'Entreprises partenaires', part: 0.14, effectif: '44 contrats en 2025', description: 'Un partenaire titre, trois partenaires officiels, 40 partenaires d’épreuve ou d’obstacle.' },
       { nom: 'Clients de l’hospitalité', part: 0.17, effectif: '1 020 couverts vendus', description: 'Tables d’entreprises (75 %) et particuliers (25 %).' },
       { nom: 'Public', part: 0.2, effectif: '≈ 18 000 visiteurs sur l’année', description: 'Billetterie du week-end du Jumping et buvettes de tous les concours.' },
       { nom: 'Exposants et associations', part: 0.03, description: 'Stands du village, journée d’élevage.' },
@@ -304,7 +304,7 @@ const etab: Etablissement = {
     regimeFiscal: 'IS',
     formeComptable: 'SAS au capital de 40 000 €, soumise à l’impôt sur les sociétés',
     subventionsExploitation: [
-      ligne('subv-collectivites', 'Subventions des collectivités au Jumping (Région, Département, communauté de communes)', '74', an(22000, 22000, 24000, 24000), '2023 : aide ponctuelle au passage en CSI 2*. Versées après remise du bilan de l’édition.'),
+      ligne('subv-collectivites', 'Subventions des collectivités au Jumping (Région, Département, communauté de communes)', '74', an(22000, 22000, 24000, 24000), 'Région 10 000 €, Département 6 000 € puis 8 000 € à partir de 2025, communauté de communes 6 000 € (montants du cas). Versées après remise du bilan de l’édition.'),
     ],
     autresProduits: [ligne('refacturations', 'Refacturations aux exposants et aux partenaires (électricité, mobilier, impressions)', '758', an(3800, 4200, 4600, 4800))],
     produitsFinanciers: [ligne('interets-placement', 'Intérêts du compte à terme', '768', an(600, 1500, 1300, 900))],
@@ -394,8 +394,8 @@ const etab: Etablissement = {
     ouverture: { capital: 40000, libelleCapital: 'Capital social', tresorerie: 118000 },
     dividendes: an(0, 0, 0, 0),
     tresorerieMensuelle: {
-      saisonnaliteEncaissements: [10, 4, 6, 10, 13, 20, 9, 2, 9, 8, 3, 6],
-      saisonnaliteAchats: [3, 3, 4, 11, 9, 24, 10, 4, 11, 10, 6, 5],
+      saisonnaliteEncaissements: [10, 4, 5, 8, 11, 15, 14, 3, 7, 11, 4, 8],
+      saisonnaliteAchats: [3, 3, 5, 12, 13, 22, 9, 3, 11, 9, 5, 5],
       saisonnalitePersonnel: [7, 7, 7.5, 9.5, 8, 13, 8, 6, 10, 9, 7, 8],
       moisSubventions: [9, 11],
       commentaire:
@@ -412,12 +412,12 @@ const etab: Etablissement = {
       ],
       cles: [
         { id: 'jours-site', nom: 'Jours d’occupation du site', unite: 'jours', justification: 'Jours facturés par la collectivité en 2025, montage et démontage compris (convention d’occupation).', repartition: { csi: 11, printemps: 7, automne: 7, club: 3, elevage: 2 } },
-        { id: 'jours-piste', nom: 'Jours de piste pondérés', unite: 'jours-piste', justification: 'Nombre de jours de compétition par piste ; la piste d’honneur du Jumping compte double (parc décoratif, préparation de l’herbe, jury international).', repartition: { csi: 12, printemps: 8, automne: 8, club: 2, elevage: 1 } },
+        { id: 'jours-piste', nom: 'Jours de piste pondérés', unite: 'jours-piste', justification: 'Nombre de jours de compétition par piste ; la piste d’honneur du Jumping compte double (parc décoratif, préparation de l’herbe, jury international). La journée d’élevage n’utilise ni parc loué ni jury rémunéré par Orbe.', repartition: { csi: 12, printemps: 8, automne: 8, club: 2 } },
         { id: 'boxes', nom: 'Boxes installés', unite: 'box-événements', justification: 'Bons de livraison du loueur de boxes en 2025.', repartition: { csi: 330, printemps: 330, automne: 300 } },
         { id: 'public', nom: 'Fréquentation', unite: 'visiteurs', justification: 'Comptages 2025 (billetterie, bracelets, estimation des jours gratuits) ; les structures, la sécurité, les secours et la communication sont dimensionnés pour le public attendu.', repartition: { csi: 12000, printemps: 2400, automne: 2100, club: 900, elevage: 450 } },
         { id: 'buvette', nom: 'Recettes de buvette', unite: '€', justification: 'Les achats de boissons et de denrées suivent les ventes de chaque buvette.', repartition: { csi: 61750, printemps: 39600, automne: 34320, club: 13680 } },
         { id: 'engagements', nom: 'Engagements nationaux', unite: 'engagements', justification: 'Engagements enregistrés sur le système fédéral en 2025 (part fixe fédérale, flots et plaques).', repartition: { csi: 1150, printemps: 3240, automne: 2840, club: 990 } },
-        { id: 'temps-equipe', nom: 'Temps de l’équipe permanente', unite: 'heures', justification: 'Relevé déclaratif des heures de l’équipe permanente par événement en 2025 (préparation, jours de concours, bilan).', repartition: { csi: 3400, printemps: 1300, automne: 1200, club: 350, elevage: 180 } },
+        { id: 'temps-equipe', nom: 'Temps de l’équipe permanente', unite: 'heures', justification: 'Relevé déclaratif des heures de l’équipe permanente par événement en 2025 (préparation, jours de concours, bilan).', repartition: { csi: 3400, printemps: 1300, automne: 1200, club: 320, elevage: 140 } },
         { id: 'ca', nom: "Chiffre d'affaires", unite: '€', justification: 'Clé conventionnelle pour les frais de structure sans lien mesurable avec un événement.', repartition: { csi: 572015, printemps: 219780, automne: 191580, club: 30015, elevage: 6300 } },
       ],
       affectations: {

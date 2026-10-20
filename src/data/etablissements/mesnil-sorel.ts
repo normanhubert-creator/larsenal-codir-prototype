@@ -271,7 +271,7 @@ const etab: Etablissement = {
 
   rh: {
     synthese:
-      "Le travail repose d'abord sur les deux associés, qui assurent ensemble environ 5 500 heures par an. Le haras emploie un cavalier-soigneur à temps plein, une apprentie mineure depuis septembre 2024 et un saisonnier pour les poulinages. Une soigneuse salariée, partie en août 2024, n'a pas été remplacée.",
+      "Le travail repose d'abord sur les deux associés, qui assurent ensemble environ 5 500 heures par an. Le haras emploie un cavalier-soigneur à temps plein, une apprentie de 18 ans depuis septembre 2024 et un saisonnier pour les poulinages. Une soigneuse salariée, partie en août 2024, n'a pas été remplacée.",
     organigramme: [
       { id: 'h', intitule: 'Cogérante : reproduction, ventes, gestion', personne: 'Hélène Lécuyer' },
       { id: 'a', intitule: 'Cogérant : travail des jeunes chevaux, cultures, matériel', personne: 'Antoine Lécuyer' },
@@ -293,7 +293,7 @@ const etab: Etablissement = {
     conventionCollective: "Convention collective nationale de la production agricole et des CUMA, applicable aux salariés de l'élevage ; le rattachement du travail de chevaux de tiers à la convention des personnels des activités hippiques reste à vérifier avec le centre de gestion",
     enjeux: [
       'Charge physique et horaires des associés en période de poulinage et de concours.',
-      'Départ de la soigneuse non remplacé : l’apprentie, mineure, ne peut pas travailler de nuit, et la règle interne lui interdit de monter les chevaux non débourrés.',
+      'Départ de la soigneuse non remplacé : l’apprentie, au lycée une semaine sur trois, ne peut pas assurer de continuité, et la règle interne lui interdit la surveillance de nuit seule comme le travail des chevaux non débourrés.',
       'Fidélisation du cavalier salarié, sollicité par des écuries de commerce.',
     ],
   },
@@ -382,7 +382,7 @@ const etab: Etablissement = {
     personnel: [
       { id: 'cavalier', intitule: 'Cavalier-soigneur (CDI)', titulaire: 'Yanis Lefort', categorie: 'technique', etp: constant(1), brutAnnuelEtp: an(24600, 25200, 25900, 26500), tauxCharges: 0.17 },
       { id: 'soigneuse', intitule: 'Soigneuse d’élevage (partie en août 2024)', titulaire: 'Élodie Rault', categorie: 'soins', etp: an(1, 0.6, 0, 0), brutAnnuelEtp: an(21800, 22300, 22300, 22300), tauxCharges: 0.12 },
-      { id: 'apprentie', intitule: 'Apprentie mineure, bac professionnel conduite et gestion de l’entreprise hippique', titulaire: 'Lou Marchal (depuis septembre 2024)', categorie: 'formation', etp: an(0, 0.33, 1, 1), brutAnnuelEtp: an(0, 5700, 6700, 9000), tauxCharges: 0.02 },
+      { id: 'apprentie', intitule: 'Apprentie, bac professionnel conduite et gestion de l’entreprise hippique', titulaire: 'Lou Marchal (depuis septembre 2024)', categorie: 'formation', etp: an(0, 0.33, 1, 1), brutAnnuelEtp: an(9100, 9100, 9900, 12300), tauxCharges: 0.02 },
       { id: 'saisonnier', intitule: 'Saisonnier poulinage (février à mai)', titulaire: 'Contrat saisonnier', categorie: 'saisonnier', etp: constant(0.33), brutAnnuelEtp: an(22000, 22600, 23100, 23600), tauxCharges: 0.12 },
     ],
     exploitant: {
@@ -442,7 +442,7 @@ const etab: Etablissement = {
       autresDettes: fin(2400, 2600, 3100, 6200, 3000),
       produitsConstatesAvance: fin(4800, 5200, 5400, 5900, 6000),
     },
-    ouverture: { capital: 60000, libelleCapital: 'Capital social', tresorerie: 20000 },
+    ouverture: { capital: 60000, libelleCapital: 'Capital social', tresorerie: 25000 },
     tresorerieMensuelle: {
       saisonnaliteEncaissements: [5, 7, 9, 11, 12, 10, 7, 5, 12, 11, 7, 4],
       saisonnaliteAchats: [8, 9, 10, 9, 8, 11, 10, 7, 7, 7, 7, 7],
@@ -527,7 +527,7 @@ const etab: Etablissement = {
       "Repère réel : lors des ventes d'élite 2025 de l'agence Fences, le prix moyen des chevaux de 3 ans d'une des sessions a atteint 47 000 € (source : https://grandprix.info/fr/111874/Le-cru-2025-pourrait-etre-le-meilleur-de-lhistoire-de-lagence-Fences-Benjamin-Ghelfi/). Ce segment très sélectif n'est pas celui des chevaux moyens de l'élevage.",
       "Repère réel : un contrat de saillie 2026 publié par un haras prévoit des frais techniques encaissés à la réservation et un solde encaissé seulement si la jument est gestante au 1er octobre, restitué sur certificat vétérinaire de jument vide (source : https://s3.fr-par.scw.cloud/wp-haras-eygalieres/2026/03/Contrat-de-saillie-2026-Shaloubet-Eygalieres.pdf). Les conditions de monte d'Éclat de Varenne reprennent ce schéma courant.",
       "Repère réel : pour la finale nationale du cycle classique de CSO 2025 à Fontainebleau, la SHF sélectionne les chevaux sur un classement arrêté au 12 août 2025, avec un nombre maximal d'épreuves courues (source : https://www.shf.eu/userfiles/valorisation/cso_chevaux/2025/2025_reglement_cso_cycle_classique_finale.pdf) ; la Grande Semaine 2025 s'est tenue du 29 août au 7 septembre au Grand Parquet (source : https://www.shf.eu/fr/actualites/cso/grande-semaine-cso-hunter-qualifications-planning,1885.html).",
-      'Salaires : SMIC annuel brut à temps plein de 20 800 € (2023) à 21 880 € (2026) ; le cavalier-soigneur est rémunéré environ 1,2 SMIC, l’apprentie mineure en pourcentage du SMIC selon son année de formation.',
+      'Salaires : SMIC annuel brut à temps plein de 20 800 € (2023) à 21 880 € (2026) ; le cavalier-soigneur est rémunéré environ 1,2 SMIC, l’apprentie (18 ans à l’embauche) à 43 % du SMIC la première année, 51 % la deuxième et 67 % la troisième.',
     ],
   },
 
@@ -636,7 +636,7 @@ const etab: Etablissement = {
       confidentiel: true,
       contenu: [
         { type: 'p', texte: 'Madame, Monsieur,' },
-        { type: 'p', texte: "En 2025, votre compte courant a présenté un solde débiteur en fin de mois onze mois sur douze. Le point bas a été atteint fin août, à environ 44 000 €, au-delà de l'autorisation de 40 000 € dont vous disposez. Les agios et commissions de l'exercice s'élèvent à 2 300 €. Le prêt de consolidation de 50 000 € sur cinq ans accordé en novembre 2024 n'a permis qu'une amélioration temporaire : le solde au 31 décembre 2025 est débiteur d'environ 24 500 €." },
+        { type: 'p', texte: "En 2025, votre compte courant a présenté un solde débiteur en fin de mois onze mois sur douze. Le point bas a été atteint fin août, à environ 43 000 €, au-delà de l'autorisation de 40 000 € dont vous disposez. Les agios et commissions de l'exercice s'élèvent à 2 300 €. Le prêt de consolidation de 50 000 € sur cinq ans accordé en novembre 2024 n'a permis qu'une amélioration temporaire : le solde au 31 décembre 2025 est débiteur d'environ 24 000 €." },
         { type: 'p', texte: "Vos échéances d'emprunts ont représenté 65 770 € en 2025. Nous notons qu'elles diminueront en 2026 avec la fin du prêt étalon (février) et du prêt de reprise (octobre), puis en 2027." },
         { type: 'p', texte: "Nous renouvelons l'autorisation de découvert de 40 000 € jusqu'au 30 juin 2026. Son maintien au-delà sera examiné au vu des éléments suivants :" },
         { type: 'liste', items: [
@@ -707,7 +707,7 @@ const etab: Etablissement = {
           'Aucune perte de jument ; un foal de l’élevage perdu à dix jours (septicémie).',
         ] },
         { type: 'h', texte: '3. Points d’organisation' },
-        { type: 'p', texte: "La surveillance de nuit a reposé sur le saisonnier de février à mai, avec des relais de ma part trois nuits par semaine en mars et en avril. Les expéditions de semence du samedi ont été assurées par Antoine, au détriment des concours de jeunes chevaux. L'arrêt du travail de nuit de l'apprentie est une contrainte réglementaire." },
+        { type: 'p', texte: "La surveillance de nuit a reposé sur le saisonnier de février à mai, avec des relais de ma part trois nuits par semaine en mars et en avril. Les expéditions de semence du samedi ont été assurées par Antoine, au détriment des épreuves SHF du week-end. Nous avons maintenu la règle selon laquelle l'apprentie ne surveille pas seule les poulinages de nuit : elle n'a ni l'expérience ni la disponibilité requises, une semaine sur trois étant passée au lycée." },
         { type: 'signature', nom: 'Hélène Lécuyer', fonction: 'Cogérante' },
       ],
     },
@@ -723,7 +723,7 @@ const etab: Etablissement = {
       confidentiel: true,
       contenu: [
         { type: 'p', texte: "Nous avons 41 jeunes chevaux en stock, dont 13 au travail, pour 345 000 € au bilan. Nous n'en avons vendu que 9 en 2025. Le compte a été à découvert onze mois sur douze et la banque ne renouvelle l'autorisation que pour six mois." },
-        { type: 'p', texte: "Nos comptes affichent un résultat d'environ 10 000 €, mais il ne se retrouve pas en banque : sans la hausse de valeur de nos chevaux en stock, qui n'existe que sur le papier, l'exercice serait en perte. Et nous ne sommes pas sûrs de les vendre à leur valeur au barème." },
+        { type: 'p', texte: "Nos comptes affichent un résultat d'environ 7 000 €, mais il ne se retrouve pas en banque : sans la hausse de valeur de nos chevaux en stock, qui n'existe que sur le papier, l'exercice serait en perte. Et nous ne sommes pas sûrs de les vendre à leur valeur au barème." },
         { type: 'p', texte: 'Je propose :' },
         { type: 'liste', items: [
           "d'accepter l'offre de Didier Vardon pour les quatre chevaux de 3 ans : 26 000 € encaissés avant l'été ;",
