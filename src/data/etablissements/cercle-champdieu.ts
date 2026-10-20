@@ -1,0 +1,763 @@
+import type { Etablissement } from '../../types';
+import { an, constant, fin, ligne } from '../aides';
+
+/**
+ * Cercle hippique de Champdieu (dossier standard).
+ * Modèle : association loi 1901 gérant le centre équestre municipal (convention d'occupation),
+ * enseignement à tarifs accessibles, stages, pensions de membres, groupes et équitation adaptée.
+ * Toutes les données sont fictives ; voir docs/METHODOLOGIE.md pour les hypothèses.
+ */
+const etab: Etablissement = {
+  id: 'cercle-champdieu',
+  nom: 'Cercle hippique de Champdieu',
+  nomCourt: 'Cercle de Champdieu',
+  monogramme: 'CHC',
+  signature: 'Le cheval à la portée de tous, dans la plaine du Forez.',
+  famille: 'associatif',
+  libelleFamille: 'Centre équestre associatif',
+  profondeur: 'standard',
+  lieu: {
+    commune: 'Champdieu',
+    departement: 'Loire (42)',
+    region: 'Auvergne-Rhône-Alpes',
+    cadre: "Plaine du Forez, au pied des monts du Forez, à cinq kilomètres de Montbrison et quarante de Saint-Étienne, entre étangs, prairies et bourg médiéval.",
+  },
+  formeJuridique: 'Association loi 1901 (déclarée en préfecture en 1984)',
+  gouvernance:
+    "Conseil d'administration de neuf membres bénévoles élus par l'assemblée générale, bureau de quatre personnes (présidente, trésorier, secrétaire, vice-président). Le directeur salarié assiste aux réunions du conseil avec voix consultative. Les bâtiments, le manège et les terrains appartiennent à la commune, qui les met à disposition par une convention d'occupation.",
+  creation: 1984,
+  dirigeant: { nom: 'Odile Bérardier', fonction: 'Présidente bénévole ; direction opérationnelle confiée à Julien Montagnon, directeur-enseignant salarié' },
+  theme: {
+    primaire: '#34463c',
+    accent: '#9c4f2a',
+    fond: '#f8f4ec',
+    fondAlt: '#eee6d6',
+    encre: '#26291f',
+    attenue: '#5f5e50',
+    surPrimaire: '#f8f4ec',
+    policeTitre: 'lora',
+    policeTexte: 'jost',
+    graphique: ['#4e7a5a', '#c8783c', '#6f93ab', '#8b6a4a', '#c9a94e'],
+  },
+  accroche:
+    "Association de près de 230 adhérents qui fait vivre le centre équestre municipal de Champdieu avec 26 équidés et des tarifs modulés selon le quotient familial. Des comptes proches de l'équilibre, un matériel à bout de souffle et une convention avec la commune à renégocier.",
+  chiffresCles: [
+    { libelle: 'Adhérents', valeur: '229', detail: 'année 2025' },
+    { libelle: 'Équidés du club', valeur: '26', detail: '15 poneys, 11 chevaux' },
+    { libelle: 'Pensions de membres', valeur: '6', detail: 'boxes réservés aux adhérents' },
+    { libelle: 'Salariés', valeur: '3,6 ETP', detail: 'dont un contrat aidé' },
+    { libelle: 'Bénévolat', valeur: '≈ 3 100 h', detail: 'heures déclarées en 2025' },
+    { libelle: 'Création', valeur: '1984', detail: 'convention municipale depuis 2004' },
+  ],
+  enjeux: [
+    'Comment renouveler la cavalerie et le tracteur sans renoncer à des tarifs accessibles ?',
+    "Qui doit financer la réfection du sol du manège : l'association ou la commune propriétaire ?",
+    'Quelles ressources nouvelles une association peut-elle mobiliser sans dénaturer son projet ?',
+  ],
+  roleEtudiant:
+    "Le conseil d'administration vous confie, en lien avec le directeur, une mission de conseil en gestion de six mois, préalable à la renégociation de la convention avec la commune. Vous avez accès aux comptes annuels, aux procès-verbaux et aux plannings.",
+
+  presentation: {
+    introduction:
+      "Le Cercle hippique de Champdieu est une association qui exploite le centre équestre construit par la commune en 2004 en bordure du bourg. Elle possède sa cavalerie et son petit matériel ; la commune reste propriétaire de l'écurie, du manège, de la carrière et des prés. Le club se veut un équipement de proximité ouvert aux familles de la plaine du Forez.",
+    histoire: [
+      "L'association naît en 1984 à l'initiative d'un groupe de cavaliers propriétaires qui partagent une carrière de terre battue louée à un agriculteur. Les premiers cours sont donnés par un moniteur vacataire, le samedi seulement.",
+      "En 2004, la commune décide de doter le territoire d'un équipement équestre : elle construit une écurie de 32 boxes, un manège de 20 × 40 m et une carrière, puis en confie la gestion au Cercle par convention. L'association recrute alors son premier enseignant salarié.",
+      "La convention, renouvelée en 2019 pour huit ans, fixe une redevance modérée et répartit l'entretien entre la commune (gros œuvre) et l'association (entretien courant). Elle reste imprécise sur le renouvellement des équipements sportifs, en particulier le sol du manège.",
+      "Depuis 2022, la hausse du fourrage, de l'énergie et des soins pèse sur un budget que l'association équilibre difficilement. Le tracteur de 2011, le van et une partie de la cavalerie arrivent en fin de vie, alors que les fonds associatifs restent faibles.",
+    ],
+    valeurs: [
+      { titre: 'Accessibilité', texte: "Tarifs modulés selon le quotient familial, paiement en trois fois, prêt de bombes et de bottes pour les débutants." },
+      { titre: 'Vie associative', texte: "Les adhérents participent aux soins, aux chantiers et à l'organisation des concours internes ; l'assemblée générale fixe les orientations." },
+      { titre: 'Respect des équidés', texte: 'Vie au pré dès que le terrain le permet, plafond de reprises par équidé, retraite organisée pour les chevaux réformés.' },
+    ],
+    chronologie: [
+      { annee: 1984, titre: "Création de l'association", texte: 'Une vingtaine de membres, une carrière louée, un moniteur vacataire.' },
+      { annee: 2004, titre: 'Centre équestre municipal', texte: "La commune construit l'écurie, le manège et la carrière ; première convention d'occupation." },
+      { annee: 2011, titre: 'Achat du tracteur', texte: "Tracteur d'occasion de 60 ch, toujours en service." },
+      { annee: 2019, titre: 'Renouvellement de la convention', texte: "Convention de huit ans, redevance de 4 800 € par an, échéance au 31 décembre 2026." },
+      { annee: 2021, titre: 'Obstacles et sellerie', texte: 'Renouvellement du matériel pédagogique avec une aide du département.' },
+      { annee: 2023, titre: 'Deux poneys et un petit emprunt', texte: "Achat de deux poneys et de selles, financé par un prêt de 9 000 € sur quatre ans." },
+      { annee: 2025, titre: 'Alerte sur le sol du manège', texte: "Le sol se compacte et se creuse ; un devis de réfection est demandé." },
+    ],
+    organisation:
+      "Le conseil d'administration fixe les tarifs, vote le budget et recrute ; le bureau se réunit chaque mois avec le directeur. Le directeur organise l'enseignement, la cavalerie et l'équipe salariée (une enseignante, un palefrenier, une agente d'accueil et d'entretien en contrat aidé). Une trentaine de bénévoles réguliers assurent l'accueil du week-end, les chantiers et une partie des soins.",
+    modeleEconomique:
+      "Les ressources proviennent des cotisations statutaires, des forfaits d'activité (enseignement à l'année, cartes, stages), des pensions réservées aux membres, des séances facturées aux écoles et à un institut médico-éducatif, d'une subvention municipale de fonctionnement, d'aides à l'emploi et de dons d'entreprises locales. Les forfaits et cotisations, réglés pour l'essentiel à la rentrée, constituent une avance de trésorerie.",
+  },
+
+  installations: {
+    synthese:
+      "Les bâtiments communaux de 2004 sont sains mais les équipements d'usage intensif (sol du manège, matériel d'entretien, van) arrivent en fin de cycle. La répartition des charges entre la commune et l'association conditionne le financement de leur renouvellement.",
+    elements: [
+      { nom: 'Écurie communale', type: 'hebergement-equin', capacite: '32 boxes de 3 × 3,2 m', annee: 2004, etat: 'correct', description: '26 boxes occupés par les équidés du club, 6 réservés aux pensions de membres. Ventilation correcte, abreuvoirs à remplacer progressivement.', photo: 'hero' },
+      { nom: 'Manège', type: 'aire-travail', capacite: '20 × 40 m', annee: 2004, etat: 'a-renover', description: "Charpente et bardage communaux en bon état. Le sol d'origine, rechargé une seule fois en 2014, est compact et irrégulier le long des pistes.", photo: 'activite' },
+      { nom: 'Carrière', type: 'aire-travail', capacite: '55 × 30 m', annee: 2004, etat: 'correct', description: 'Sable sur drainage, éclairage partiel. Impraticable une vingtaine de jours par an après de fortes pluies.' },
+      { nom: 'Prés et paddocks', type: 'exterieur', surface: '6 ha communaux', etat: 'correct', description: 'Prés en bordure de rivière, clôtures entretenues par les bénévoles. Pâturage tournant pour les poneys.', photo: 'lieu' },
+      { nom: 'Club-house et sellerie', type: 'accueil', capacite: '30 places', annee: 2004, etat: 'correct', description: "Accueil, vestiaires, sellerie aménagée par l'association en 2019 (rangements, sécurisation)." },
+      { nom: 'Matériel', type: 'materiel', capacite: 'Tracteur 60 ch, herse, van 2 places', etat: 'vieillissant', description: "Tracteur de 2011 (plus de 7 000 heures), herse de 2016, van d'occasion de 2018. Pannes plus fréquentes depuis 2024.", photo: 'detail' },
+    ],
+    maintenance: [
+      { titre: 'Partage des charges', texte: "Selon la convention, la commune assure le clos et le couvert ; l'association assure l'entretien courant, le hersage et les petites réparations. Le renouvellement des sols n'est attribué à aucune des parties." },
+      { titre: 'Entretien courant', texte: 'Hersage quotidien du manège, arrosage manuel en été, chantiers bénévoles deux samedis par trimestre (clôtures, peinture, curage).' },
+      { titre: 'Matériel', texte: "Les réparations du tracteur sont confiées à un garage agricole de Montbrison ; le coût des interventions a doublé en deux ans." },
+    ],
+    contraintes: [
+      "Les équipements sont communaux : toute transformation suppose l'accord du conseil municipal.",
+      'Le manège est le seul abri de travail ; son sol conditionne toute l’activité de novembre à mars.',
+      'La convention arrive à échéance le 31 décembre 2026.',
+    ],
+  },
+
+  cavalerie: {
+    synthese:
+      "La cavalerie appartient à l'association : 15 poneys et 11 chevaux, auxquels s'ajoutent six chevaux de membres en pension. Neuf équidés ont seize ans ou plus. Les réformés sont placés chez des adhérents ou cédés pour un euro symbolique à des particuliers sélectionnés.",
+    effectifs: [
+      { categorie: 'Shetlands et poneys A', statut: 'propriete', nombre: 5, usage: 'Baby-poney, premières reprises' },
+      { categorie: 'Poneys B et C', statut: 'propriete', nombre: 7, usage: 'Reprises enfants, stages, séances scolaires' },
+      { categorie: 'Poneys D', statut: 'propriete', nombre: 3, usage: 'Adolescents, concours internes' },
+      { categorie: 'Chevaux de club', statut: 'propriete', nombre: 10, usage: 'Reprises adolescents et adultes' },
+      { categorie: 'Cheval d’équitation adaptée', statut: 'propriete', nombre: 1, usage: 'Séances avec l’institut médico-éducatif' },
+      { categorie: 'Chevaux de membres', statut: 'pension', nombre: 6, usage: 'Pension en box réservée aux adhérents' },
+    ],
+    parAge: [
+      { tranche: 'Moins de 8 ans', nombre: 4 },
+      { tranche: '8 à 15 ans', nombre: 13 },
+      { tranche: '16 à 20 ans', nombre: 6 },
+      { tranche: 'Plus de 20 ans', nombre: 3 },
+    ],
+    disponibilite: [
+      { etat: 'En activité normale', nombre: 21 },
+      { etat: 'Activité allégée', nombre: 3, commentaire: 'Plus de vingt ans, une reprise par jour' },
+      { etat: 'Convalescence', nombre: 1, commentaire: 'Fourbure de printemps (Rocaille)' },
+      { etat: 'En débourrage et mise au travail', nombre: 1, commentaire: 'Kalin de Chalain, acheté en septembre 2025' },
+    ],
+    fiches: [
+      { nom: 'Java du Forez', race: 'Origine non constatée', naissance: 2004, sexe: 'hongre', robe: 'Bai', role: 'Reprises adultes débutants', statut: "Propriété de l'association", notes: "Activité allégée depuis 2024. Une adhérente s'est proposée pour sa retraite." },
+      { nom: 'Rocaille', race: 'Haflinger', naissance: 2012, sexe: 'jument', robe: 'Alezan crins lavés', role: 'Équitation adaptée, reprises enfants', statut: "Propriété de l'association", notes: "Fourbure en avril 2025 ; ferrure orthopédique, accès au pré limité." },
+      { nom: 'Bibop', race: 'Shetland', naissance: 2016, sexe: 'hongre', robe: 'Pie noir', role: 'Baby-poney', statut: "Propriété de l'association", notes: 'Acheté en 2023 avec Praline grâce au prêt de cavalerie.' },
+      { nom: 'Kalin de Chalain', race: 'Trotteur Français reconverti', naissance: 2018, sexe: 'hongre', robe: 'Bai brun', role: 'En formation pour les reprises adultes', statut: "Propriété de l'association", notes: "Acheté 4 500 € en septembre 2025 ; travaillé par le directeur, intégration prévue au printemps." },
+    ],
+    reglesUtilisation: [
+      'Trois reprises par jour au maximum, deux pour les équidés de plus de vingt ans.',
+      'Une journée complète de repos au pré par semaine.',
+      'Pas plus de cinq journées de stage par semaine pour un même poney.',
+      'Visite annuelle du dentiste et vermifugation raisonnée par coproscopie.',
+    ],
+  },
+
+  activites: {
+    synthese:
+      "L'enseignement est organisé en 22 reprises hebdomadaires de septembre à juin, complétées par les stages de vacances, les séances scolaires du printemps et un créneau hebdomadaire d'équitation adaptée. Les prix indiqués sont des prix moyens facturés, après réductions liées au quotient familial.",
+    prestations: [
+      { id: 'forfait-poney', nom: 'Forfait annuel poney', activite: 'enseignement', description: 'Une reprise hebdomadaire d’une heure, 33 séances, enfants de 4 à 11 ans. Plein tarif 2025 : 440 €.', unite: 'forfait annuel', prix: an(368, 377, 387, 402), volume: an(97, 103, 99, 100), compte: '706', periode: 'Septembre à juin', clientele: 'Enfants adhérents' },
+      { id: 'forfait-cheval', nom: 'Forfait annuel cheval', activite: 'enseignement', description: 'Une reprise hebdomadaire d’une heure, 33 séances, adolescents et adultes. Plein tarif 2025 : 530 €.', unite: 'forfait annuel', prix: an(442, 455, 466, 484), volume: an(88, 86, 83, 84), compte: '706', periode: 'Septembre à juin', clientele: 'Adolescents et adultes adhérents' },
+      { id: 'cartes', nom: 'Cartes de dix séances', activite: 'enseignement', description: 'Séances sans engagement annuel, dans la limite des places disponibles.', unite: 'heure', prix: an(16.5, 17, 17.5, 18.5), volume: an(980, 1080, 1000, 1020), compte: '706', clientele: 'Adultes, cavaliers irréguliers' },
+      { id: 'stages', nom: 'Stages de vacances', activite: 'stages', description: 'Journées de stage poney et cheval (soins, équitation, préparation des Galops).', unite: 'journée stagiaire', prix: an(38, 40, 42, 44), volume: an(1300, 1350, 1300, 1360), capaciteAnnuelle: constant(1600), compte: '706', periode: 'Petites vacances et juillet, 16 semaines', clientele: 'Enfants adhérents et extérieurs' },
+      { id: 'pension', nom: 'Pension de membres', activite: 'pension', description: 'Box, foin, paille, sortie au paddock ; réservée aux adhérents, sans service de travail du cheval.', unite: 'mois de pension', prix: an(245, 252, 260, 272), volume: an(64, 66, 70, 70), capaciteAnnuelle: constant(72), compte: '706', clientele: 'Adhérents propriétaires' },
+      { id: 'scolaires', nom: 'Séances scolaires et centres de loisirs', activite: 'groupes', description: 'Séances d’une heure trente pour des groupes de dix enfants, tarif conventionné avec les communes.', unite: 'séance de groupe', prix: an(88, 90, 94, 96), volume: an(104, 112, 118, 120), compte: '706', periode: 'Mars à juin, mercredis', clientele: 'Écoles et accueils de loisirs de la plaine' },
+      { id: 'adaptee', nom: 'Équitation adaptée', activite: 'groupes', description: 'Séances hebdomadaires pour quatre jeunes accompagnés par leurs éducateurs.', unite: 'séance', prix: an(72, 72, 75, 78), volume: an(54, 58, 60, 60), compte: '706', periode: 'Hors vacances scolaires', clientele: 'Institut médico-éducatif du secteur' },
+    ],
+    calendrier: [
+      'Septembre : assemblée générale, inscriptions, cotisations et premier tiers des forfaits.',
+      'Octobre à juin : reprises hebdomadaires, concours internes deux dimanches par trimestre.',
+      'Mars à juin : cycles scolaires le mercredi après-midi et le jeudi.',
+      'Petites vacances et juillet : stages ; fermeture des reprises du 14 juillet au 31 août.',
+    ],
+  },
+
+  clients: {
+    synthese:
+      "Les adhérents viennent à 85 % de la communauté d'agglomération ; un tiers des familles bénéficie d'un tarif réduit. Le club recrute surtout par les stages et les cycles scolaires, mais la part des adultes au forfait recule.",
+    segments: [
+      { nom: 'Enfants 4-11 ans', part: 0.45, effectif: '99 forfaits', description: 'Forfaits poney, stages ; forte sensibilité au prix et au jour de reprise.' },
+      { nom: 'Adolescents', part: 0.24, effectif: '≈ 55 cavaliers', description: 'Forfaits cheval, concours internes, bénévolat actif.' },
+      { nom: 'Adultes', part: 0.18, effectif: '≈ 40 cavaliers', description: 'Forfaits du soir et cartes, pratique irrégulière.' },
+      { nom: 'Propriétaires en pension', part: 0.05, effectif: '6 adhérents', description: 'Pension sans service, participation aux soins du week-end.' },
+      { nom: 'Groupes', part: 0.08, description: 'Écoles, accueils de loisirs, institut médico-éducatif.' },
+    ],
+    indicateurs: [
+      { libelle: 'Adhérents', valeurs: { 2023: 232, 2024: 236, 2025: 229, 2026: 232 } },
+      { libelle: 'Familles au tarif réduit', unite: '%', valeurs: { 2023: 31, 2024: 33, 2025: 35 }, commentaire: 'Tranches A et B du quotient familial.' },
+      { libelle: 'Taux de réinscription', unite: '%', valeurs: { 2023: 70, 2024: 72, 2025: 67 } },
+      { libelle: 'Adultes au forfait', valeurs: { 2023: 34, 2024: 31, 2025: 28 } },
+    ],
+    satisfaction: {
+      source: 'Questionnaire distribué lors de l’assemblée générale de septembre 2025, 112 réponses',
+      criteres: [
+        { critere: 'Qualité de l’enseignement', note: 4.3, noteMax: 5 },
+        { critere: 'Ambiance et vie du club', note: 4.6, noteMax: 5 },
+        { critere: 'État de la cavalerie', note: 3.8, noteMax: 5 },
+        { critere: 'État du manège', note: 2.9, noteMax: 5 },
+        { critere: 'Tarifs', note: 4.5, noteMax: 5 },
+      ],
+    },
+    verbatims: [
+      { auteur: 'Mère de deux cavalières', profil: 'Tarif réduit, tranche A', texte: "Sans le quotient familial, mes filles ne monteraient pas. On donne du temps en échange, c'est l'esprit du club." },
+      { auteur: 'Cavalier adulte', profil: 'Forfait cheval', texte: "Le manège est devenu dur et bosselé. Je préfère monter en carrière, même en novembre." },
+      { auteur: 'Propriétaire en pension', profil: 'Adhérente depuis 2012', texte: "La pension est bon marché, mais il faut accepter de participer aux soins du dimanche." },
+    ],
+    communication: [
+      { canal: 'Page associative sur les réseaux sociaux', description: '1 200 abonnés, animée par deux bénévoles.' },
+      { canal: 'Forum des associations de Montbrison', description: 'Présence chaque septembre, premier lieu d’inscription.' },
+      { canal: 'Bulletin municipal', description: 'Annonce des stages et des portes ouvertes, gratuit.' },
+    ],
+    reclamations: [
+      'Reprises déplacées en carrière par temps froid à cause de l’état du manège.',
+      'Liste d’attente pour les forfaits poney du mercredi.',
+    ],
+  },
+
+  fournisseurs: {
+    synthese:
+      "Les achats sont concentrés sur le fourrage, acheté à des agriculteurs de la plaine, et sur les soins. L'association n'a pas de pouvoir de négociation et règle comptant la plupart de ses fournisseurs locaux.",
+    liste: [
+      { nom: 'GAEC des Bruyères', categorie: 'Fourrage', prestation: 'Foin de prairie de la plaine, livré en bottes rondes', ligne: 'foin', part: 0.8, evolutionTarifaire: '+5 % annoncé pour 2026', delaiPaiement: 'À la livraison', conditions: 'Accord verbal annuel, quantités réservées en juin', dependance: 'forte', risques: 'Production dépendante de la pluviométrie de printemps.' },
+      { nom: 'Coopérative agricole du Forez', categorie: 'Aliments et litière', prestation: 'Granulés, paille, copeaux', ligne: 'concentres', part: 0.9, evolutionTarifaire: '+3 % par an', delaiPaiement: '30 jours', conditions: 'Tarif adhérent coopérateur', dependance: 'moyenne', risques: 'Fournisseur substituable mais livraisons groupées avec la paille.' },
+      { nom: 'Bastien Cholleton, maréchal-ferrant', categorie: 'Soins', prestation: 'Ferrure et parage de la cavalerie', ligne: 'marechalerie', part: 1, evolutionTarifaire: '+5 % en 2025', delaiPaiement: 'À réception', conditions: 'Passage tous les quinze jours', dependance: 'forte', risques: 'Seul maréchal disponible dans le secteur pour un passage régulier.' },
+      { nom: 'Cabinet vétérinaire des Monts du Forez', categorie: 'Soins', prestation: 'Prophylaxie, urgences, dentisterie', ligne: 'veterinaire', part: 0.85, evolutionTarifaire: 'Variable', delaiPaiement: '30 jours', conditions: 'Visite de prophylaxie annuelle', dependance: 'moyenne', risques: 'Coûts imprévisibles (fourbure, coliques).' },
+      { nom: 'Commune de Champdieu', categorie: 'Immobilier', prestation: "Mise à disposition des installations (convention d'occupation)", ligne: 'redevance', part: 1, evolutionTarifaire: 'Redevance fixe jusqu’en 2026', delaiPaiement: 'Annuel, en juin', conditions: 'Convention de huit ans, échéance au 31 décembre 2026', dependance: 'forte', risques: 'Conditions de renouvellement inconnues.' },
+    ],
+    partenaires: [
+      { nom: 'Commune de Champdieu', type: 'Collectivité', description: 'Propriétaire des installations, subvention de fonctionnement, cycles scolaires de l’école communale.' },
+      { nom: 'Institut médico-éducatif du secteur', type: 'Médico-social', description: 'Convention annuelle d’équitation adaptée.' },
+      { nom: 'Comité départemental d’équitation', type: 'Fédéral', description: 'Formation des enseignants, calendrier des concours club.' },
+      { nom: 'Entreprises locales mécènes', type: 'Mécénat', description: 'Une dizaine de commerces et artisans de la plaine, dons de 100 à 800 €.' },
+    ],
+  },
+
+  rh: {
+    synthese:
+      "L'équipe salariée est réduite et polyvalente ; le fonctionnement repose aussi sur le bénévolat (accueil du week-end, chantiers, soins, concours internes). Le contrat aidé de l'agente d'accueil et d'entretien arrive à son terme en juin 2026.",
+    organigramme: [
+      { id: 'ca', intitule: "Conseil d'administration (bénévoles)", personne: 'Présidente : Odile Bérardier' },
+      { id: 'dir', intitule: 'Directeur-enseignant (DEJEPS)', personne: 'Julien Montagnon', parent: 'ca' },
+      { id: 'ens', intitule: 'Enseignante (BPJEPS)', personne: 'Camille Duverger', parent: 'dir' },
+      { id: 'pal', intitule: 'Palefrenier-soigneur', personne: 'Rémi Faure', parent: 'dir' },
+      { id: 'pec', intitule: "Agente d'accueil et d'entretien (contrat aidé, 21 h par semaine)", personne: 'Sandrine Pupier', parent: 'dir' },
+      { id: 'ben', intitule: 'Bénévoles réguliers', personne: 'Une trentaine d’adhérents', parent: 'ca' },
+    ],
+    organisationTravail: [
+      'Ouverture du mardi au dimanche ; soins du lundi assurés par le palefrenier et un bénévole.',
+      'Les deux enseignants assurent 22 reprises hebdomadaires et les stages en alternance.',
+      'Un moniteur indépendant intervient à la vacation pendant les stages d’été.',
+      'Accueil du samedi après-midi et du dimanche matin tenu par des bénévoles formés.',
+    ],
+    saisonnalite:
+      "Pic de travail en septembre (inscriptions), pendant les stages et au printemps (cycles scolaires). Fermeture des reprises en août, période de congés du personnel et de chantiers bénévoles.",
+    dirigeant:
+      "La présidente, bénévole, consacre environ dix heures par semaine à l'association (relations avec la commune, employeur, trésorerie avec le trésorier). Le directeur salarié cumule l'enseignement (vingt heures hebdomadaires), la gestion de la cavalerie et l'encadrement.",
+    conventionCollective: 'Convention collective nationale du personnel des centres équestres',
+    enjeux: [
+      'Fin du contrat aidé en juin 2026 et baisse de l’aide de l’État.',
+      'Usure des bénévoles les plus engagés, difficile renouvellement du bureau.',
+      'Rémunération du directeur inférieure à celle proposée par les structures privées.',
+    ],
+  },
+
+  environnement: {
+    synthese:
+      "Le club est l'un des équipements de loisirs de la plaine du Forez, dans un territoire mi-rural mi-périurbain proche de Montbrison. L'offre équestre locale est dense, avec des structures privées plus chères et des écuries orientées vers la compétition.",
+    territoire:
+      "Champdieu est une commune d'environ 2 000 habitants de la communauté d'agglomération Loire Forez. Le bassin de recrutement couvre Montbrison, Savigneux et les villages de la plaine. Le territoire combine agriculture d'élevage, zones résidentielles récentes et une tradition équestre ancienne.",
+    donneesTerritoire: [
+      { libelle: 'Population de Champdieu', valeur: '≈ 2 000 habitants', source: 'Estimation du cas' },
+      { libelle: 'Bassin de recrutement (15 km)', valeur: '≈ 50 000 habitants', source: 'Estimation du cas' },
+      { libelle: 'Familles adhérentes au tarif réduit', valeur: '35 %', source: 'Fichier des adhérents 2025' },
+      { libelle: 'Structures équestres dans un rayon de 20 km', valeur: '8', source: 'Relevé du cas' },
+    ],
+    concurrents: [
+      { nom: 'Écuries du Bief', distance: '7 km', offre: 'Enseignement, compétition amateur, 25 pensions', tarifs: 'Forfait cheval 690 €, pension 430 €', positionnement: 'Structure privée orientée compétition' },
+      { nom: 'Poney-club des Granges', distance: '11 km', offre: 'Poney-club privé, anniversaires, stages', tarifs: 'Forfait poney 560 €', positionnement: 'Familles, forte communication' },
+      { nom: 'Ferme équestre des Hautes Chaumes', distance: '18 km', offre: 'Randonnée et tourisme équestre dans les monts', tarifs: 'Journée de randonnée 85 €', positionnement: 'Tourisme et adultes' },
+    ],
+    pestel: [
+      { dimension: 'Politique', faits: ['Les communes réexaminent leurs subventions aux associations sous l’effet de la contrainte budgétaire.', "Le dispositif Pass'Sport peut être utilisé par les familles éligibles dans les clubs affiliés.", "Les aides de l'État aux parcours emploi compétences ont été réduites en 2025."] },
+      { dimension: 'Économique', faits: ['Le prix du fourrage reste élevé et instable depuis la sécheresse de 2022.', 'Le coût des réparations de matériel agricole a nettement augmenté.', 'Les taux d’emprunt ont remonté depuis 2022.'] },
+      { dimension: 'Socioculturel', faits: ['Les familles comparent les clubs sur le prix et les jours de reprise.', 'Le bénévolat associatif se raréfie chez les actifs de 30 à 50 ans.', 'La demande d’activités avec les chevaux pour des publics en situation de handicap progresse.'] },
+      { dimension: 'Technologique', faits: ['Les logiciels de gestion d’adhérents permettent l’inscription et le paiement fractionné en ligne.', 'Les sols fibrés améliorent la tenue des manèges mais coûtent plus cher à l’installation.'] },
+      { dimension: 'Écologique', faits: ['Les étés secs réduisent la pousse de l’herbe dans la plaine.', 'Les prés en bordure de rivière sont soumis aux règles de protection des berges.'] },
+      { dimension: 'Légal', faits: ["Le caractère non lucratif d'une association s'apprécie au regard de sa gestion désintéressée et des conditions d'exercice de ses activités ; il relève d'une analyse au cas par cas.", "L'encadrement contre rémunération exige un diplôme ou un titre inscrit au code du sport.", 'La loi du 30 novembre 2021 visant à lutter contre la maltraitance animale renforce les obligations des détenteurs d’équidés.'] },
+    ],
+    marche: [
+      "La plaine du Forez compte plusieurs structures privées, dont les tarifs sont de 20 à 30 % supérieurs à ceux du Cercle.",
+      'Les stages de vacances et les cycles scolaires sont les premières portes d’entrée vers l’adhésion.',
+      'Les pensions disponibles près de Montbrison sont rares et chères.',
+    ],
+  },
+
+  finances: {
+    referentiel: 'ANC-2018-06',
+    regimeFiscal: 'non-lucratif',
+    formeComptable: "Association loi 1901, comptes établis selon le règlement ANC 2018-06, non soumise aux impôts commerciaux (gestion désintéressée)",
+    subventionsExploitation: [
+      ligne('subv-commune', 'Subvention de fonctionnement de la commune de Champdieu', '74', an(18000, 18000, 18000, 18000), 'Montant inchangé depuis 2019 ; la commune a annoncé un gel pour 2026.'),
+      ligne('aide-emploi', "Aide de l'État au parcours emploi compétences", '74', an(8400, 7600, 5900, 2700), 'Taux de prise en charge réduit en 2025 ; contrat terminé en juin 2026.'),
+    ],
+    autresProduits: [
+      ligne('cotisations', 'Cotisations statutaires des membres', '756', an(14384, 15340, 15572, 16704), 'Adhérents × cotisation (62 €, 65 €, 68 €, 72 €).'),
+      ligne('mecenat', "Dons et mécénat d'entreprises locales", '754', an(2200, 2900, 2600, 4000), '2026 : campagne de mécénat envisagée par le bureau.'),
+    ],
+    produitsFinanciers: [ligne('livret', 'Intérêts du livret associatif', '768', an(120, 340, 330, 260))],
+    produitsExceptionnels: [],
+    achatsMarchandises: [],
+    achatsApprovisionnements: [
+      ligne('foin', 'Foin', '6011', an(21800, 20800, 21600, 22800), '2023 encore marqué par la sécheresse de 2022.'),
+      ligne('litiere', 'Paille et copeaux', '6012', an(11800, 12200, 12900, 13400)),
+      ligne('concentres', 'Aliments concentrés', '6013', an(10900, 11300, 11800, 12200)),
+      ligne('complements', 'Compléments, pharmacie, petit matériel de soins', '6022', an(2600, 2700, 2900, 3000)),
+    ],
+    chargesExternes: [
+      ligne('redevance', "Redevance d'occupation versée à la commune", '613', an(4800, 4800, 4800, 4800), 'Fixée par la convention de 2019.'),
+      ligne('marechalerie', 'Maréchalerie', '6228', an(8600, 9000, 9500, 9900)),
+      ligne('veterinaire', 'Vétérinaire et dentiste', '6226', an(5600, 6300, 7400, 7600), '2025 : fourbure de Rocaille.'),
+      ligne('energie', 'Électricité, eau et carburant', '6061', an(9800, 9100, 8900, 9200)),
+      ligne('entretien', 'Entretien et réparations (matériel, sols, sellerie)', '615', an(6400, 7300, 8900, 10500), 'Réparations du tracteur : 2 100 € en 2023, 4 300 € en 2025.'),
+      ligne('assurances', 'Assurances (responsabilité civile, mortalité des équidés, matériel)', '616', an(5900, 6200, 6500, 6800)),
+      ligne('honoraires', 'Honoraires comptables', '6226', an(2400, 2450, 2500, 2600)),
+      ligne('vacations', 'Moniteur indépendant (vacations de stages)', '6228', an(2800, 3000, 3200, 3200)),
+      ligne('deplacements', 'Déplacements en concours et transport des poneys', '6251', an(1600, 1800, 1900, 2000)),
+      ligne('communication', 'Communication et impressions', '623', an(700, 800, 900, 1500)),
+      ligne('telecom', 'Téléphone, internet et logiciel d’adhérents', '626', an(1300, 1400, 1500, 1600)),
+      ligne('fournitures', 'Petit équipement de sellerie et fournitures', '6063', an(2600, 2900, 3100, 3200)),
+      ligne('banque', 'Frais bancaires', '627', an(500, 520, 550, 580)),
+      ligne('affiliations', 'Affiliation fédérale et cotisations', '6281', an(1100, 1150, 1200, 1250)),
+    ],
+    impotsTaxes: [ligne('formation', 'Contribution à la formation professionnelle', '633', an(1100, 1150, 1200, 1250))],
+    autresCharges: [ligne('impayes', 'Créances irrécouvrables (forfaits impayés)', '654', an(300, 450, 500, 400))],
+    chargesFinancieresAutres: [],
+    chargesExceptionnelles: [],
+    personnel: [
+      { id: 'directeur', intitule: 'Directeur-enseignant (DEJEPS)', titulaire: 'Julien Montagnon', categorie: 'direction', etp: constant(1), brutAnnuelEtp: an(28400, 28900, 29500, 30100), tauxCharges: 0.3 },
+      { id: 'enseignante', intitule: 'Enseignante (BPJEPS)', titulaire: 'Camille Duverger', categorie: 'enseignement', etp: constant(1), brutAnnuelEtp: an(22800, 23300, 23900, 24500), tauxCharges: 0.22 },
+      { id: 'palefrenier', intitule: 'Palefrenier-soigneur', titulaire: 'Rémi Faure', categorie: 'soins', etp: constant(1), brutAnnuelEtp: an(21400, 21900, 22300, 22800), tauxCharges: 0.16 },
+      { id: 'agente-pec', intitule: "Agente d'accueil et d'entretien (parcours emploi compétences)", titulaire: 'Sandrine Pupier', categorie: 'administratif', etp: an(0.6, 0.6, 0.6, 0.3), brutAnnuelEtp: an(20800, 21300, 21700, 22100), tauxCharges: 0.15 },
+    ],
+    immobilisations: [
+      { id: 'logiciel', libelle: "Logiciel de gestion des adhérents", categorie: 'incorporel', valeurOrigine: 2400, miseEnService: '2024-01', duree: 3 },
+      { id: 'agencements', libelle: 'Aménagement de la sellerie et des boxes (bâtiments communaux)', categorie: 'installations', valeurOrigine: 12000, miseEnService: '2019-06', duree: 10 },
+      { id: 'tracteur', libelle: "Tracteur 60 ch d'occasion", categorie: 'materiel', valeurOrigine: 18000, miseEnService: '2011-10', duree: 8 },
+      { id: 'herse', libelle: 'Herse d’entretien du manège', categorie: 'materiel', valeurOrigine: 6500, miseEnService: '2016-03', duree: 8 },
+      { id: 'materiel-2021', libelle: 'Obstacles, selles et matériel pédagogique', categorie: 'materiel', valeurOrigine: 9000, miseEnService: '2021-03', duree: 5 },
+      { id: 'materiel-2023', libelle: 'Selles et filets des nouveaux poneys', categorie: 'materiel', valeurOrigine: 3000, miseEnService: '2023-04', duree: 5 },
+      { id: 'van', libelle: "Van 2 places d'occasion", categorie: 'vehicules', valeurOrigine: 9000, miseEnService: '2018-04', duree: 7 },
+      { id: 'cav-2017', libelle: 'Cavalerie, achats 2015 à 2018', categorie: 'cavalerie', valeurOrigine: 30000, miseEnService: '2017-01', duree: 8 },
+      { id: 'cav-2020', libelle: 'Cavalerie, achats 2019 à 2021', categorie: 'cavalerie', valeurOrigine: 18000, miseEnService: '2020-03', duree: 7 },
+      { id: 'cav-2023', libelle: 'Cavalerie, achats 2023 (Bibop et Praline)', categorie: 'cavalerie', valeurOrigine: 6000, miseEnService: '2023-04', duree: 6 },
+      { id: 'cav-2025', libelle: 'Cavalerie, achat 2025 (Kalin de Chalain)', categorie: 'cavalerie', valeurOrigine: 4500, miseEnService: '2025-09', duree: 6 },
+      { id: 'cav-2026', libelle: 'Cavalerie, achat budgété 2026 (un poney)', categorie: 'cavalerie', valeurOrigine: 5000, miseEnService: '2026-03', duree: 6, prevue: true },
+    ],
+    emprunts: [
+      { id: 'pret-cavalerie', libelle: 'Prêt d’équipement 2023', preteur: 'Banque mutualiste du Forez', capital: 9000, taux: 0.043, dureeMois: 48, debut: '2023-04', objet: 'Achat de deux poneys et de leur sellerie' },
+    ],
+    subventionsInvestissement: [
+      { id: 'subv-dept-2021', libelle: 'Aide départementale au matériel sportif', financeur: 'Conseil départemental (dispositif fictif du cas)', montant: 4500, date: '2021-04', dureeReprise: 5 },
+    ],
+    stocks: [{ id: 'stock-fourrage', libelle: 'Foin, paille et aliments', type: 'approvisionnements', finDAn: fin(5200, 6100, 5400, 5600, 5600) }],
+    provisions: [],
+    bfr: {
+      creancesClients: fin(2600, 2800, 3100, 3400, 3300),
+      autresCreances: fin(5400, 5600, 5900, 4800, 3800),
+      dettesFournisseurs: fin(7400, 7900, 7800, 8300, 8500),
+      dettesFiscalesSociales: fin(10800, 11200, 11600, 12000, 11800),
+      autresDettes: fin(1200, 1300, 1300, 1400, 1400),
+      produitsConstatesAvance: fin(37500, 38800, 40200, 40600, 42000),
+    },
+    ouverture: { capital: 15000, libelleCapital: 'Fonds associatifs sans droit de reprise', tresorerie: 36000 },
+    tresorerieMensuelle: {
+      saisonnaliteEncaissements: [10, 5, 5, 10, 6, 7, 11, 3, 21, 8, 6, 8],
+      saisonnaliteAchats: [10, 9, 9, 8, 7, 9, 8, 6, 8, 8, 9, 9],
+      saisonnalitePersonnel: [8, 8, 8, 8, 8, 8, 9, 9, 8, 8, 8, 10],
+      moisSubventions: [4, 6, 9, 12],
+      commentaire:
+        "Les cotisations et le premier tiers des forfaits sont encaissés en septembre, les deux autres tiers en janvier et en avril. La subvention communale est versée en avril, l'aide à l'emploi chaque trimestre.",
+    },
+    analytique: {
+      exercice: 2025,
+      sections: [
+        { id: 'enseignement', nom: 'Enseignement à l’année', uniteOeuvre: { libelle: 'heure-cavalier', quantite: 7006 } },
+        { id: 'stages', nom: 'Stages de vacances', uniteOeuvre: { libelle: 'journée stagiaire', quantite: 1300 } },
+        { id: 'pension', nom: 'Pensions de membres', uniteOeuvre: { libelle: 'mois de pension', quantite: 70 } },
+        { id: 'groupes', nom: 'Groupes et équitation adaptée', uniteOeuvre: { libelle: 'séance', quantite: 178 } },
+      ],
+      cles: [
+        { id: 'heures-equide', nom: 'Heures de travail de la cavalerie', unite: 'heures-équidé', justification: 'Planning 2025 : heures de reprise, de stage et de séance de groupe par équidé du club (les chevaux en pension n’en consomment pas).', repartition: { enseignement: 5400, stages: 2600, pension: 0, groupes: 700 } },
+        { id: 'equides-presents', nom: 'Équidés présents', unite: 'équidés-année', justification: 'Les 26 équidés du club ventilés selon leur usage principal, plus les 6 chevaux en pension.', repartition: { enseignement: 16, stages: 7, pension: 6, groupes: 3 } },
+        { id: 'temps-equipe', nom: 'Temps de l’équipe salariée', unite: 'heures', justification: 'Relevé des plannings du directeur, de l’enseignante et de l’agente sur quatre semaines types.', repartition: { enseignement: 3300, stages: 1150, pension: 450, groupes: 400 } },
+        { id: 'installations', nom: 'Occupation des installations', unite: 'heures d’aires de travail', justification: 'Planning du manège et de la carrière (les propriétaires en pension utilisent les créneaux libres).', repartition: { enseignement: 1500, stages: 560, pension: 420, groupes: 220 } },
+        { id: 'activites-sociales', nom: 'Recettes des activités ouvertes au public', unite: '€', justification: 'Le bureau considère que la subvention municipale et le mécénat soutiennent les activités ouvertes aux habitants, pas les pensions.', repartition: { enseignement: 94491, stages: 54600, pension: 0, groupes: 15592 } },
+        { id: 'adherents', nom: 'Adhérents par activité principale', unite: 'adhérents', justification: 'Fichier des adhérents 2025 : activité principale déclarée.', repartition: { enseignement: 205, stages: 18, pension: 6, groupes: 0 } },
+        { id: 'ca', nom: 'Recettes d’activité', unite: '€', justification: 'Clé conventionnelle pour les frais généraux.', repartition: { enseignement: 94491, stages: 54600, pension: 18200, groupes: 15592 } },
+      ],
+      affectations: {
+        foin: { cle: 'equides-presents' },
+        litiere: { cle: 'equides-presents' },
+        concentres: { cle: 'equides-presents' },
+        complements: { cle: 'equides-presents' },
+        'variation-stocks': { cle: 'equides-presents' },
+        marechalerie: { cle: 'heures-equide' },
+        veterinaire: { cle: 'heures-equide' },
+        redevance: { cle: 'installations' },
+        energie: { cle: 'installations' },
+        entretien: { cle: 'installations' },
+        vacations: { section: 'stages' },
+        deplacements: { section: 'enseignement' },
+        directeur: { cle: 'temps-equipe' },
+        enseignante: { cle: 'temps-equipe' },
+        palefrenier: { cle: 'equides-presents' },
+        'agente-pec': { cle: 'temps-equipe' },
+        'amortissements:cavalerie': { cle: 'heures-equide' },
+        'amortissements:installations': { cle: 'equides-presents' },
+        'amortissements:materiel': { cle: 'installations' },
+        'amortissements:vehicules': { section: 'enseignement' },
+        interets: { cle: 'heures-equide' },
+      },
+      cleParDefaut: 'ca',
+      affectationsProduits: {
+        subventions: { cle: 'activites-sociales' },
+        'autres-produits': { cle: 'adherents' },
+        'produits-financiers': { cle: 'ca' },
+      },
+      commentaire:
+        "Coûts complets 2025, avant quote-part des subventions d'investissement. La répartition de la subvention municipale et des cotisations est un choix du bureau, discutable : elle conditionne le résultat apparent des pensions et des groupes.",
+    },
+    hypotheses: [
+      'Montants hors taxes ; le régime de TVA des activités de l’association n’est pas modélisé.',
+      "Régime fiscal : le cas retient une association non soumise aux impôts commerciaux (gestion désintéressée, activités réservées pour l'essentiel aux membres). Cette qualification n'est pas automatique : elle relève d'une analyse au cas par cas de l'administration fiscale, notamment pour les pensions et les prestations aux non-membres.",
+      "Les cotisations statutaires sont enregistrées en produits de cotisations (compte 756) et non en chiffre d'affaires ; les forfaits d'activité sont des prestations de services (706). La licence fédérale est encaissée pour le compte de la fédération.",
+      "Les prix des forfaits sont des prix moyens facturés, après réductions liées au quotient familial (environ 12 % du plein tarif en moyenne).",
+      "Les contributions volontaires en nature (bénévolat, environ 3 100 heures en 2025, et mise à disposition gratuite des prés par la commune) ne sont pas intégrées au compte de résultat du modèle ; elles sont décrites dans les documents du dossier.",
+      'Les installations communales ne figurent pas au bilan de l’association ; seuls les aménagements qu’elle a financés sont immobilisés.',
+      "Le cas suppose que la taxe sur les salaires éventuellement due est entièrement couverte par l'abattement propre aux associations.",
+    ],
+  },
+
+  documents: [
+    {
+      id: 'note-directeur',
+      type: 'note',
+      titre: 'État de la cavalerie et du matériel avant le budget 2026',
+      date: '2025-10-20',
+      emetteur: 'Julien Montagnon, directeur',
+      destinataire: 'Bureau de l’association',
+      resume: 'Le directeur dresse l’inventaire des équidés et du matériel à renouveler et chiffre ses besoins.',
+      rubriques: ['cavalerie', 'installations', 'finances'],
+      contenu: [
+        { type: 'p', texte: "Neuf de nos vingt-six équidés ont seize ans ou plus, dont trois de plus de vingt ans qui ne font plus qu'une reprise par jour. Deux d'entre eux devront partir à la retraite d'ici l'été 2026. Le mercredi et le samedi, les poneys B et C atteignent déjà la limite de trois reprises." },
+        { type: 'p', texte: "Le tracteur de 2011 dépasse 7 000 heures. Les réparations sont passées de 2 100 € en 2023 à 4 300 € en 2025, et le garage ne garantit plus la boîte de vitesses. La herse de 2016 ne décompacte plus le sol du manège, qui se creuse le long de la piste." },
+        { type: 'h', texte: 'Besoins chiffrés' },
+        { type: 'tableau', colonnes: ['Poste', 'Montant estimé'], alignDroite: [1], lignes: [
+          ['Quatre équidés de club (deux poneys, deux chevaux)', '24 000 €'],
+          ["Tracteur 75 ch d'occasion récente avec herse", '34 000 €'],
+          ['Sellerie et équipement des nouveaux équidés', '3 000 €'],
+          ['Total', '61 000 €'],
+        ] },
+        { type: 'p', texte: "Avec deux équidés de plus qu'aujourd'hui, je peux rouvrir le créneau poney du mercredi à 17 h et un créneau adultes le vendredi, soit environ mille heures-cavalier par an si les places se remplissent. Le sol du manège n'est pas compris : il relève à mon sens de la commune." },
+        { type: 'signature', nom: 'Julien Montagnon', fonction: 'Directeur-enseignant' },
+      ],
+    },
+    {
+      id: 'convention',
+      type: 'contrat',
+      titre: "Convention d'occupation du centre équestre municipal (extraits)",
+      date: '2018-12-14',
+      emetteur: 'Commune de Champdieu et Cercle hippique de Champdieu',
+      resume: "Extraits de la convention qui organise la mise à disposition des installations communales à l'association.",
+      rubriques: ['installations', 'fournisseurs', 'environnement'],
+      contenu: [
+        { type: 'h', texte: 'Article 2 : Durée' },
+        { type: 'p', texte: "La présente convention est conclue pour une durée de huit ans, du 1er janvier 2019 au 31 décembre 2026. Son renouvellement fera l'objet d'une nouvelle délibération du conseil municipal." },
+        { type: 'h', texte: 'Article 4 : Redevance' },
+        { type: 'p', texte: "En contrepartie de la mise à disposition, l'association verse à la commune une redevance annuelle de 4 800 €, payable au mois de juin. Ce montant tient compte de la mission d'intérêt local assurée par l'association." },
+        { type: 'h', texte: 'Article 6 : Entretien et travaux' },
+        { type: 'liste', items: [
+          "La commune assure les grosses réparations, le clos et le couvert, les structures et les réseaux.",
+          "L'association assure l'entretien courant, le nettoyage, le hersage des aires de travail et les menues réparations.",
+          "Les travaux d'amélioration sont soumis à l'accord préalable de la commune et lui restent acquis sans indemnité.",
+        ] },
+        { type: 'h', texte: 'Article 8 : Soutien de la commune' },
+        { type: 'p', texte: "La commune peut allouer à l'association une subvention annuelle de fonctionnement, votée chaque année au budget communal. L'association transmet chaque année ses comptes approuvés et un bilan de fréquentation." },
+        { type: 'citation', texte: "La convention ne dit rien du renouvellement des sols : ni gros œuvre, ni entretien courant. C'est là que tout va se jouer.", auteur: 'Annotation manuscrite du trésorier, octobre 2025' },
+      ],
+    },
+    {
+      id: 'devis-sol',
+      type: 'devis',
+      titre: 'Devis de réfection du sol du manège',
+      date: '2025-11-18',
+      emetteur: 'Sols Équestres Rhône-Loire',
+      destinataire: 'Cercle hippique de Champdieu',
+      resume: 'Devis pour une réfection complète du sol du manège de 800 m², avec une variante de simple recharge.',
+      rubriques: ['installations', 'finances'],
+      contenu: [
+        { type: 'tableau', colonnes: ['Prestation', 'Quantité', 'Prix unitaire HT', 'Montant HT'], alignDroite: [1, 2, 3], lignes: [
+          ['Décompactage et reprise de la sous-couche', '800 m²', '4,50 €', '3 600 €'],
+          ['Fourniture et pose d’un géotextile', '800 m²', '3,20 €', '2 560 €'],
+          ['Sable siliceux lavé 0/1', '120 t', '62 €', '7 440 €'],
+          ['Fibres textiles et liant', '9 t', '1 050 €', '9 450 €'],
+          ['Mise en œuvre et nivellement laser', 'Forfait', '', '3 200 €'],
+          ['Amenée et repli du matériel', 'Forfait', '', '1 350 €'],
+          ['Total solution complète', '', '', '27 600 €'],
+        ] },
+        { type: 'p', texte: "Variante : recharge simple de 80 t de sable avec décompactage et nivellement, pour 9 760 € HT. Durée de vie estimée : trois à quatre ans pour la recharge, dix à douze ans pour la solution complète avec un entretien adapté." },
+        { type: 'p', texte: 'Validité de l’offre : trois mois. Intervention possible en août, manège fermé dix jours.' },
+        { type: 'signature', nom: 'Thierry Masclaux', fonction: 'Chargé d’affaires' },
+      ],
+    },
+    {
+      id: 'grille-qf',
+      type: 'tableau',
+      titre: 'Grille tarifaire 2025-2026 et répartition des forfaits par tranche de quotient familial',
+      date: '2025-10-01',
+      emetteur: 'Secrétariat de l’association',
+      resume: 'Plein tarif, réductions par tranche de quotient familial et nombre de forfaits concernés à la rentrée 2025.',
+      rubriques: ['activites', 'clients'],
+      contenu: [
+        { type: 'tableau', colonnes: ['Tranche', 'Quotient familial', 'Réduction', 'Forfait poney', 'Forfait cheval', 'Forfaits'], alignDroite: [3, 4, 5], lignes: [
+          ['A', 'Jusqu’à 700 €', '40 %', '264 €', '318 €', 40],
+          ['B', '701 à 1 100 €', '25 %', '330 €', '398 €', 24],
+          ['C', 'Au-delà de 1 100 € ou non communiqué', 'Aucune', '440 €', '530 €', 118],
+          ['Total', '', '', '', '', 182],
+        ], note: 'Cotisation statutaire identique pour tous (68 € en 2025). Le prix moyen facturé ressort à environ 88 % du plein tarif.' },
+        { type: 'p', texte: "La grille n'a pas été revue depuis 2021. Les tranches ne sont pas indexées sur l'évolution des revenus ; la part des forfaits au tarif réduit est passée de 31 % en 2023 à 35 % en 2025." },
+      ],
+    },
+    {
+      id: 'cr-ca',
+      type: 'compte-rendu',
+      titre: "Compte rendu du conseil d'administration du 15 janvier 2026",
+      date: '2026-01-15',
+      emetteur: 'Agnès Rivollier, secrétaire',
+      destinataire: 'Membres du conseil',
+      resume: 'Arrêté des comptes 2025, vote du budget 2026 et point sur le bénévolat.',
+      rubriques: ['finances', 'rh', 'etablissement'],
+      confidentiel: true,
+      contenu: [
+        { type: 'p', texte: 'Présents : Odile Bérardier (présidente), Gérard Chazelle (trésorier), Agnès Rivollier (secrétaire), cinq administrateurs ; Julien Montagnon (directeur, voix consultative).' },
+        { type: 'h', texte: '1. Comptes 2025' },
+        { type: 'p', texte: "Le trésorier présente un déficit de 2 446 €, après un déficit de 5 586 € en 2023 et un excédent de 745 € en 2024. La trésorerie au 31 décembre s'élève à 52 390 €, mais 40 600 € correspondent à des forfaits et cotisations encaissés pour la fin de la saison. Les capitaux propres s'établissent à 17 767 €." },
+        { type: 'citation', texte: "Notre trésorerie appartient en grande partie aux familles : c'est de l'argent pour des séances que nous devons encore donner. Nous ne pouvons pas acheter un tracteur avec.", auteur: 'Gérard Chazelle, trésorier' },
+        { type: 'citation', texte: "Nous avons toujours bouclé nos fins d'année. Si la commune prend sa part, le projet de renouvellement est à notre portée.", auteur: 'Odile Bérardier, présidente' },
+        { type: 'h', texte: '2. Budget 2026' },
+        { type: 'p', texte: "Le budget prévoit un excédent de 7 816 €, fondé sur une hausse moyenne des tarifs d'environ 4 %, quelques forfaits supplémentaires, 4 000 € de mécénat et la fin du contrat aidé en juin. Deux administrateurs s'abstiennent en jugeant le mécénat incertain." },
+        { type: 'h', texte: '3. Contributions volontaires en nature 2025' },
+        { type: 'tableau', colonnes: ['Nature', 'Heures'], alignDroite: [1], lignes: [
+          ['Accueil du week-end', 900],
+          ['Soins aux équidés', 850],
+          ['Chantiers (clôtures, peinture, curage)', 600],
+          ['Concours internes et animations', 450],
+          ['Administration (bureau, trésorerie)', 300],
+          ['Total', 3100],
+        ], note: "Valorisation indicative proposée par le trésorier : 15 € de l'heure, soit 46 500 €, non intégrée aux comptes du dossier. La mise à disposition gratuite des prés est estimée par lui à 1 200 € par an." },
+        { type: 'h', texte: 'Décisions' },
+        { type: 'liste', items: ['Budget 2026 adopté (6 voix pour, 2 abstentions).', 'Mandat donné à la présidente pour ouvrir la renégociation de la convention.', 'Recours à un regard extérieur en gestion pour préparer cette négociation.'] },
+      ],
+    },
+    {
+      id: 'courriel-mairie',
+      type: 'courriel',
+      titre: 'Re : renouvellement de la convention et sol du manège',
+      date: '2026-01-28',
+      emetteur: 'Lucien Brossard, adjoint aux sports et à la vie associative',
+      destinataire: 'Odile Bérardier',
+      resume: 'La commune expose sa position sur la subvention, la redevance et le financement des équipements.',
+      rubriques: ['environnement', 'finances', 'installations'],
+      contenu: [
+        { type: 'p', texte: 'Madame la Présidente,' },
+        { type: 'p', texte: "Le conseil municipal maintiendra en 2026 la subvention de fonctionnement à 18 000 €, sans revalorisation. Le budget communal ne permet pas davantage." },
+        { type: 'p', texte: "S'agissant du sol du manège, la commune pourrait prendre en charge la solution complète, à condition que la redevance soit portée de 4 800 € à 7 200 € par an dans la nouvelle convention. Une aide communale à l'investissement de 9 000 € pour la cavalerie et le tracteur est envisageable si le département accorde de son côté un montant équivalent." },
+        { type: 'p', texte: "Plusieurs élus s'interrogent par ailleurs sur vos tarifs, nettement inférieurs à ceux des structures privées voisines. Ils souhaitent connaître l'effet de la grille du quotient familial avant de se prononcer." },
+        { type: 'p', texte: 'Je vous propose une première réunion de travail en mars.' },
+        { type: 'signature', nom: 'Lucien Brossard', fonction: 'Adjoint aux sports et à la vie associative' },
+      ],
+    },
+  ],
+  documentsAuto: [
+    { id: 'tarifs', type: 'auto-tarifs', titre: 'Prix moyens et volumes 2023-2026' },
+    { id: 'echeancier-pret', type: 'auto-echeancier', emprunt: 'pret-cavalerie', titre: 'Échéancier du prêt d’équipement 2023' },
+    { id: 'cr-2025', type: 'auto-compte-resultat', exercice: 2025, titre: 'Compte de résultat 2025' },
+    { id: 'bilan-2025', type: 'auto-bilan', exercice: 2025, titre: 'Bilan au 31 décembre 2025' },
+  ],
+
+  projets: [
+    {
+      id: 'renouvellement',
+      titre: 'Renouvellement de la cavalerie et du tracteur',
+      description:
+        "Achat de quatre équidés de club (deux poneys, deux chevaux) en remplacement de deux réformes et pour rouvrir deux créneaux, et d'un tracteur d'occasion récent avec herse. Financement mixte : subvention départementale et communale, autofinancement et emprunt.",
+      composantes: [
+        { libelle: 'Quatre équidés de club', montant: 24000, duree: 6 },
+        { libelle: "Tracteur 75 ch d'occasion récente et herse", montant: 34000, duree: 8 },
+        { libelle: 'Sellerie et équipement des nouveaux équidés', montant: 3000, duree: 5 },
+      ],
+      chargesLancement: 800,
+      financement: { apport: 13800, emprunt: 30000, taux: 0.042, dureeAnnees: 6, subvention: 18000, dureeRepriseSubvention: 7 },
+      recettes: [
+        { libelle: 'Heures-cavalier supplémentaires (deux créneaux rouverts)', unite: 'heure-cavalier', prix: 14.5, volumes: { prudent: 500, central: 1000, favorable: 1400 }, capaciteMax: 1800 },
+        { libelle: 'Journées de stage supplémentaires', unite: 'journée stagiaire', prix: 42, volumes: { prudent: 60, central: 140, favorable: 220 }, capaciteMax: 240 },
+      ],
+      tauxChargesVariables: 0.12,
+      chargesFixes: [
+        { libelle: 'Entretien de deux équidés supplémentaires (net des réformes)', montant: 3800 },
+        { libelle: 'Heures d’enseignement supplémentaires', montant: 4200 },
+        { libelle: 'Assurance et entretien courant du tracteur', montant: 1000 },
+      ],
+      delaiMiseEnServiceMois: 3,
+      monteeEnCharge: [0.7, 1],
+      horizon: 8,
+      tauxActualisation: 0.04,
+      tauxImpot: 0,
+      reperes: [
+        'Prix moyen d’une heure-cavalier au forfait cheval en 2025 : environ 14 € (466 € pour 33 séances).',
+        'La VAN est calculée hors subvention : la subvention réduit l’effort de trésorerie mais pas le coût économique du projet.',
+        "Les réparations évitées sur l'ancien tracteur (4 300 € en 2025) ne figurent pas dans les recettes du simulateur : à intégrer dans votre raisonnement.",
+        "Taux d'impôt nul : l'association est supposée non soumise aux impôts commerciaux.",
+      ],
+      vigilance: [
+        'Les quatre équidés doivent être intégrés progressivement à la cavalerie (période d’essai, travail préalable).',
+        'La réouverture de créneaux suppose des heures d’enseignement disponibles en semaine.',
+        "La subvention n'est pas acquise : la commune conditionne son aide à la renégociation de la convention.",
+      ],
+    },
+  ],
+
+  missions: [
+    {
+      numero: 1,
+      titre: 'Diagnostic stratégique',
+      lettre: {
+        de: 'Odile Bérardier',
+        fonction: 'Présidente',
+        date: '2026-01-19',
+        objet: "Regard d'ensemble sur l'association avant la renégociation avec la commune",
+        corps: [
+          "Le conseil d'administration doit négocier dans l'année une nouvelle convention avec la commune. Nous avons besoin d'un diagnostic objectif de notre situation : ce que nous faisons bien, ce qui nous fragilise, ce que notre environnement change.",
+          "Je vous demande une analyse argumentée, fondée sur les pièces du dossier, qui distingue les faits de leur interprétation. Elle sera présentée au conseil de février.",
+        ],
+      },
+      contexte: "Association gestionnaire d'un équipement communal, à tarifs accessibles, avec une cavalerie et un matériel vieillissants et une convention qui expire fin 2026.",
+      objectifs: ['Réaliser un diagnostic interne et externe', 'Identifier les ressources clés et les dépendances (commune, bénévoles, aides)', 'Hiérarchiser les enjeux stratégiques'],
+      livrables: ['Matrice SWOT argumentée', 'Note de synthèse des enjeux (une page)'],
+      documentsUtiles: ['note-directeur', 'convention', 'grille-qf', 'cr-ca', 'courriel-mairie'],
+      pistes: [
+        "Qu'apporte la convention à l'association, et que lui coûte-t-elle ?",
+        'Quels publics le club sert-il, et lesquels s’éloignent ?',
+        'Quelle part du fonctionnement repose sur le bénévolat ?',
+      ],
+    },
+    {
+      numero: 2,
+      titre: 'Diagnostic financier',
+      lettre: {
+        de: 'Odile Bérardier',
+        fonction: 'Présidente',
+        date: '2026-02-02',
+        objet: 'Analyse de nos comptes 2023 à 2025 et du budget 2026',
+        corps: [
+          "Notre trésorier et moi-même n'avons pas la même lecture de nos comptes : il s'inquiète de déficits répétés, je constate que la trésorerie n'a jamais été aussi élevée. Je souhaite une analyse qui nous mette d'accord sur les faits.",
+          "Analysez l'évolution de nos ressources, de nos charges, de notre structure financière et de notre trésorerie, ainsi que le coût de chacune de nos activités.",
+        ],
+      },
+      contexte: "Comptes d'une association non fiscalisée, établis selon le règlement ANC 2018-06, avec des cotisations hors chiffre d'affaires et des produits constatés d'avance importants.",
+      objectifs: ['Analyser les SIG et la CAF sur trois exercices', "Interpréter l'équilibre financier (FR, BFR, trésorerie)", 'Apprécier le coût complet des activités et la place des subventions', 'Critiquer le budget 2026'],
+      livrables: ['Note d’analyse financière', 'Contrôles de calcul complétés'],
+      documentsUtiles: ['cr-2025', 'bilan-2025', 'echeancier-pret', 'cr-ca', 'tarifs'],
+      pistes: [
+        "Que devient l'EBE si l'on raisonne avec les cotisations des membres ?",
+        "Pourquoi le BFR est-il négatif, et que représente réellement la trésorerie de fin d'année ?",
+        'Le coût complet d’un mois de pension justifie-t-il le tarif pratiqué ?',
+      ],
+      controles: [
+        { id: 'c-caf', question: "Quelle est la capacité d'autofinancement 2025 ?", indicateur: 'caf', exercice: 2025, unite: '€', tolerance: 50, aide: 'Résultat net + dotations aux amortissements − quote-part des subventions virée au résultat.' },
+        { id: 'c-bfr', question: 'Quel est le besoin en fonds de roulement au 31/12/2025 ?', indicateur: 'bfr', exercice: 2025, unite: '€', tolerance: 50, aide: 'Stocks + créances − dettes d’exploitation, produits constatés d’avance compris.' },
+        { id: 'c-fr', question: 'Quel est le fonds de roulement au 31/12/2025 ?', indicateur: 'fr', exercice: 2025, unite: '€', tolerance: 50, aide: 'Capitaux propres + dettes financières à long terme − actif immobilisé net.' },
+        { id: 'c-pension', question: 'Quel est le coût complet 2025 d’un mois de pension (clés par défaut) ?', indicateur: 'coutUnitaire:pension', exercice: 2025, unite: '€/unité', tolerance: 3, aide: 'Coût complet de la section pensions divisé par les 70 mois de pension vendus.' },
+      ],
+    },
+    {
+      numero: 3,
+      titre: 'Financement du renouvellement des équipements',
+      lettre: {
+        de: 'Odile Bérardier',
+        fonction: 'Présidente',
+        date: '2026-02-23',
+        objet: 'Projet de renouvellement de la cavalerie et du tracteur',
+        corps: [
+          "Le directeur propose de renouveler quatre équidés et le tracteur pour 61 000 €. La commune et le département pourraient nous aider, mais rien n'est acquis et nos fonds propres sont modestes.",
+          "Je vous demande d'évaluer ce projet selon plusieurs scénarios, d'en proposer un plan de financement réaliste et de dire au conseil à quelles conditions il peut être engagé.",
+        ],
+      },
+      contexte: "Le projet ne comprend pas le sol du manège, dont la prise en charge dépend de la négociation avec la commune.",
+      objectifs: ['Simuler le projet selon trois scénarios', 'Mesurer son effet sur la trésorerie et l’endettement', 'Proposer un plan de financement et un calendrier'],
+      livrables: ['Simulation sauvegardée', 'Note de recommandation au conseil'],
+      documentsUtiles: ['note-directeur', 'courriel-mairie', 'devis-sol', 'echeancier-pret', 'bilan-2025'],
+      projets: ['renouvellement'],
+      pistes: [
+        "Que devient le projet sans la subvention de 18 000 € ?",
+        'Quelle part de la trésorerie de fin d’année peut réellement servir d’apport ?',
+        "Faut-il étaler l'achat des équidés sur deux saisons ?",
+      ],
+    },
+    {
+      numero: 4,
+      titre: 'Politique tarifaire et ressources nouvelles',
+      lettre: {
+        de: 'Odile Bérardier',
+        fonction: 'Présidente',
+        date: '2026-03-09',
+        objet: 'Tarifs, quotient familial et mécénat',
+        corps: [
+          "Les élus estiment nos tarifs trop bas ; nos adhérents les jugent justes. Nous devons revoir notre grille pour la rentrée sans trahir notre projet associatif.",
+          "Proposez-moi une politique tarifaire et un plan de développement des ressources (mécénat, partenariats, nouveaux publics), avec un budget et des indicateurs de suivi.",
+        ],
+      },
+      contexte: 'La grille du quotient familial date de 2021 ; le mécénat repose sur une dizaine de commerçants sans démarche structurée.',
+      objectifs: ['Évaluer la grille actuelle et ses effets', 'Proposer une nouvelle grille argumentée', 'Construire un plan de mécénat et de communication'],
+      livrables: ['Proposition de grille tarifaire 2026-2027 chiffrée', 'Plan d’action de développement des ressources'],
+      documentsUtiles: ['grille-qf', 'tarifs', 'cr-ca', 'courriel-mairie'],
+      pistes: [
+        'Quel est le coût annuel des réductions accordées au titre du quotient familial ?',
+        "Quelles contreparties une association peut-elle offrir à des mécènes ?",
+        'Les adultes au forfait peuvent-ils être reconquis par une autre offre ?',
+      ],
+    },
+    {
+      numero: 5,
+      titre: 'Arbitrage du conseil',
+      lettre: {
+        de: 'Odile Bérardier',
+        fonction: 'Présidente',
+        date: '2026-03-30',
+        objet: 'Position de l’association pour la négociation de la convention',
+        corps: [
+          "La réunion avec la commune approche. Le conseil doit arrêter sa position et ses marges de manœuvre, et plusieurs administrateurs défendent des voies différentes.",
+          'Je vous demande une note de recommandation qui compare les options, en chiffre les effets et précise les conditions de réussite, y compris pour nos chevaux, nos salariés et nos bénévoles.',
+        ],
+      },
+      contexte: "Les options peuvent se combiner ; elles n'ont pas les mêmes effets sur les familles, sur la relation avec la commune et sur la charge des bénévoles.",
+      objectifs: ['Comparer les options', 'Chiffrer leurs effets sur le résultat et la trésorerie', 'Formuler une recommandation et une stratégie de négociation'],
+      livrables: ['Note de recommandation au conseil (deux pages)'],
+      documentsUtiles: ['convention', 'devis-sol', 'courriel-mairie', 'grille-qf', 'cr-ca', 'cr-2025'],
+      options: [
+        { id: 'a', titre: 'Hausse des tarifs et quotient familial renforcé', description: 'Relever le plein tarif d’environ 10 % tout en approfondissant les réductions des tranches A et B.' },
+        { id: 'b', titre: 'Renégociation de la convention', description: "Accepter une redevance de 7 200 € contre la prise en charge du sol du manège et une aide à l'investissement de la commune." },
+        { id: 'c', titre: 'Campagne de mécénat', description: 'Structurer une démarche de mécénat auprès des entreprises de la plaine pour financer une partie du renouvellement.' },
+        { id: 'd', titre: "Réduction de l'offre", description: 'Ramener la cavalerie à 22 équidés, fermer deux créneaux et reporter le renouvellement du tracteur.' },
+      ],
+      pistes: [
+        'Quel est l’effet d’une hausse de redevance de 2 400 € sur le résultat, comparé au coût annuel d’une réfection du sol ?',
+        'Combien de départs une hausse de 10 % du plein tarif peut-elle absorber ?',
+        'Que deviendrait le club si la convention n’était pas renouvelée ?',
+      ],
+    },
+  ],
+  indicateursActivite: [
+    { libelle: 'Adhérents', unite: 'adhérents', valeurs: { 2023: 232, 2024: 236, 2025: 229, 2026: 232 } },
+    { libelle: 'Heures-cavalier par équidé disponible et par semaine', unite: 'h', valeurs: { 2023: 8.6, 2024: 8.8, 2025: 8.5 }, aide: 'Forfaits et cartes, 36 semaines, 23 équidés disponibles en moyenne.' },
+    { libelle: 'Part des forfaits au tarif réduit', unite: '%', valeurs: { 2023: 31, 2024: 33, 2025: 35 } },
+    { libelle: 'Heures de bénévolat déclarées', unite: 'h', valeurs: { 2023: 3400, 2024: 3250, 2025: 3100 } },
+    { libelle: 'Âge moyen de la cavalerie', unite: 'ans', valeurs: { 2023: 13.1, 2024: 13.6, 2025: 13.4 } },
+  ],
+};
+
+export default etab;

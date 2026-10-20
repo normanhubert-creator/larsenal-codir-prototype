@@ -1,0 +1,8 @@
+node_modules
+dist
+test-results
+playwright-report
+# Ressources enseignant : ne jamais publier (dépôt public)
+enseignant-prive/
+public/photos/*.webp
+public/photos/*.jpg

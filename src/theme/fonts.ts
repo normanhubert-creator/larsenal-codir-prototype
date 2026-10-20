@@ -1,0 +1,26 @@
+// Polices auto-hébergées (licence SIL Open Font License), aucune dépendance à un CDN.
+import '@fontsource/cormorant-garamond/latin-500.css';
+import '@fontsource/cormorant-garamond/latin-600.css';
+import '@fontsource/cormorant-garamond/latin-500-italic.css';
+import '@fontsource/playfair-display/latin-500.css';
+import '@fontsource/playfair-display/latin-600.css';
+import '@fontsource/playfair-display/latin-500-italic.css';
+import '@fontsource/libre-baskerville/latin-400.css';
+import '@fontsource/libre-baskerville/latin-700.css';
+import '@fontsource/libre-baskerville/latin-400-italic.css';
+import '@fontsource/dm-serif-display/latin-400.css';
+import '@fontsource/dm-serif-display/latin-400-italic.css';
+import '@fontsource/bodoni-moda/latin-500.css';
+import '@fontsource/bodoni-moda/latin-600.css';
+import '@fontsource/bodoni-moda/latin-500-italic.css';
+import '@fontsource/ibm-plex-sans/latin-400.css';
+import '@fontsource/ibm-plex-sans/latin-500.css';
+import '@fontsource/ibm-plex-sans/latin-600.css';
+import '@fontsource/ibm-plex-mono/latin-400.css';
+import '@fontsource-variable/fraunces/wght.css';
+import '@fontsource-variable/fraunces/wght-italic.css';
+import '@fontsource-variable/inter/wght.css';
+import '@fontsource-variable/jost/wght.css';
+import '@fontsource-variable/lora/wght.css';
+import '@fontsource-variable/lora/wght-italic.css';
+import '@fontsource-variable/manrope/wght.css';
