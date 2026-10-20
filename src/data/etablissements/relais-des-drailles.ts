@@ -466,8 +466,8 @@ const etab: Etablissement = {
       resume: 'Soldes du compte professionnel à la fin de chaque mois de 2025.',
       rubriques: ['finances'],
       contenu: [
-        { type: 'tableau', colonnes: ['Mois', 'Solde de fin de mois'], alignDroite: [1], lignes: [['Janvier', '−35 300 €'], ['Février', '−38 700 €'], ['Mars', '−32 800 €'], ['Avril', '700 €'], ['Mai', '11 300 €'], ['Juin', '20 200 €'], ['Juillet', '36 000 €'], ['Août', '43 300 €'], ['Septembre', '38 700 €'], ['Octobre', '19 100 €'], ['Novembre', '−900 €'], ['Décembre', '−17 300 €']], note: 'Trésorerie nette (disponibilités moins découvert utilisé), arrondie à la centaine. Le solde de décembre correspond à la trésorerie nette du bilan au 31 décembre 2025.' },
-        { type: 'p', texte: 'Le compte a été débiteur de novembre à mars. Le point bas de février approche la limite de l’autorisation de découvert.' },
+        { type: 'tableau', colonnes: ['Mois', 'Solde de fin de mois'], alignDroite: [1], lignes: [['Janvier', '−40 200 €'], ['Février', '−43 600 €'], ['Mars', '−37 500 €'], ['Avril', '−2 800 €'], ['Mai', '7 900 €'], ['Juin', '16 800 €'], ['Juillet', '32 700 €'], ['Août', '39 800 €'], ['Septembre', '34 700 €'], ['Octobre', '14 500 €'], ['Novembre', '−6 200 €'], ['Décembre', '−23 200 €']], note: 'Trésorerie nette (disponibilités moins découvert utilisé), arrondie à la centaine. Le solde de décembre correspond à la trésorerie nette du bilan au 31 décembre 2025.' },
+        { type: 'p', texte: 'Le compte a été débiteur de janvier à avril puis à nouveau en novembre et en décembre. Le point bas de février s’est approché à moins de 6 500 € de la limite de l’autorisation de découvert ; les acomptes de la saison 2026 ont commencé à rentrer en janvier.' },
       ],
     },
     {
@@ -481,8 +481,8 @@ const etab: Etablissement = {
       rubriques: ['finances'],
       contenu: [
         { type: 'p', texte: 'Madame, Monsieur,' },
-        { type: 'p', texte: "Nous renouvelons votre autorisation de découvert de 40 000 € pour la période du 1er novembre 2025 au 30 avril 2026, au taux de 7,9 % sur les sommes utilisées, avec une commission d'engagement annuelle de 300 €." },
-        { type: 'p', texte: "Nous attirons votre attention sur le fait que votre compte est resté débiteur de façon continue de novembre à mars au cours des trois derniers hivers. Pour tout nouveau financement d'investissement, notre comité souhaitera disposer d'un plan de trésorerie mensuel sur deux ans." },
+        { type: 'p', texte: "Nous renouvelons votre autorisation de découvert de 50 000 € pour la période du 1er novembre 2025 au 30 avril 2026, au taux de 7,9 % sur les sommes utilisées, avec une commission d'engagement annuelle de 300 €." },
+        { type: 'p', texte: "Nous attirons votre attention sur le fait que votre compte est resté débiteur de façon continue de novembre à avril au cours des trois derniers hivers, et que l'utilisation du découvert a dépassé 40 000 € en février 2025. Pour tout nouveau financement d'investissement, notre comité souhaitera disposer d'un plan de trésorerie mensuel sur deux ans." },
         { type: 'p', texte: 'Nous restons à votre disposition pour étudier un prêt de trésorerie saisonnier, alternative possible au découvert.' },
         { type: 'signature', nom: 'Fabienne Pradal', fonction: 'Conseillère professionnelle' },
       ],
@@ -543,6 +543,28 @@ const etab: Etablissement = {
           ['Octobre', 105, 434, '24 %'],
           ['Total', 1720, 2996, '57 %'],
         ], note: 'Environ 240 lits-nuits sont occupés par les cavaliers en randonnée la veille du départ et le soir du retour. Gîte fermé de novembre à mars.' },
+      ],
+    },
+    {
+      id: 'courrier-cdg',
+      type: 'courrier',
+      titre: 'Résultat 2025 et statut de la conjointe collaboratrice',
+      date: '2026-02-18',
+      emetteur: 'Centre de gestion agricole des Causses, service conseil',
+      destinataire: 'Bastien et Élodie Roumieu',
+      resume: 'Le centre de gestion commente le résultat 2025 et rappelle l’échéance du statut de conjointe collaboratrice.',
+      rubriques: ['finances', 'rh', 'etablissement'],
+      confidentiel: true,
+      contenu: [
+        { type: 'p', texte: 'Madame, Monsieur,' },
+        { type: 'p', texte: "Le résultat 2025 de votre exploitation s'établit à 35 300 €, après 17 200 € de cotisations sociales personnelles. Vos prélèvements privés ont atteint 30 000 €. Vos plannings font état d'environ 2 600 heures de travail pour Bastien et 2 200 heures pour Élodie sur l'année." },
+        { type: 'p', texte: "Nous vous rappelons que la loi limite désormais à cinq ans la durée du statut de conjoint collaborateur. Selon notre lecture, Élodie devra opter pour un autre statut au plus tard au 1er janvier 2027 : coexploitante, associée d'une société agricole (EARL ou GAEC entre époux) ou salariée de l'exploitation." },
+        { type: 'tableau', colonnes: ['Statut envisagé', 'Effet estimé sur les cotisations du foyer', 'Points d’attention'], lignes: [
+          ['Coexploitante', '+3 000 à +5 000 € par an selon la répartition du revenu', 'Droits propres à la retraite et aux indemnités journalières'],
+          ['Associée d’une EARL', 'Comparable à la coexploitation', 'Frais de constitution, apport des biens, comptabilité de société'],
+          ['Salariée à mi-temps au SMIC', '≈ 11 000 € de salaire brut et 1 500 € de charges patronales, soit environ 12 500 € de charges pour l’exploitation', 'Le résultat de l’exploitation baisse d’autant ; contrat de travail et durée du travail à respecter'],
+        ], note: 'Estimations indicatives du centre de gestion, à affiner avec la MSA.' },
+        { type: 'signature', nom: 'Hélène Bastide', fonction: 'Conseillère d’entreprise' },
       ],
     },
     {
@@ -627,7 +649,7 @@ const etab: Etablissement = {
       ],
       chargesLancement: 1000,
       financement: { apport: 8000, emprunt: 35000, taux: 0.042, dureeAnnees: 5, subvention: 0 },
-      recettes: [{ libelle: 'Jours-cavalier de randonnée supplémentaires', unite: 'jour-cavalier', prix: 186, volumes: { prudent: 120, central: 220, favorable: 300 }, capaciteMax: 400 }],
+      recettes: [{ libelle: 'Jours-cavalier de randonnée supplémentaires', unite: 'jour-cavalier', prix: 186, volumes: { prudent: 120, central: 240, favorable: 300 }, capaciteMax: 400 }],
       tauxChargesVariables: 0.42,
       chargesFixes: [
         { libelle: 'Entretien de six chevaux (foin, concentrés, maréchalerie, vétérinaire, hivernage)', montant: 9600 },
@@ -680,14 +702,14 @@ const etab: Etablissement = {
         date: '2026-01-12',
         objet: 'Lecture de nos comptes et de notre trésorerie',
         corps: [
-          "Notre comptable nous dit que l'exploitation est rentable, mais notre compte est débiteur cinq mois par an. Nous ne savons pas combien nous gagnons vraiment par activité.",
+          "Notre comptable nous dit que l'exploitation est rentable, mais notre compte est débiteur six mois par an. Nous ne savons pas combien nous gagnons vraiment par activité.",
           "Je vous demande d'analyser nos comptes 2023 à 2025, notre trésorerie mensuelle et la rentabilité de chaque activité, en tenant compte du fait que notre travail n'est pas rémunéré en charges.",
         ],
       },
       contexte: 'Entreprise individuelle à l’impôt sur le revenu : le résultat rémunère le travail du couple ; les prélèvements ne sont pas des charges.',
       objectifs: ['Analyser les SIG et la CAF', 'Expliquer le profil mensuel de trésorerie', 'Apprécier l’équilibre financier', 'Interpréter les coûts complets par activité'],
       livrables: ['Note d’analyse financière', 'Plan de trésorerie mensuel commenté', 'Contrôles de calcul complétés'],
-      documentsUtiles: ['cr-2025', 'bilan-2025', 'releve-tresorerie', 'courriel-banque', 'echeancier-gite', 'echeancier-selles'],
+      documentsUtiles: ['cr-2025', 'bilan-2025', 'releve-tresorerie', 'courriel-banque', 'courrier-cdg', 'echeancier-gite', 'echeancier-selles'],
       pistes: ['Le résultat suffit-il à rémunérer deux personnes à temps plein et à financer le renouvellement de la cavalerie ?', 'Pourquoi le BFR est-il négatif alors que la trésorerie l’est aussi ?', 'Quelle activité supporte le mieux les charges de structure ?', 'Que changerait, pour le résultat et les cotisations, le salariat ou l’association d’Élodie Roumieu ?'],
       controles: [
         { id: 'c-tn', question: 'Quelle est la trésorerie nette au 31/12/2025 ?', indicateur: 'tn', exercice: 2025, unite: '€', tolerance: 50, aide: 'Fonds de roulement moins BFR, ou disponibilités moins concours bancaires.' },
@@ -751,13 +773,13 @@ const etab: Etablissement = {
       contexte: 'Les options engagent l’entreprise et le foyer sur plusieurs années.',
       objectifs: ['Comparer les options', 'Chiffrer leurs effets sur le résultat et la trésorerie mensuelle', 'Formuler une recommandation et ses conditions'],
       livrables: ['Note de recommandation (deux pages)'],
-      documentsUtiles: ['releve-tresorerie', 'courriel-banque', 'devis-gite', 'cr-saison', 'courrier-agence'],
+      documentsUtiles: ['releve-tresorerie', 'courriel-banque', 'courrier-cdg', 'devis-gite', 'cr-saison', 'courrier-agence'],
       options: [
         { id: 'a', titre: 'Gîte quatre saisons', description: 'Engager les travaux du gîte et de la salle, sous réserve de la subvention, et développer une offre d’hiver.' },
         { id: 'b', titre: 'Capacité d’été', description: 'Acheter six chevaux, accepter les départs garantis de l’agence et rester fermé l’hiver.' },
         { id: 'c', titre: 'Intersaison sans travaux', description: 'Développer avril, octobre et novembre avec l’existant, remplacer le découvert par un prêt saisonnier et différer l’investissement.' },
       ],
-      pistes: ['Quel est le solde de trésorerie le plus bas de l’année dans chaque option ?', 'Quel est le revenu du couple par heure travaillée dans chaque option ?', 'Quelle option réduit la dépendance aux agences ?'],
+      pistes: ['Quel est le solde de trésorerie le plus bas de l’année dans chaque option ?', 'Quel est le revenu du couple par heure travaillée dans chaque option, une fois le nouveau statut d’Élodie Roumieu pris en compte ?', 'Quelle option réduit la dépendance aux agences ?'],
     },
   ],
 
@@ -765,7 +787,7 @@ const etab: Etablissement = {
     { libelle: 'Jours-cavalier de randonnée', unite: 'jours-cavalier', valeurs: { 2023: 1330, 2024: 1390, 2025: 1420, 2026: 1480 } },
     { libelle: 'Taux d’occupation du gîte (avril à octobre)', unite: '%', valeurs: { 2023: 55, 2024: 56, 2025: 57, 2026: 59 }, aide: 'Nuitées vendues / lits-nuits disponibles, hors cavaliers en randonnée.' },
     { libelle: 'Jours de randonnée par cheval apte à la randonnée', unite: 'jours', valeurs: { 2023: 79, 2024: 76, 2025: 80 }, aide: 'Jours-cavalier et jours des chevaux de guide, rapportés aux chevaux aptes à toutes distances (21 en 2025).' },
-    { libelle: 'Mois de trésorerie négative', unite: 'mois', valeurs: { 2023: 5, 2024: 5, 2025: 5 } },
+    { libelle: 'Mois de trésorerie négative', unite: 'mois', valeurs: { 2023: 5, 2024: 6, 2025: 6 }, aide: 'Mois dont le solde de fin de mois est débiteur.' },
     { libelle: 'Part du chiffre d’affaires réalisée de mai à septembre', unite: '%', valeurs: { 2023: 71, 2024: 70, 2025: 70 } },
   ],
 };

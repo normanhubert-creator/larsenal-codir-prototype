@@ -785,11 +785,12 @@ const etab: Etablissement = {
       chargesLancement: 4000,
       financement: { apport: 44000, emprunt: 200000, taux: 0.039, dureeAnnees: 15, subvention: 0 },
       recettes: [
-        { libelle: 'Pension complète en box neuf', unite: 'mois de pension', prix: 660, volumes: { prudent: 118, central: 132, favorable: 140 }, capaciteMax: 144 },
+        { libelle: 'Pension complète en box neuf', unite: 'mois de pension', prix: 565, volumes: { prudent: 118, central: 132, favorable: 140 }, capaciteMax: 144 },
+        { libelle: 'Services à la carte achetés par les nouveaux pensionnaires (forfait bien-être, tonte, fournitures)', unite: 'mois de pension', prix: 45, volumes: { prudent: 100, central: 132, favorable: 140 }, capaciteMax: 144 },
       ],
-      tauxChargesVariables: 0.28,
+      tauxChargesVariables: 0.32,
       chargesFixes: [
-        { libelle: 'Palefrenier-soigneur supplémentaire (1 ETP chargé)', montant: 28800 },
+        { libelle: 'Palefrenier-soigneur supplémentaire à 0,75 ETP (hypothèse intermédiaire, chargé)', montant: 20000 },
         { libelle: 'Entretien, assurance et taxe foncière du bâtiment', montant: 3600 },
         { libelle: 'Énergie et eau (part fixe)', montant: 1400 },
       ],
@@ -825,7 +826,7 @@ const etab: Etablissement = {
       chargesLancement: 5000,
       financement: { apport: 35000, emprunt: 90000, taux: 0.038, dureeAnnees: 7, subvention: 0 },
       recettes: [
-        { libelle: 'Supplément pension premium (au-delà de la pension complète)', unite: 'mois', prix: 450, volumes: { prudent: 66, central: 96, favorable: 114 }, capaciteMax: 120 },
+        { libelle: 'Supplément pension premium (au-delà de la pension complète)', unite: 'mois', prix: 420, volumes: { prudent: 66, central: 96, favorable: 114 }, capaciteMax: 120 },
         { libelle: 'Forfait récupération (solarium, marcheur couvert) pour les autres pensionnaires', unite: 'mois', prix: 45, volumes: { prudent: 80, central: 150, favorable: 190 }, capaciteMax: 360 },
       ],
       tauxChargesVariables: 0.2,
