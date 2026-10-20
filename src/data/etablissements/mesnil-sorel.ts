@@ -316,7 +316,7 @@ const etab: Etablissement = {
       { nom: 'Petits éleveurs amateurs du secteur', distance: 'Secteur', offre: '1 à 3 poulinières, vente de foals et de yearlings', tarifs: 'Foals 2 500 à 4 000 €', positionnement: 'Prix bas, peu de suivi' },
     ],
     pestel: [
-      { dimension: 'Politique', faits: ["Les surfaces en herbe exploitées par l'élevage ouvrent droit aux aides découplées de la politique agricole commune.", "Les associés d'EARL relèvent du régime social des non-salariés agricoles (MSA) ; le bénéfice de l'EARL à l'impôt sur le revenu est imposé au nom des associés dans la catégorie des bénéfices agricoles.", "La SHF, association soutenue par l'État et la filière, organise la valorisation des jeunes chevaux de sport et des primes récompensent les éleveurs des chevaux classés."] },
+      { dimension: 'Politique', faits: ["Les surfaces en herbe exploitées par l'élevage ouvrent droit aux aides découplées de la politique agricole commune.", "Les associés d'EARL relèvent du régime social des non-salariés agricoles (MSA) ; le bénéfice de l'EARL à l'impôt sur le revenu est imposé au nom des associés dans la catégorie des bénéfices agricoles.", "La SHF organise le circuit national de valorisation des jeunes chevaux de sport et ses finales."] },
       { dimension: 'Économique', faits: ['Les prix des aliments, des engrais et du fourrage ont fortement augmenté en 2022 et 2023, puis se sont partiellement détendus.', 'Les taux des crédits professionnels ont nettement remonté depuis 2022.', 'Les professionnels du secteur rapportent une demande soutenue pour les chevaux confirmés et un ralentissement des ventes de jeunes chevaux moyens.', 'Les prix des jeunes chevaux de sport sont très dispersés selon le niveau, l’âge, les origines et les résultats.'] },
       { dimension: 'Socioculturel', faits: ['La pratique du saut d’obstacles en compétition est majoritairement amateur.', 'Les acheteurs amateurs consultent les vidéos et les résultats en ligne avant toute visite.', 'L’attention portée au bien-être des chevaux, y compris à leur fin de carrière, progresse dans l’opinion.'] },
       { dimension: 'Technologique', faits: ['L’insémination en semence fraîche réfrigérée (IAR) ou congelée (IAC) permet de choisir des étalons éloignés ; les stud-books de chevaux de sport autorisent tous les modes de monte et le transfert d’embryon.', 'Le transfert d’embryons permet à une jument âgée ou de sport de donner un poulain porté par une jument receveuse.', 'Les plateformes de vente aux enchères en ligne se sont développées pour les jeunes chevaux.'] },
@@ -345,7 +345,7 @@ const etab: Etablissement = {
     ],
     autresProduits: [
       ligne('refacturations', 'Refacturation des frais vétérinaires des chevaux de tiers', '758', an(5200, 5600, 6100, 6300)),
-      ligne('gains-concours', 'Gains en concours de jeunes chevaux et primes à l’éleveur', '758', an(4800, 3900, 5600, 5000)),
+      ligne('gains-concours', 'Gains en épreuves de jeunes chevaux et prix en concours d’élevage', '758', an(4800, 3900, 5600, 5000)),
     ],
     produitsFinanciers: [],
     produitsExceptionnels: [],
@@ -410,7 +410,7 @@ const etab: Etablissement = {
       { id: 'jument-rosee', libelle: 'Rosée du Mesnil, poulinière reprise en 2014 (réformée)', categorie: 'cavalerie', valeurOrigine: 6000, miseEnService: '2014-10', duree: 8, cession: { date: '2023-09', prix: 900 } },
       { id: 'jument-uranie', libelle: 'Uranie du Mesnil, poulinière reprise en 2014 (réformée)', categorie: 'cavalerie', valeurOrigine: 6000, miseEnService: '2014-10', duree: 8, cession: { date: '2025-11', prix: 1200 } },
       { id: 'poulinieres-2016', libelle: 'Trois poulinières achetées en 2016', categorie: 'cavalerie', valeurOrigine: 33000, miseEnService: '2016-03', duree: 10 },
-      { id: 'jument-gaia', libelle: 'Gaïa de Sap, poulinière achetée en 2017 (réformée)', categorie: 'cavalerie', valeurOrigine: 13000, miseEnService: '2017-05', duree: 10, cession: { date: '2024-10', prix: 2000 } },
+      { id: 'jument-gaia', libelle: 'Bérénice de Sap, poulinière achetée en 2017 (réformée)', categorie: 'cavalerie', valeurOrigine: 13000, miseEnService: '2017-05', duree: 10, cession: { date: '2024-10', prix: 2000 } },
       { id: 'poulinieres-2018', libelle: 'Poulinière achetée en 2018', categorie: 'cavalerie', valeurOrigine: 13000, miseEnService: '2018-04', duree: 10 },
       { id: 'jument-fee', libelle: 'Fée des Champeaux, poulinière achetée en 2018 (réforme budgétée)', categorie: 'cavalerie', valeurOrigine: 13000, miseEnService: '2018-04', duree: 10, cession: { date: '2026-09', prix: 2500 } },
       { id: 'etalon', libelle: 'Étalon Éclat de Varenne', categorie: 'cavalerie', valeurOrigine: 55000, miseEnService: '2019-02', duree: 8 },
@@ -449,7 +449,7 @@ const etab: Etablissement = {
       saisonnalitePersonnel: [8, 10, 10, 10, 9, 8, 8, 8, 8, 7, 7, 7],
       moisSubventions: [10, 12],
       commentaire:
-        "Les ventes de chevaux se concentrent au printemps et après les finales de septembre. Les saillies sont encaissées de février à juin, les pensions de poulinières surtout au premier semestre. Les aides de la PAC sont versées en octobre (avance) et en décembre (solde). Les prélèvements des associés sont mensuels.",
+        "Les ventes de chevaux se concentrent au printemps et après la Grande Semaine de Fontainebleau. Les frais techniques de saillie sont encaissés de février à juin et les soldes en octobre, les pensions de poulinières surtout au premier semestre. Les aides de la PAC sont versées en octobre (avance) et en décembre (solde). Les prélèvements des associés sont mensuels.",
     },
     analytique: {
       exercice: 2025,
@@ -511,13 +511,23 @@ const etab: Etablissement = {
         "Coûts complets 2025. Le travail des associés n'est pas valorisé (seules leurs cotisations sociales sont réparties). La production stockée est ventilée selon la variation de valeur de chaque classe d'âge ; les chevaux qui changent de classe (un foal devenu yearling, un deux ans devenu trois ans) changent de section sans cession interne valorisée, et les saillies internes de l'étalon ne sont pas facturées au naissage. Ces conventions sont discutables : vous pouvez tester l'effet d'une clé unique.",
     },
     hypotheses: [
-      'Montants hors taxes ; la TVA, ses différents taux et le remboursement forfaitaire agricole ne sont pas modélisés.',
+      'Montants hors taxes ; la TVA n’est pas modélisée.',
       "Les jeunes chevaux d'élevage sont des stocks de produits évalués au coût de production selon un barème par classe d'âge établi avec le centre de gestion (charges directes d'alimentation, de pâturage, de reproduction, de soins et de travail salarié ; hors amortissements, frais de structure, frais financiers, cotisations et travail des associés) ; leur variation constitue la production stockée (compte 713).",
       "Aucune dépréciation du stock de jeunes chevaux n'est comptabilisée au 31 décembre 2025, alors que l'inventaire mentionne des estimations de marché inférieures à la valeur au barème pour certains chevaux.",
       "Les poulinières et l'étalon sont des immobilisations amorties linéairement sur 8 à 10 ans ; les juments réformées sont cédées et leur prix de cession figure en produits exceptionnels. Aucune pouliche de l'élevage n'a été transférée en immobilisation sur la période (renouvellement par achats).",
       "EARL à l'impôt sur le revenu : aucun impôt sur les bénéfices n'apparaît dans les comptes. Les cotisations sociales des associés (MSA) sont en charges ; leurs prélèvements sont imputés sur les capitaux propres.",
       'Les frais vétérinaires engagés pour les chevaux de tiers sont comptabilisés en charges puis refacturés (autres produits).',
       'Le budget 2026 retient douze naissances, la vente de cinq chevaux de 5 et 6 ans à 30 000 € en moyenne et la réforme d’une poulinière.',
+      'Les cotisations sociales des associés sont calculées par la MSA sur leurs revenus professionnels des années antérieures : elles baissent avec un décalage après la dégradation des résultats.',
+      'Les contrats de saillie sont comptabilisés pour la recette effectivement acquise : frais techniques à la réservation, solde au 1er octobre pour les seules juments déclarées pleines.',
+      'Les prix, volumes, effectifs et montants sont des données simulées ; quand ils sont calés sur des repères réels, ceux-ci sont cités ci-dessous avec leur source.',
+      "Repère réel : l'Observatoire économique et social du cheval (IFCE) a publié des coûts de production d'environ 4 960 € pour un poulain sevré et 7 200 € pour un cheval de 2 ans (source : https://www.ifce.fr/wp-content/uploads/2015/07/OESC-4-Coûts-de-production_Pavie_Morhain.pdf). Le barème du cas (4 200 € au sevrage, 7 400 € à 2 ans) est du même ordre ; il exclut une partie des charges de structure.",
+      "Repère réel : sur les achats de chevaux de CSO observés par l'IFCE (2011-2020), le prix moyen est d'environ 4 500 € (médiane 3 000 €) pour les 3 ans et moins et de 7 565 € (médiane 5 000 €) pour les 4 à 6 ans (source : https://www.ifce.fr/wp-content/uploads/2022/03/Commerce-prix-en-cso-par-niveau-age-race-2019.pdf). Les prix de vente du cas, nettement supérieurs pour les 5 et 6 ans, correspondent à des chevaux ayant couru le cycle classique et parfois les finales.",
+      "Repère réel : une cote établie à partir d'annonces de chevaux à vendre donne des prix moyens affichés d'environ 8 800 € à 3 ans, 10 000 € à 4 ans et 11 100 € à 5 ans (source : https://www.equirodi.com/cote-cheval/selle-francais.htm). Il s'agit de prix demandés, non de prix de transaction.",
+      "Repère réel : lors des ventes d'élite 2025 de l'agence Fences, le prix moyen des chevaux de 3 ans d'une des sessions a atteint 47 000 € (source : https://grandprix.info/fr/111874/Le-cru-2025-pourrait-etre-le-meilleur-de-lhistoire-de-lagence-Fences-Benjamin-Ghelfi/). Ce segment très sélectif n'est pas celui des chevaux moyens de l'élevage.",
+      "Repère réel : un contrat de saillie 2026 publié par un haras prévoit des frais techniques encaissés à la réservation et un solde encaissé seulement si la jument est gestante au 1er octobre, restitué sur certificat vétérinaire de jument vide (source : https://s3.fr-par.scw.cloud/wp-haras-eygalieres/2026/03/Contrat-de-saillie-2026-Shaloubet-Eygalieres.pdf). Les conditions de monte d'Éclat de Varenne reprennent ce schéma courant.",
+      "Repère réel : pour la finale nationale du cycle classique de CSO 2025 à Fontainebleau, la SHF sélectionne les chevaux sur un classement arrêté au 12 août 2025, avec un nombre maximal d'épreuves courues (source : https://www.shf.eu/userfiles/valorisation/cso_chevaux/2025/2025_reglement_cso_cycle_classique_finale.pdf) ; la Grande Semaine 2025 s'est tenue du 29 août au 7 septembre au Grand Parquet (source : https://www.shf.eu/fr/actualites/cso/grande-semaine-cso-hunter-qualifications-planning,1885.html).",
+      'Salaires : SMIC annuel brut à temps plein de 20 800 € (2023) à 21 880 € (2026) ; le cavalier-soigneur est rémunéré environ 1,2 SMIC, l’apprentie mineure en pourcentage du SMIC selon son année de formation.',
     ],
   },
 
@@ -540,12 +550,12 @@ const etab: Etablissement = {
           alignDroite: [1, 4],
           lignes: [
             ['Jazz du Mesnil', 2019, 'Hongre', 'Quolibet du Rouvre × Nobel de Tessé', '25 000 €', '18 000 à 26 000 €', 'Saison 2024 perdue (tendinite)'],
-            ['Kalypso du Mesnil', 2020, 'Jument', 'Éclat de Varenne × Orphée des Prés', '19 800 €', '35 000 à 50 000 €', 'Qualifiée en finale 5 ans'],
+            ['Kalypso du Mesnil', 2020, 'Jument', 'Éclat de Varenne × Orphée des Prés', '19 800 €', '35 000 à 50 000 €', 'Finale 5 ans à Fontainebleau'],
             ['Kronos du Mesnil', 2020, 'Hongre', 'Dauphin de Saint-Aubin × Rubis du Mesnil', '19 800 €', '14 000 à 20 000 €', 'Parcours irréguliers'],
-            ['Lord du Mesnil', 2021, 'Hongre', 'Éclat de Varenne × Joyau de Brécy', '14 600 €', '14 000 à 20 000 €', 'Qualifié en finale 4 ans'],
+            ['Lord du Mesnil', 2021, 'Hongre', 'Éclat de Varenne × Joyau de Brécy', '14 600 €', '14 000 à 20 000 €', 'Finale 4 ans à Fontainebleau'],
             ['Lilas du Mesnil', 2021, 'Jument', 'Hélios de la Risle × Nobel de Tessé', '14 600 €', '8 000 à 12 000 €', 'Entorse en octobre 2025'],
             ['Loustic du Mesnil', 2021, 'Hongre', 'Éclat de Varenne × Ulysse des Fresnes', '14 600 €', '9 000 à 13 000 €', 'Manque de moyens'],
-            ['Lune du Mesnil', 2021, 'Jument', 'Fakir du Val × Orphée des Prés', '14 600 €', '12 000 à 17 000 €', 'Qualifiée en finale 4 ans'],
+            ['Lune du Mesnil', 2021, 'Jument', 'Fakir du Val × Orphée des Prés', '14 600 €', '12 000 à 17 000 €', 'Finale 4 ans à Fontainebleau'],
             ['Magnum du Mesnil', 2022, 'Hongre', 'Éclat de Varenne × Orphée des Prés', '10 200 €', '12 000 à 16 000 €', 'Exclu de l’offre du marchand'],
             ['Mélusine du Mesnil', 2022, 'Jument', 'Éclat de Varenne × Joyau de Brécy', '10 200 €', '6 000 à 8 000 €', 'Comprise dans l’offre du marchand'],
             ['Mistral du Mesnil', 2022, 'Hongre', 'Hélios de la Risle × Quolibet du Rouvre', '10 200 €', '7 000 à 9 000 €', 'Comprise dans l’offre du marchand'],
@@ -609,7 +619,8 @@ const etab: Etablissement = {
           'Coût cumulé jusqu’à 5 ans : 19 800 €, soit 9 600 € de plus pour deux années de valorisation.',
           'Travail des associés non compris : environ 280 heures par cheval jusqu’à 3 ans et 560 heures jusqu’à 5 ans, d’après le relevé de temps de 2025.',
         ] },
-        { type: 'p', texte: "Le barème ne mesure pas un coût complet. Une comparaison avec la comptabilité analytique de l'exercice permettrait d'apprécier l'écart entre ces deux approches. Le barème n'a pas été révisé depuis 2023 malgré l'évolution des prix des intrants." },
+        { type: 'p', texte: "Le barème ne mesure pas un coût complet. Ses premières classes d'âge sont du même ordre que les coûts de production publiés par l'Observatoire économique et social du cheval de l'IFCE (près de 5 000 € pour un poulain sevré, 7 200 € à deux ans), qui reposent sur un périmètre plus large. Une comparaison avec la comptabilité analytique de l'exercice permettrait d'apprécier l'écart entre ces approches. Le barème n'a pas été révisé depuis 2023 malgré l'évolution des prix des intrants." },
+        { type: 'p', texte: "Rappel : la valeur d'inventaire d'un cheval en stock ne peut pas excéder sa valeur actuelle. Lorsque le prix de vente probable, diminué des frais de vente, est inférieur à la valeur au barème, une dépréciation doit être envisagée." },
         { type: 'signature', nom: 'Nathalie Guérin', fonction: 'Conseillère d’entreprise' },
       ],
     },
@@ -625,8 +636,8 @@ const etab: Etablissement = {
       confidentiel: true,
       contenu: [
         { type: 'p', texte: 'Madame, Monsieur,' },
-        { type: 'p', texte: "En 2025, votre compte courant a présenté un solde débiteur en fin de mois onze mois sur douze. Le point bas a été atteint fin août, à environ 41 000 €, au-delà de l'autorisation de 40 000 € dont vous disposez. Les agios et commissions de l'exercice s'élèvent à 2 300 €. Le prêt de consolidation de 35 000 € accordé en novembre 2024 n'a permis qu'une amélioration temporaire." },
-        { type: 'p', texte: "Vos échéances d'emprunts ont représenté 64 145 € en 2025. Nous notons qu'elles diminueront en 2026 avec la fin du prêt étalon (février) et du prêt de reprise (octobre), puis en 2027." },
+        { type: 'p', texte: "En 2025, votre compte courant a présenté un solde débiteur en fin de mois onze mois sur douze. Le point bas a été atteint fin août, à environ 44 000 €, au-delà de l'autorisation de 40 000 € dont vous disposez. Les agios et commissions de l'exercice s'élèvent à 2 300 €. Le prêt de consolidation de 50 000 € sur cinq ans accordé en novembre 2024 n'a permis qu'une amélioration temporaire : le solde au 31 décembre 2025 est débiteur d'environ 24 500 €." },
+        { type: 'p', texte: "Vos échéances d'emprunts ont représenté 65 770 € en 2025. Nous notons qu'elles diminueront en 2026 avec la fin du prêt étalon (février) et du prêt de reprise (octobre), puis en 2027." },
         { type: 'p', texte: "Nous renouvelons l'autorisation de découvert de 40 000 € jusqu'au 30 juin 2026. Son maintien au-delà sera examiné au vu des éléments suivants :" },
         { type: 'liste', items: [
           'les comptes 2025 arrêtés et un plan de trésorerie mensuel pour 2026 ;',
@@ -650,7 +661,7 @@ const etab: Etablissement = {
       rubriques: ['clients', 'finances'],
       contenu: [
         { type: 'p', texte: 'Madame Lécuyer,' },
-        { type: 'p', texte: "Suite à ma visite du 16 janvier, je vous confirme mon intérêt pour quatre de vos chevaux de 3 ans : Mélusine, Mistral, Myrtille et Mandarine du Mesnil. Je vous propose un prix global de 26 000 € HT pour le lot, soit 6 500 € par cheval en moyenne." },
+        { type: 'p', texte: "À la suite de ma visite du 16 janvier, je vous confirme mon intérêt pour quatre de vos chevaux de 3 ans : Mélusine, Mistral, Myrtille et Mandarine du Mesnil. Je vous propose un prix global de 26 000 € HT pour le lot, soit 6 500 € par cheval en moyenne." },
         { type: 'liste', items: [
           'Paiement de 13 000 € à la signature et du solde à soixante jours.',
           'Visite vétérinaire d’achat simplifiée (examen clinique, sans radiographies) à ma charge.',
@@ -677,16 +688,17 @@ const etab: Etablissement = {
           colonnes: ['Indicateur', '2023', '2024', '2025'],
           alignDroite: [1, 2, 3],
           lignes: [
-            ['Juments de tiers inséminées (saillies vendues)', 58, 55, 50],
-            ['Éleveurs utilisateurs', 55, 52, 47],
+            ['Juments de tiers inséminées (contrats de saillie)', 50, 44, 36],
+            ['Éleveurs utilisateurs', 45, 40, 32],
             ['Juments de l’élevage inséminées avec Éclat', 6, 8, 7],
-            ['Collectes', 71, 68, 64],
-            ['Taux de gestation déclaré des juments de tiers', '74 %', '71 %', '66 %'],
-            ['Prix de la saillie (HT)', '820 €', '850 €', '870 €'],
+            ['Collectes', 68, 61, 52],
+            ['Juments de tiers pleines au 1er octobre', '74 %', '71 %', '66 %'],
+            ['Frais techniques + solde jument pleine (HT)', '300 € + 460 €', '315 € + 480 €', '330 € + 500 €'],
+            ['Recette moyenne par contrat (HT)', '640 €', '655 €', '660 €'],
           ],
-          note: 'Taux de gestation calculé sur les juments dont le propriétaire a communiqué le résultat (44 sur 50 en 2025).',
+          note: 'Taux établis sur les juments dont le propriétaire a transmis un constat de gestation ou un certificat de jument vide (33 sur 36 en 2025) ; les trois juments sans information sont comptées vides.',
         },
-        { type: 'p', texte: "Plusieurs éleveurs fidèles ont choisi en 2025 de jeunes étalons plus en vue. Les demandes portent sur les résultats des produits d'Éclat : ses premiers produits ont eu 5 ans cette année, et Kalypso du Mesnil est la seule à s'être qualifiée pour la finale. Le prix 2026 est fixé à 880 €." },
+        { type: 'p', texte: "Plusieurs éleveurs fidèles ont choisi en 2025 de jeunes étalons plus en vue, souvent proposés en semence congelée. Les demandes portent sur les résultats des produits d'Éclat : ses premiers produits ont eu 5 ans cette année, et Kalypso du Mesnil est la seule à avoir été retenue pour la finale de Fontainebleau. Les conditions 2026 restent fixées à 330 € de frais techniques et 500 € au 1er octobre si la jument est pleine." },
         { type: 'h', texte: '2. Pensions de poulinières et poulinages' },
         { type: 'liste', items: [
           '170 mois de pension de poulinières de tiers facturés (160 en 2024), pour 16 places.',
@@ -711,7 +723,7 @@ const etab: Etablissement = {
       confidentiel: true,
       contenu: [
         { type: 'p', texte: "Nous avons 41 jeunes chevaux en stock, dont 13 au travail, pour 345 000 € au bilan. Nous n'en avons vendu que 9 en 2025. Le compte a été à découvert onze mois sur douze et la banque ne renouvelle l'autorisation que pour six mois." },
-        { type: 'p', texte: "Nos comptes affichent un résultat de plus de 22 000 €, mais il ne se retrouve pas en banque : la valeur de nos chevaux augmente chaque année sur le papier, sans que nous soyons sûrs de les vendre à ce prix." },
+        { type: 'p', texte: "Nos comptes affichent un résultat d'environ 10 000 €, mais il ne se retrouve pas en banque : sans la hausse de valeur de nos chevaux en stock, qui n'existe que sur le papier, l'exercice serait en perte. Et nous ne sommes pas sûrs de les vendre à leur valeur au barème." },
         { type: 'p', texte: 'Je propose :' },
         { type: 'liste', items: [
           "d'accepter l'offre de Didier Vardon pour les quatre chevaux de 3 ans : 26 000 € encaissés avant l'été ;",
@@ -759,7 +771,7 @@ const etab: Etablissement = {
       contenu: [
         {
           type: 'tableau',
-          colonnes: ['Cheval', 'Âge', 'Parcours', 'Sans-faute', 'Qualification en finale', 'Résultat en finale'],
+          colonnes: ['Cheval', 'Âge', 'Parcours SHF', 'Sans-faute', 'Retenu pour la finale', 'Résultat à Fontainebleau'],
           alignDroite: [1, 2, 3],
           lignes: [
             ['Jazz du Mesnil', 6, 9, 5, 'Non', ''],
@@ -770,9 +782,9 @@ const etab: Etablissement = {
             ['Loustic du Mesnil', 4, 6, 2, 'Non', ''],
             ['Lune du Mesnil', 4, 7, 5, 'Oui', 'Sans-faute'],
           ],
-          note: '47 parcours au total pour les 4 à 6 ans ; engagements et déplacements de l’année : 8 500 €.',
+          note: '47 parcours au total pour les 4 à 6 ans sur le circuit SHF ; sélection pour la finale sur le classement de chaque génération arrêté à la mi-août. Engagements et déplacements de l’année : 8 500 €.',
         },
-        { type: 'h', texte: 'Chevaux de 3 ans (épreuves de présentation, note sur 20)' },
+        { type: 'h', texte: 'Chevaux de 3 ans (épreuves SHF notées sur 20)' },
         {
           type: 'tableau',
           colonnes: ['Cheval', 'Épreuves', 'Note moyenne'],
@@ -835,7 +847,7 @@ const etab: Etablissement = {
       resume: 'Un centre de valorisation propose de travailler et de commercialiser plusieurs chevaux du haras contre pension et commission.',
       rubriques: ['fournisseurs', 'activites'],
       contenu: [
-        { type: 'p', texte: "Suite à notre échange lors des finales de septembre, nous vous proposons de prendre en charge quatre à six chevaux de 4 ans et plus pour la saison 2026." },
+        { type: 'p', texte: "À la suite de notre échange lors de la Grande Semaine de Fontainebleau, nous vous proposons de prendre en charge quatre à six chevaux de 4 ans et plus pour la saison 2026." },
         {
           type: 'tableau',
           colonnes: ['Prestation', 'Conditions HT'],
