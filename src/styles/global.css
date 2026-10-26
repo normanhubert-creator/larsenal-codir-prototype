@@ -51,9 +51,12 @@ body {
 }
 
 li,
-p,
-td {
+p {
   overflow-wrap: anywhere;
+}
+
+td {
+  overflow-wrap: break-word;
 }
 
 h1,
@@ -2485,4 +2488,8 @@ input[type='radio'] {
     overflow: visible;
     border: 0;
   }
+}
+
+.papier thead th {
+  white-space: normal;
 }
